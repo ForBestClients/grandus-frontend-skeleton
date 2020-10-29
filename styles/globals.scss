@@ -1,0 +1,14 @@
+@import "variables";
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  &.guttered {
+      margin-top: $general-gutter;
+      margin-bottom: $general-gutter;
+      @media (max-width: $xl) {
+        padding-left: $general-gutter;
+        padding-right: $general-gutter;
+      }      
+  }
+}

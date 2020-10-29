@@ -1,0 +1,8 @@
+@import "styles/variables";
+
+.wrapper {
+    padding: $general-gutter;
+    background-color: black;
+    color: orangered;
+    min-height: 100px;
+}
