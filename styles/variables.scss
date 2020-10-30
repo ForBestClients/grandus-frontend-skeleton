@@ -1,10 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+//
+// Colors
+//-----------------------------------------------
+$c_green: #20F800;
+$c_white: #fff;
+$c_black: #000;
+$c_sale: #FF0127;
+
+$c_red_bg: #FF0027;
+$c_black_bg: #101010;
+$c_white_bg: #fff;
+
+$c_green_border: #1EEA00;
+$c_dark_green_border: #313131;
+
+$text_white: #fff;
+$text_gray: #B1B1B1;
+$text_gray_darker: #888888;
+$text_black: #000;
+
+$c_count_badge: #F10000;
+
+$c_shadow: #0000001A;
+
+  //
+// Typography
+//-----------------------------------------------
+$f_family_primary: 'Source Sans Pro', sans-serif;
+$f_family_secondary: 'Montserrat', sans-serif;
+
+$f_size_base: 16px;
+$line_height_base: 25px;
+
+//
+// Breakpoints
+//-----------------------------------------------
+$xs: 480px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl:  1200px;
+$xxl: 1400px;
+$xxxl: 1600px;
+
+
+
+
+
 $footer-color: rgb(57, 12, 99);
 
-$xs: 480px;
-$sm: 766px;
-$md: 991px;
-$lg: 1200px;
-$xl: 1440px;
+//$xs: 480px;
+//$sm: 766px;
+//$md: 991px;
+//$lg: 1200px;
+//$xl: 1440px;
 
 $general-gutter: 15px;
 $general-shadow: rgba(0, 0, 0, 0.15) 0px 0px 40px;

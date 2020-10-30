@@ -1,11 +1,175 @@
 @import "styles/variables";
 
-.wrapper {
-    padding: $general-gutter;
-    background-color: black;
-    color: yellow;
-    min-height: 300px;
-    .test {
-        color: red;
+.footer {
+  padding: 50px 0 40px;
+  background-color: $c_black_bg;
+
+  .newsletter {
+
+    h2 {
+      color: $text_white;
+      font-size: 40px;
+      line-height: 50px;
+      margin-bottom: 20px;
     }
+
+    p {
+      color: $text_white;
+      max-width: 680px;
+      margin: auto;
+      font-size: $f_size_base;
+      line-height: 20px;
+    }
+
+    div {
+      margin-top: 45px;
+    }
+  }
+
+  .benefitIcons {
+    margin-top: 70px;
+
+    .benefitIconsWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 0;
+      border-top: 1px solid $c_dark_green_border;
+      border-bottom: 1px solid $c_dark_green_border;
+
+      .box {
+        display: flex;
+        align-items: center;
+        margin-right: 60px;
+
+        img {
+          margin-right: 10px;
+        }
+
+        p {
+          color: $text_white;
+          margin-bottom: 0;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  .links {
+    margin-top: 70px;
+
+    .colWrapper {
+      display: flex;
+
+      .col {
+        width: calc(100% / 4);
+
+        .brand {
+          margin-bottom: 35px;
+        }
+
+        h5 {
+          font-size: 20px;
+          line-height: 25px;
+          color: $c_green;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: $f_size_base;
+          line-height: 20px;
+          color: $text_white;
+        }
+
+        ul {
+
+          li {
+            font-size: $f_size_base;
+            line-height: 20px;
+            color: $text_white;
+            margin-bottom: 5px;
+
+            a {
+
+            }
+          }
+        }
+
+        .socialContact {
+          margin-top: 25px;
+
+          .social {
+
+            a {
+              display: inline-block;
+              margin-right: 20px;
+
+              svg {
+                width: 27px;
+                height: 27px;
+
+                path {
+                  fill: $c_white;
+                }
+              }
+            }
+          }
+
+          .contact {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+
+            a {
+              display: flex;
+              align-items: center;
+              font-size: $f_size_base;
+              font-weight: bold;
+              color: $text_white;
+              margin-bottom: 5px;
+              transition: all .2s ease;
+
+              &:hover {
+                color: $c_green;
+                text-decoration: underline;
+              }
+
+              svg {
+                margin-right: 7px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .logos {
+    margin-top: 80px;
+
+    .logosWrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        margin-right: 50px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 50px;
+
+    p {
+      font-size: 12px;
+      line-height: 15px;
+      color: $text_gray_darker;
+      margin-bottom: 0;
+    }
+  }
 }

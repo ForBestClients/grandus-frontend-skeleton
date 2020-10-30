@@ -1,0 +1,35 @@
+.action-form {
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      height: 48px;
+      width: 580px;
+      padding-left: 32px;
+      border-radius: 10px 0 0 10px;
+
+      &::placeholder {
+        color: $text_gray;
+        font-size: $f_size_base;
+        line-height: 20px;
+      }
+    }
+
+    button {
+      margin-left: 5px;
+      margin-right: 50px;
+      padding: 0 15px;
+      height: 50px;
+      border-radius: 0 10px 10px 0;
+      transition: all .2s ease;
+
+      &:hover {
+        color: $text_white;
+        background-color: transparent;
+      }
+    }
+  }
+}

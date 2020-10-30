@@ -1,8 +1,164 @@
 @import "styles/variables";
 
-.wrapper {
-    padding: $general-gutter;
-    background-color: black;
-    color: orangered;
-    min-height: 100px;
+.header {
+
+  .infoBar {
+    color: $text_white;
+    background-color: $c_red_bg;
+    font-size: 20px;
+    font-weight: bold;
+
+     p {
+       padding: 10px 0;
+       margin: 0;
+
+       a {
+         margin-left: 15px;
+
+         &:hover {
+           text-decoration: underline;
+
+           svg {
+             transform: translateX(5px);
+
+             path {
+               width: 15px;
+             }
+           }
+         }
+
+         svg {
+           transition: transform .2s ease;
+           margin-left: 8px;
+
+           path {
+             fill: $c_white;
+           }
+         }
+       }
+     }
+  }
+
+  .mainBarWrap {
+    background-color: $c_black_bg;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+
+    .mainBar {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+
+    .brand {
+      margin-right: 70px;
+    }
+
+    .contact {
+      font-size: $f_size_base;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      padding: 0 20px;
+      border-left: 1px solid $c_dark_green_border;
+      border-right: 1px solid $c_dark_green_border;
+
+      a {
+        color: $text_white;
+        font-weight: bold;
+        line-height: 20px;
+        white-space: nowrap;
+        transition: all .2s ease;
+
+        svg {
+          margin-right: 7px;
+        }
+
+        &:hover {
+          color: $c_green;
+          text-decoration: underline;
+        }
+
+        &:first-child {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .iconActions {
+      display: flex;
+      align-items: center;
+      height: 100%;
+
+      a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 30px;
+        border-right: 1px solid $c_dark_green_border;
+        transition: all .2s ease;
+        position: relative;
+
+        &:after {
+          opacity: 0;
+          content: '';
+          position: absolute;
+          height: 1px;
+          width: 28px;
+          border-bottom: 2px solid $c_black;
+          left: 0;
+          right: 0;
+          bottom: 25px;
+          margin: 2px auto 0;
+          transition: opacity .2s ease;
+        }
+
+        &:hover {
+          background-color: $c_green;
+
+          &:after {
+            opacity: 1;
+          }
+
+          svg {
+            stroke: $c_black;
+
+            circle {
+              fill: $c_black;
+            }
+
+            path {
+              fill: $c_black;
+            }
+          }
+        }
+      }
+
+      .iconCart {
+
+        .cartCount {
+          position: relative;
+
+          span {
+            font-size: 14px;
+            font-weight: bold;
+            color: $text_white;
+            background-color: $c_count_badge;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            position: absolute;
+            right: -8px;
+            top: -8px;
+            border-radius: 50%;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
 }
+
