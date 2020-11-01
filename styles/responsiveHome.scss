@@ -9,6 +9,22 @@
 
       .categoryWidget {
 
+        ul.categoryWidgetList {
+          width: 100%;
+          background-color: $c_white_bg;
+          border-radius: $b_radius_default;
+          box-shadow: 0 0 5px $c_shadow;
+
+          li.categoryWidgetItem {
+
+            &.hasMegamenu {
+
+              .megamenu {
+                width: calc(1011px - 50px);
+              }
+            }
+          }
+        }
       }
 
       .promoSlider {

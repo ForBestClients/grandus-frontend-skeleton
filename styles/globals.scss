@@ -9,6 +9,11 @@ body {
   margin: 0;
 }
 
+::selection {
+  color: $c_black_bg;
+  background: $c_red_bg;
+}
+
 h1,
 h2,
 h3,
@@ -268,6 +273,44 @@ section.blogPosts {
 
 .promoSlider {
 
+  .promoCarousel {
+    height: 100%;
+
+    ul, li {
+      height: 100%;
+    }
+
+    .promoCarouselArrows {
+      display: flex;
+      position: absolute;
+      right: 30px;
+      bottom: 30px;
+
+      button {
+        display: flex;
+        align-items: center;
+        border: 1px solid $c_white;
+        border-radius: $b_radius_default;
+        background-color: transparent;
+
+        &:hover {
+          background-color: $c_white_bg;
+
+          img {
+            filter: grayscale(1) invert(1);
+          }
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &.promoArrowPrev {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
 }
 
 @import "components";

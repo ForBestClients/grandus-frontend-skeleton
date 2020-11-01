@@ -1,7 +1,68 @@
 import styles from "../styles/Home.module.scss";
-import Slider from "react-slick";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 export default function Home() {
+
+    const CustomRightArrow = ({ onClick, ...rest }) => {
+        const {
+            onMove,
+            carouselState: { currentSlide, deviceType }
+        } = rest;
+
+        // onMove means if dragging or swiping in progress.
+        return <img src="img/arrow-right.svg" className="svg" onClick={() => onClick()} />;
+    };
+
+    const CustomLeftArrow = ({ onClick, ...rest }) => {
+        const {
+            onMove,
+            carouselState: { currentSlide, deviceType }
+        } = rest;
+
+        // onMove means if dragging or swiping in progress.
+        return <img src="img/arrow-left.svg" className="svg" onClick={() => onClick()} />;
+    };
+
+    const PromoArrowsGroup = ({ next, previous, goToSlide, ...rest }) => {
+        const { carouselState: { currentSlide } } = rest;
+
+        return (
+            <div className="promoCarouselArrows">
+                <button className="promoArrowPrev">
+                    <img src="img/arrow-left.svg" onClick={ () => previous() } />
+                </button>
+                <button className="promoArrowNext">
+                    <img src="img/arrow-right.svg" onClick={ () => next() } />
+                </button>
+            </div>
+        );
+    };
+
+    const responsive = {
+
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 1,
+            slidesToSlide: 1
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 1,
+            slidesToSlide: 1
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 1,
+            slidesToSlide: 1
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1,
+            slidesToSlide: 1
+        }
+    };
 
   return (
       <main>
@@ -216,30 +277,45 @@ export default function Home() {
                           </ul>
                       </aside>
                       <div className={[styles.promoSlider, 'promoSlider'].join(' ')}>
-                          <img src="img/thumbnail-1.png"
-                               alt=""
-                               title="" />
-                          {/*<Slider settings={{*/}
-                          {/*    arrows         : false,*/}
-                          {/*    infinite       : true,*/}
-                          {/*    speed          : 500,*/}
-                          {/*    slidesToShow   : 1,*/}
-                          {/*    slidesToScroll : 1,*/}
-                          {/*    lazyLoad       : true,*/}
-                          {/*    nextArrow      : '<img src="img/arrow-right.svg" />',*/}
-                          {/*    prevArrow      : '<img src="img/arrow-left.svg" />'*/}
-                          {/*}}>*/}
-                          {/*    <div className={styles.slide}>*/}
-                          {/*        <img src="img/thumbnail-1.png"*/}
-                          {/*             alt=""*/}
-                          {/*             title="" />*/}
-                          {/*    </div>*/}
-                          {/*    <div className={styles.slide}>*/}
-                          {/*        <img src="img/thumbnail-1.png"*/}
-                          {/*             alt=""*/}
-                          {/*             title="" />*/}
-                          {/*    </div>*/}
-                          {/*</Slider>*/}
+                          <Carousel
+                              responsive={responsive}
+                              swipeable={true}
+                              draggable={false}
+                              infinite={true}
+                              ssr={true}
+                              arrows={false}
+                              customButtonGroup={<PromoArrowsGroup />}
+                              containerClass='promoCarousel'
+                          >
+                              <div className={styles.slide} >
+                                  <img src="img/thumbnail-1.png"
+                                        alt=""
+                                        title=""
+                                        className={styles.slideImage}
+                                  />
+                                  <div className={styles.text}>
+                                      <h3>Herné <br />notebooky</h3>
+                                      <a href="" className="button secondary">
+                                          Zobraziť viac
+                                          <img src="img/arrow-right-1.svg" />
+                                      </a>
+                                  </div>
+                              </div>
+                              <div className={styles.slide} >
+                                  <img src="img/thumbnail-1.png"
+                                       alt=""
+                                       title=""
+                                       className={styles.slideImage}
+                                  />
+                                  <div className={styles.text}>
+                                      <h3>Lorem <br />Ipsum</h3>
+                                      <a href="" className="button secondary">
+                                          Zobraziť viac
+                                          <img src="img/arrow-right-1.svg" />
+                                      </a>
+                                  </div>
+                              </div>
+                          </Carousel>
                       </div>
                       <div className={styles.adBanner}>
                           <img src="img/lenovo.png" alt=""/>

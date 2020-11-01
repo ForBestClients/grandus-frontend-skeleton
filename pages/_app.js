@@ -4,6 +4,7 @@ import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 
 import Head from 'next/head'
+// import Footer from 'next/footer';
 
 const convertImages = (query, callback) => {
     const images = document.querySelectorAll(query);

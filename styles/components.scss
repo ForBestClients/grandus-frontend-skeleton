@@ -97,10 +97,23 @@ button, a.button {
     background-color: $c_white_bg;
     border: 1px solid $c_white;
 
+    img {
+      display: inline-block;
+      width: 13px;
+      height: 10px;
+      margin-left: 10px;
+      transition: transform .2s ease;
+    }
+
     &:hover {
       color: $text-white;
       background-color: transparent;
       border-color: $c_gray_border;
+
+      img {
+        filter: grayscale(1) invert(1);
+        transform: translateX(5px);
+      }
 
       svg {
         transform: translateX(5px);
