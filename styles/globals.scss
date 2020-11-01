@@ -30,6 +30,12 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
 ul {
   padding-left: 0;
   margin: 0;
@@ -46,20 +52,6 @@ ul {
         margin-right: 10px;
       }
     }
-  }
-}
-
-button {
-  display: inline-block;
-  font-size: $f_size_base;
-  font-weight: bold;
-  border: none;
-  background-color: $c_white_bg;
-  cursor: pointer;
-
-  &.primary {
-    background-color: $c_green;
-    border: 1px solid $c_green_border;
   }
 }
 
@@ -83,6 +75,11 @@ form {
   max-width: 100%;
   height: 100%;
 
+  &.sliderContainer {
+    margin: 0 0 0 auto;
+    padding: 0;
+  }
+
   @media ( min-width: $sm ) {
     max-width: 540px;
   }
@@ -97,30 +94,180 @@ form {
 
   @media ( min-width: $xl ) {
     max-width: 1140px;
+
+    &.sliderContainer {
+      max-width: 1170px;
+    }
   }
 
   @media ( min-width: $xxl ) {
     max-width: 1320px;
+
+    &.sliderContainer {
+      max-width: 1350px;
+    }
   }
 
   @media ( min-width: $xxxl ) {
     max-width: 1600px;
+
+    &.sliderContainer {
+      max-width: 1630px;
+    }
   }
 }
 
-@import "components";
+section.favouriteProducts {
+  background-color: $c_main_bg;
+}
 
-//.container {
-//  max-width: 1440px;
-//  margin: 0 auto;
-//
-//  &.guttered {
-//      margin-top: $general-gutter;
-//      margin-bottom: $general-gutter;
-//
-//      @media ( max-width: $xl ) {
-//        padding-left: $general-gutter;
-//        padding-right: $general-gutter;
-//      }      
-//  }
-//}
+section.benefitProducts {
+  background-color: $c_white_bg;
+}
+
+section.newsProducts {
+  background-color: $c_main_bg;
+}
+
+section.blogPosts {
+  background-color: $c_main_bg;
+
+
+  a {
+    display: block;
+    position: relative;
+  }
+
+  .blogPostBadge {
+    color: $text_white;
+    font-size: 14px;
+    line-height: 18px;
+    background-color: $c_red_bg;
+    border-radius: $b_radius_default;
+    padding: 5px 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    box-shadow: 0 0 10px $c_black;
+  }
+
+  .blogPostBox {
+    width: 460px !important;
+    padding: 0 !important;
+
+    &:hover {
+
+      .blogPostThumb {
+
+        &:after {
+          background-color: rgba(0, 0, 0, .6);
+        }
+
+        svg {
+
+          path {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .blogPostThumb {
+      border-top-left-radius: $b_radius_default;
+      border-top-right-radius: $b_radius_default;
+      position: relative;
+
+      &:after {
+        content: '';
+        border-top-left-radius: $b_radius_default;
+        border-top-right-radius: $b_radius_default;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        transition: background-color .2s ease;
+      }
+
+      svg {
+        z-index: 10;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 50%;
+
+        path {
+          fill: $c_white;
+          opacity: 0;
+          transition: opacity .2s ease;
+        }
+      }
+    }
+
+    .text {
+      padding: 20px;
+
+      .postTitle {
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+          max-width: 80%;
+          font-size: 30px !important;
+          line-height: 34px !important;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+
+        .meta {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-end;
+
+          .comments {
+            display: flex;
+            align-items: center;
+
+            svg {
+
+              path {
+                fill: $text_light_gray;
+              }
+            }
+
+            span {
+              position: relative;
+              top: -2px;
+              font-size: $f_size_base;
+              font-weight: bold;
+              color: $text_light_gray;
+              margin-left: 5px;
+            }
+          }
+
+          time {
+            color: $text_light_gray;
+            font-weight: bold;
+            font-size: $f_size_base;
+          }
+        }
+      }
+
+      p {
+        font-size: $f_size_base !important;
+        border-bottom: none !important;
+        opacity: 1 !important;
+      }
+    }
+  }
+}
+
+.promoSlider {
+
+}
+
+@import "components";

@@ -32,4 +32,97 @@
       }
     }
   }
+
+  @media ( max-width: $xxxl ) {
+
+    &.on-header {
+
+      form {
+
+        input {
+          width: 280px;
+        }
+      }
+    }
+  }
+}
+
+.discountBadge {
+  background-color: $c_discount_badge;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 71px;
+  height: 71px;
+
+  span {
+    color: $text_white;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: bold;
+
+    strong {
+      font-size: 24px;
+      line-height: 20px;
+    }
+  }
+}
+
+button {
+  display: inline-block;
+  font-size: $f_size_base;
+  font-weight: bold;
+  border: none;
+  background-color: $c_white_bg;
+  cursor: pointer;
+}
+
+button, a.button {
+  font-size: $f_size_base;
+  border-radius: $b_radius_default;
+  font-weight: bold;
+  transition: all .2s ease;
+  padding: 0 12px;
+  height: 40px;
+  line-height: 40px;
+
+  &.primary {
+    background-color: $c_green;
+    border: 1px solid $c_green_border;
+  }
+
+  &.secondary {
+    color: $text_black;
+    background-color: $c_white_bg;
+    border: 1px solid $c_white;
+
+    &:hover {
+      color: $text-white;
+      background-color: transparent;
+      border-color: $c_gray_border;
+
+      svg {
+        transform: translateX(5px);
+
+        path {
+          fill: $c_white;
+        }
+      }
+    }
+
+    svg {
+      transition: transform .2s ease;
+      margin-left: 10px;
+
+      path {
+        transition: fill .2s ease;
+        fill: $c_black;
+      }
+    }
+  }
+}
+
+a.button {
+  display: inline-block;
 }

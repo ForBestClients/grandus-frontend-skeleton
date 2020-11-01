@@ -27,7 +27,7 @@ const Header = ({}) => {
                      </a>
                  </div>
 
-                 <div className="action-form">
+                 <div className="action-form on-header">
                      <form action="">
                          <input type="text" name="s" placeholder="Hľadaný výraz" />
                          <button type="submit" className="primary">Hľadať</button>

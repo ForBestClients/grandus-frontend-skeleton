@@ -64,6 +64,10 @@
       .col {
         width: calc(100% / 4);
 
+        &:first-child {
+          width: 40%;
+        }
+
         .brand {
           margin-bottom: 35px;
         }
@@ -76,6 +80,7 @@
         }
 
         p {
+          max-width: 60%;
           font-size: $f_size_base;
           line-height: 20px;
           color: $text_white;
@@ -108,7 +113,7 @@
                 width: 27px;
                 height: 27px;
 
-                path {
+                path, circle {
                   fill: $c_white;
                 }
               }
@@ -168,7 +173,7 @@
     p {
       font-size: 12px;
       line-height: 15px;
-      color: $text_gray_darker;
+      color: $text_gray_dark;
       margin-bottom: 0;
     }
   }

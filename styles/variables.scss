@@ -9,23 +9,36 @@ $c_white: #fff;
 $c_black: #000;
 $c_sale: #FF0127;
 
+$c_main_bg: #F3F3F3;
 $c_red_bg: #FF0027;
 $c_black_bg: #101010;
 $c_white_bg: #fff;
+$c_green_bg: #20F800;
 
 $c_green_border: #1EEA00;
+$c_gray_border: #F3F3F3;
 $c_dark_green_border: #313131;
 
 $text_white: #fff;
+$text_light_gray: #D9D9D9;
 $text_gray: #B1B1B1;
-$text_gray_darker: #888888;
+$text_gray_darker: #A8A8A8;
+$text_gray_dark: #888888;
 $text_black: #000;
 
+$text_red_stock: #F30000;
+$text_price: #FF0127;
+$text_danger: #FF0027;
+
 $c_count_badge: #F10000;
+$c_discount_badge: #F80000;
+$c_blue_badge: #3CA0F7;
+$c_favourite_badge: #B474F4;
+$c_info_badge:#FFA439;
 
 $c_shadow: #0000001A;
 
-  //
+//
 // Typography
 //-----------------------------------------------
 $f_family_primary: 'Source Sans Pro', sans-serif;
@@ -33,6 +46,11 @@ $f_family_secondary: 'Montserrat', sans-serif;
 
 $f_size_base: 16px;
 $line_height_base: 25px;
+
+//
+// Other stuff
+//-----------------------------------------------
+$b_radius_default: 10px;
 
 //
 // Breakpoints
@@ -44,37 +62,3 @@ $lg: 992px;
 $xl:  1200px;
 $xxl: 1400px;
 $xxxl: 1600px;
-
-
-
-
-
-$footer-color: rgb(57, 12, 99);
-
-//$xs: 480px;
-//$sm: 766px;
-//$md: 991px;
-//$lg: 1200px;
-//$xl: 1440px;
-
-$general-gutter: 15px;
-$general-shadow: rgba(0, 0, 0, 0.15) 0px 0px 40px;
-
-$discount-color: rgb(230, 59, 69);
-$available-color: rgb(40, 167, 69);
-$unavailable-color: rgb(220, 53, 69);
-$arriving-color: rgb(236, 62, 172);
-
-$primary-color: rgb(80, 35, 122);
-$primary-color-hover: darken($primary-color, 20%);;
-
-$secondary-color: rgb(175, 202, 5);
-$secondary-background: #f7f7f7;
-
-$text-color: rgb(17, 17, 17);
-$blue-color: rgb(0, 89, 255);
-$grey-color: rgb(183, 183, 183);
-$grey-light-color: rgb(238, 238, 238);
-$grey-dark-color: rgb(172, 172, 172);
-
-$shadow-default: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);

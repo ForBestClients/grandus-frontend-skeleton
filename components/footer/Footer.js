@@ -120,6 +120,9 @@ const Footer = ({}) => {
                                 <a href="">
                                     <img src="img/icon-facebook.svg" className="svg" />
                                 </a>
+                                <a href="">
+                                    <img src="img/icon-stores.svg" className="svg" />
+                                </a>
                             </div>
                             <div className={styles.contact}>
                                 <a href="">
@@ -145,6 +148,7 @@ const Footer = ({}) => {
                     <img src="img/hppartner.png" alt=""/>
                     <img src="img/logo-saec.png" alt=""/>
                     <img src="img/master_secure.png" alt=""/>
+                    <img src="img/microsoft-registered.png" alt=""/>
                     <img src="img/visa.png" alt=""/>
                 </div>
             </div>
