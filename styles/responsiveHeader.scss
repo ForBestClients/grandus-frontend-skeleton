@@ -13,3 +13,30 @@
     }
   }
 }
+
+@media ( max-width: $xxl ) {
+
+  .header {
+
+    .mainBarWrap {
+
+
+      .contact {
+        display: none;
+      }
+
+      .iconActions {
+
+        a:first-child {
+          border-left: 1px solid $c_dark_green_border;
+        }
+      }
+    }
+  }
+}
+
+@media ( max-width: $xl ) {
+  .header {
+
+  }
+}

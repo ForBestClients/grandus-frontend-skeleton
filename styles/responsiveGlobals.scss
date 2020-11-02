@@ -2,6 +2,13 @@
 
   .productSlider {
 
+      ul {
+
+        li {
+          width: auto !important;
+        }
+      }
+
     .productCarousel {
 
       .react-multi-carousel-dot-list {
@@ -16,32 +23,37 @@
 
   section.blogPosts {
 
+    .blogPostBox {
+      width: 330px !important;
+    }
+  }
+
+}
+
+@media ( max-width: $xxl ) {
+
+  section.blogPosts {
+
     ul {
 
       li {
-        max-width: 330px;
-        margin-right: 10px;
+        width: auto !important;
       }
     }
 
     .blogPostBox {
-      width: 330px !important;
-      padding: 0 !important;
+      width: 300px !important;
 
-      &:hover {
+      .text {
 
-        .blogPostThumb {
+        .postTitle {
 
-          &:after {
-            background-color: rgba(0, 0, 0, .6);
-          }
-
-          img:last-child {
-            opacity: 1;
+          h4 {
+            font-size: 25px !important;
+            line-height: 29px !important;
           }
         }
       }
     }
   }
-
 }

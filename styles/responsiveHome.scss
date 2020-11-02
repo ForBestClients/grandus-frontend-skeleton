@@ -65,5 +65,29 @@
   }
 }
 
+@media ( max-width: $xxl ) {
+
+  section.promo {
+
+    .grid {
+      width: auto;
+    }
+
+    .miniBanners {
+
+      .gridMiniBanners {
+        width: auto;
+      }
+    }
+  }
+
+  section.productSliderWrapper {
+
+    .box {
+
+    }
+  }
+}
+
 
 
