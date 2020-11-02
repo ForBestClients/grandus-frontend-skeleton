@@ -437,8 +437,8 @@ section.promo {
 
 section.productSliderWrapper {
   padding-top: 35px;
-  padding-bottom: 55px;
-  overflow: hidden;
+  //padding-bottom: 55px;
+  //overflow: hidden;
 
   h2 {
     font-size: 40px;
@@ -446,165 +446,160 @@ section.productSliderWrapper {
     line-height: 50px;
   }
 
-  .productSlider {
-    display: flex;
-    align-items: center;
+  .box {
+    background-color: $c_white_bg;
+    width: 330px;
+    padding: 20px;
+    box-shadow: 0 0 5px $c_shadow;
+    margin-right: 15px;
+    position: relative;
+    border-radius: $b_radius_default;
 
-    .box {
-      background-color: $c_white_bg;
-      width: 330px;
-      padding: 20px;
-      box-shadow: 0 0 5px $c_shadow;
-      margin-right: 15px;
+    .badges {
+      position: absolute;
+      left: -10px;
+      top: 20px;
+
+      div {
+        display: flex;
+        align-items: center;
+        padding: 0 13px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        margin-bottom: 10px;
+        position: relative;
+
+        span {
+          color: $text_white;
+          font-size: 13px;
+          //line-height: 13px;
+          font-weight: bold;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: block;
+          width: 10px;
+          height: 25px;
+          z-index: 1;
+          background: $c_main_bg;
+          transform: skew(15deg, 0deg) translateX(-4px);
+        }
+      }
+
+      .badgeNew {
+        background-color: $c_blue_badge;
+      }
+
+      .favourite {
+        background-color: $c_favourite_badge;
+      }
+
+      .delivery {
+        background-color: $c_info_badge;
+      }
+    }
+
+    .productThumb {
+      display: block;
+      text-align: center;
       position: relative;
-      border-radius: $b_radius_default;
 
-      .badges {
+      .productDiscountBadge {
         position: absolute;
-        left: -10px;
-        top: 20px;
+        right: 0;
+        top: 0;
+      }
+    }
 
-        div {
-          display: flex;
-          align-items: center;
-          padding: 0 13px;
-          border-top-right-radius: 10px;
-          border-bottom-right-radius: 10px;
-          margin-bottom: 10px;
-          position: relative;
+    .infoBarWrapper {
 
-          span {
-            color: $text_white;
-            font-size: 13px;
-            //line-height: 13px;
+      .infoStock {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 15px;
+        font-weight: bold;
+        color: $text_red_stock;
+        text-transform: uppercase;
+        margin-top: 10px;
+
+        &:before {
+          content: '●';
+          font-size: 10px;
+          margin-right: 3px;
+        }
+      }
+
+      .productActions {
+
+      }
+    }
+
+    h4 {
+      color: $text_black;
+      font-size: 20px;
+      line-height: 20px;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      color: $text_black;
+      opacity: .5;
+      margin-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(0, 0, 0, .5);
+    }
+
+    .priceWrapper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .mainPrice {
+        display: flex;
+        flex-direction: column;
+
+        span {
+
+          &:first-child {
+            font-size: 30px;
             font-weight: bold;
+            line-height: 34px;
+            color: $text_price;
           }
+
+          &:last-child {
+            font-size: 14px;
+            line-height: 34px;
+            color: $text_black;
+            opacity: .5;
+          }
+        }
+      }
+
+      .discountPrice {
+
+        span {
+          display: block;
+          font-size: 20px;
+          line-height: 34px;
+          color: $text_black;
+          position: relative;
 
           &:before {
             content: '';
             position: absolute;
-            left: 0;
-            top: 0;
-            display: block;
-            width: 10px;
-            height: 25px;
-            z-index: 1;
-            background: $c_main_bg;
-            transform: skew(15deg, 0deg) translateX(-4px);
-          }
-        }
-
-        .badgeNew {
-          background-color: $c_blue_badge;
-        }
-
-        .favourite {
-          background-color: $c_favourite_badge;
-        }
-
-        .delivery {
-          background-color: $c_info_badge;
-        }
-      }
-
-      .productThumb {
-        display: block;
-        text-align: center;
-        position: relative;
-
-        .productDiscountBadge {
-          position: absolute;
-          right: 0;
-          top: 0;
-        }
-      }
-
-      .infoBarWrapper {
-
-        .infoStock {
-          display: flex;
-          align-items: center;
-          font-size: 14px;
-          line-height: 15px;
-          font-weight: bold;
-          color: $text_red_stock;
-          text-transform: uppercase;
-          margin-top: 10px;
-
-          &:before {
-            content: '●';
-            font-size: 10px;
-            margin-right: 3px;
-          }
-        }
-
-        .productActions {
-
-        }
-      }
-
-      h4 {
-        color: $text_black;
-        font-size: 20px;
-        line-height: 20px;
-        margin-top: 10px;
-        margin-bottom: 0;
-      }
-
-      p {
-        font-size: 14px;
-        line-height: 20px;
-        color: $text_black;
-        opacity: .5;
-        margin-top: 10px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid rgba(0, 0, 0, .5);
-      }
-
-      .priceWrapper {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-
-        .mainPrice {
-          display: flex;
-          flex-direction: column;
-
-          span {
-
-            &:first-child {
-              font-size: 30px;
-              font-weight: bold;
-              line-height: 34px;
-              color: $text_price;
-            }
-
-            &:last-child {
-              font-size: 14px;
-              line-height: 34px;
-              color: $text_black;
-              opacity: .5;
-            }
-          }
-        }
-
-        .discountPrice {
-
-          span {
-            display: block;
-            font-size: 20px;
-            line-height: 34px;
-            color: $text_black;
-            position: relative;
-            
-            &:before {
-              content: '';
-              position: absolute;
-              width: 100%;
-              height: 1px;
-              top: 55%;
-              background-color: $text_black;
-            }
+            width: 100%;
+            height: 1px;
+            top: 55%;
+            background-color: $text_black;
           }
         }
       }
@@ -836,7 +831,7 @@ section.bannerLinks {
         margin-left: 20px;
 
         &:hover {
-          background-color: $c_black_bg;
+          background-color: rgba(16, 16, 16, .6);
           opacity: .6;
         }
       }
