@@ -1,0 +1,47 @@
+@media ( max-width: $xxxl ) {
+
+  .productSlider {
+
+    .productCarousel {
+
+      .react-multi-carousel-dot-list {
+        padding-left: 105px;
+      }
+    }
+
+    .carouselArrows {
+      padding-right: 105px;
+    }
+  }
+
+  section.blogPosts {
+
+    ul {
+
+      li {
+        max-width: 330px;
+        margin-right: 10px;
+      }
+    }
+
+    .blogPostBox {
+      width: 330px !important;
+      padding: 0 !important;
+
+      &:hover {
+
+        .blogPostThumb {
+
+          &:after {
+            background-color: rgba(0, 0, 0, .6);
+          }
+
+          img:last-child {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+}

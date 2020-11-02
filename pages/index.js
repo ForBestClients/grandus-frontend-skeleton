@@ -92,6 +92,31 @@ export default function Home() {
         }
     };
 
+    const testimonialSliderResponsive = {
+
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 1,
+            slidesToSlide: 1
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 1,
+            slidesToSlide: 1
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 1,
+            slidesToSlide: 1
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1,
+            slidesToSlide: 1
+        }
+    };
+
   return (
       <main>
 
@@ -423,7 +448,12 @@ export default function Home() {
           {/* Start Favourite Products Slider */}
           <section className={[styles.productSliderWrapper, 'favouriteProducts', 'productSlider'].join(' ')}>
               <div className="container">
-                  <h2>Obľúbené</h2>
+                  <div className="sliderTitle">
+                      <h2>Obľúbené</h2>
+                      <a href="">
+                          Zobraziť viac
+                      </a>
+                  </div>
               </div>
               {/*<div className={['container', 'sliderContainer'].join(' ')}>*/}
                   {/*<h2>Obľúbené</h2>*/}
@@ -731,7 +761,12 @@ export default function Home() {
           {/* Start Benefit Products Slider */}
           <section className={[styles.productSliderWrapper, 'benefitProducts', 'productSlider'].join(' ')}>
               <div className="container">
-                  <h2>Najvýhodnejšie</h2>
+                  <div className="sliderTitle">
+                      <h2>Najvýhodnejšie</h2>
+                      <a href="">
+                          Zobraziť viac
+                      </a>
+                  </div>
               </div>
               <Carousel
                   responsive={productSliderResponsive}
@@ -1142,7 +1177,12 @@ export default function Home() {
           {/* Start News Products Slider */}
           <section className={[styles.productSliderWrapper, 'newsProducts' , 'productSlider'].join(' ')}>
               <div className="container">
-                  <h2>Novinky</h2>
+                  <div className="sliderTitle">
+                      <h2>Novinky</h2>
+                      <a href="">
+                          Zobraziť viac
+                      </a>
+                  </div>
               </div>
               <Carousel
                   responsive={productSliderResponsive}
@@ -1461,7 +1501,12 @@ export default function Home() {
           {/* Start Blog Posts Slider */}
           <section className={[styles.productSliderWrapper, 'blogPosts', 'productSlider'].join(' ')}>
               <div className="container">
-                  <h2>Prečítajte si <br /> náš blog.</h2>
+                  <div className="sliderTitle">
+                      <h2>Prečítajte si <br /> náš blog.</h2>
+                      <a href="">
+                          <img src="img/logo-bigblog.png" alt=""/>
+                      </a>
+                  </div>
               </div>
               <Carousel
                   responsive={productSliderResponsive}
@@ -1707,22 +1752,65 @@ export default function Home() {
           <section className={styles.testimonials}>
               <div className="container">
                   <div className={styles.testimonialsWrapper}>
-                      <div className={styles.testimonial}>
-                          <h5 className="text-center">Peter</h5>
-                          <p className={styles.description}>
-                              “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.”
-                              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.”
-                          </p>
-                          <div className={styles.rating}>
-                              <img src="img/icon-star.svg" className="svg" />
-                              <img src="img/icon-star.svg" className="svg" />
-                              <img src="img/icon-star.svg" className="svg" />
-                              <img src="img/icon-star.svg" className="svg" />
-                              <img src="img/icon-star.svg" className="svg" />
+                      <Carousel
+                          responsive={testimonialSliderResponsive}
+                          swipeable={true}
+                          draggable={false}
+                          infinite={true}
+                          ssr={true}
+                          arrows={false}
+                          showDots={false}
+                          autoPlay={true}
+                      >
+                          <div className={styles.testimonial}>
+                              <h5 className="text-center">Peter</h5>
+                              <p className={styles.description}>
+                                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.”
+                                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.”
+                              </p>
+                              <div className={styles.rating}>
+                                  <img src="img/icon-star.svg" className="svg" />
+                                  <img src="img/icon-star.svg" className="svg" />
+                                  <img src="img/icon-star.svg" className="svg" />
+                                  <img src="img/icon-star.svg" className="svg" />
+                                  <img src="img/icon-star.svg" className="svg" />
+                              </div>
                           </div>
-                      </div>
+                          <div className={styles.testimonial}>
+                              <h5 className="text-center">Andrej</h5>
+                              <p className={styles.description}>
+                                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.”
+                                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.”
+                              </p>
+                              <div className={styles.rating}>
+                                  <img src="img/icon-star.svg" className="svg" />
+                                  <img src="img/icon-star.svg" className="svg" />
+                                  <img src="img/icon-star.svg" className="svg" />
+                                  <img src="img/icon-star.svg" className="svg" />
+                                  <img src="img/icon-star.svg" className="svg" />
+                              </div>
+                          </div>
+                          <div className={styles.testimonial}>
+                              <h5 className="text-center">Filip</h5>
+                              <p className={styles.description}>
+                                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.”
+                                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa.”
+                              </p>
+                              <div className={styles.rating}>
+                                  <img src="img/icon-star.svg" className="svg" />
+                                  <img src="img/icon-star.svg" className="svg" />
+                                  <img src="img/icon-star.svg" className="svg" />
+                                  <img src="img/icon-star.svg" className="svg" />
+                                  <img src="img/icon-star.svg" className="svg" />
+                              </div>
+                          </div>
+                      </Carousel>
                   </div>
               </div>
           </section>

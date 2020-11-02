@@ -392,5 +392,24 @@ section.blogPosts {
   }
 }
 
+.sliderTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    display: block;
+    color: $c_black;
+    font-size: $f_size_base;
+    font-weight: bold;
+    line-height: 20px;
+    margin-bottom: 40px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 
 @import "components";
+@import "responsiveGlobals";
