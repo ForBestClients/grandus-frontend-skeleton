@@ -57,3 +57,34 @@
     }
   }
 }
+
+@media ( max-width: $lg ) {
+
+  .miniBannerCarousel {
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 20%;
+      height: 100%;
+      background: transparent linear-gradient(90deg, #FFFFFF00 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    }
+
+    .carouselArrowsMiniBanners {
+      position: absolute;
+      right: 25px;
+      z-index: 10;
+
+      .arrowNext {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+@media ( max-width: $md ) {
+
+
+}

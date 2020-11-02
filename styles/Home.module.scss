@@ -337,106 +337,102 @@ section.promo {
       }
     }
   }
+}
 
-  .miniBanners {
-    margin-top: 10px;
+.miniBanners, .miniBannersMobile {
+  margin-top: 10px;
 
-    .gridMiniBanners {
-      display: grid;
-      grid-template-columns: repeat(4, 319px);
-      grid-template-rows: 150px;
-      grid-column-gap: 10px;
-      grid-row-gap: 0;
-      padding-left: 295px;
+  .gridMiniBanners {
+    display: grid;
+    grid-template-columns: repeat(4, 319px);
+    grid-template-rows: 150px;
+    grid-column-gap: 10px;
+    grid-row-gap: 0;
+    padding-left: 295px;
+  }
 
-      .miniBanner {
-        position: relative;
-        //margin-right: 10px;
-        overflow: hidden;
-        border-radius: $b_radius_default;
+  .miniBanner {
+    position: relative;
+    //margin-right: 10px;
+    overflow: hidden;
+    border-radius: $b_radius_default;
 
-        &:hover {
+    &:hover {
 
-          img {
-            transform: scale(1.05);
-          }
-
-          svg {
-            opacity: 1;
-          }
-        }
-
-        img {
-          width: 100%;
-          height: 100%;
-          border-radius: $b_radius_default;
-          transition: transform .2s ease;
-        }
-
-        svg {
-          position: absolute;
-          right: 10px;
-          top: 50%;
-          opacity: 0;
-          transition: opacity .2s ease;
-
-          path {
-            fill: $c_white;
-          }
-        }
-
-        .text {
-          color: $text-white;
-          position: absolute;
-          left: 33px;
-          bottom: 20px;
-
-          h5 {
-            font-size: 30px;
-            line-height: 30px;
-            color: inherit;
-            margin-bottom: 25px;
-          }
-          
-          span {
-            font-size: 16px;
-            line-height: 20px;
-            font-weight: bold;
-            display: block;
-          }
-        }
-
-        &:nth-child(1) {
-          grid-area: 1 / 1 / 2 / 2;
-        }
-
-        &:nth-child(2) {
-          grid-area: 1 / 2 / 2 / 3;
-        }
-
-        &:nth-child(3) {
-          grid-area: 1 / 3 / 2 / 4;
-        }
-
-        &:nth-child(4) {
-          grid-area: 1 / 4 / 2 / 5;
-          margin-right: 0;
-        }
+      img {
+        transform: scale(1.05);
       }
+
+      svg {
+        opacity: 1;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: $b_radius_default;
+      transition: transform .2s ease;
+    }
+
+    svg {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      opacity: 0;
+      transition: opacity .2s ease;
+
+      path {
+        fill: $c_white;
+      }
+    }
+
+    .text {
+      color: $text-white;
+      position: absolute;
+      left: 33px;
+      bottom: 20px;
+
+      h5 {
+        font-size: 30px;
+        line-height: 30px;
+        color: inherit;
+        margin-bottom: 25px;
+      }
+
+      span {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: bold;
+        display: block;
+      }
+    }
+
+    &:nth-child(1) {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    &:nth-child(2) {
+      grid-area: 1 / 2 / 2 / 3;
+    }
+
+    &:nth-child(3) {
+      grid-area: 1 / 3 / 2 / 4;
+    }
+
+    &:nth-child(4) {
+      grid-area: 1 / 4 / 2 / 5;
+      margin-right: 0;
     }
   }
 }
 
+section.miniBannersMobile {
+  display: none;
+}
 
 section.productSliderWrapper {
   padding-top: 35px;
-
-  h2 {
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 50px;
-    margin-bottom: 50px;
-  }
 
   .box {
     background-color: $c_white_bg;
@@ -451,6 +447,7 @@ section.productSliderWrapper {
       position: absolute;
       left: -10px;
       top: 20px;
+      z-index: 10;
 
       div {
         display: flex;
@@ -817,13 +814,24 @@ section.bannerLinks {
         margin-left: 20px;
       }
 
-      a {
+      span {
         max-width: 116px;
         margin-bottom: 20px;
         margin-left: 20px;
 
+        img {
+          width: 14px !important;
+          height: 10px !important;
+          transition: all .2s ease;
+          filter: grayscale(1) invert(1);
+        }
+
         &:hover {
           background-color: rgba(16, 16, 16, .6);
+
+          img {
+            filter: grayscale(0) invert(0);
+          }
         }
       }
     }
@@ -935,4 +943,386 @@ section.testimonials {
   }
 }
 
-@import "responsiveHome";
+@media ( max-width: $xxxl ) {
+
+  section.promo {
+
+    .grid {
+      width: 1320px;
+      // FIX
+      grid-template-columns: 25% 50.8% 25%;
+
+      .categoryWidget {
+
+        ul.categoryWidgetList {
+          width: 100%;
+          background-color: $c_white_bg;
+          border-radius: $b_radius_default;
+          box-shadow: 0 0 5px $c_shadow;
+
+          li.categoryWidgetItem {
+
+            &.hasMegamenu {
+
+              .megamenu {
+                width: calc(1011px - 50px);
+              }
+            }
+          }
+        }
+      }
+
+      .promoSlider {
+
+      }
+
+      .adBanner {
+
+      }
+    }
+
+    .miniBanners {
+
+      .gridMiniBanners {
+        width: 1320px;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: 150px;
+        padding-left: 0;
+      }
+    }
+  }
+
+  section.bannerLinks {
+
+    .bannerLinksGrid {
+
+      &:first-child {
+        display: flex;
+
+        .box {
+
+          &:first-child {
+            max-width: 30%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media ( max-width: $xxl ) {
+
+  section.promo {
+
+    .grid {
+      width: auto;
+    }
+
+    .miniBanners {
+
+      .gridMiniBanners {
+        width: auto;
+      }
+    }
+  }
+
+  section.productSliderWrapper {
+
+    .box {
+
+    }
+  }
+}
+
+// Responsive
+@media ( max-width: $xl ) {
+
+  section.bannerOffer {
+
+    .bannerWrapper {
+      flex-direction: column;
+
+      .first, .second {
+        width: 100%;
+      }
+
+      .first {
+        padding-left: 0;
+        border-radius: $b_radius_default  $b_radius_default 0 0;
+
+        h3 {
+          padding-left: 20px;
+        }
+
+        p {
+          padding-left: 20px;
+        }
+
+        div.prices {
+          padding-left: 20px;
+        }
+      }
+
+      .second {
+        border-radius: 0 0 $b_radius_default  $b_radius_default;
+      }
+    }
+  }
+}
+
+
+@media ( max-width: $lg ) {
+
+  section.promo {
+
+    .grid {
+      display: block;
+      width: 100%;
+
+      .categoryWidget {
+        display: none;
+      }
+
+      .promoSlider {
+        height: 350px;
+        margin-bottom: 10px;
+      }
+
+      .adBanner {
+        border-radius: $b_radius_default;
+        max-height: 250px;
+        overflow: hidden;
+
+        img {
+          border-radius: $b_radius_default;
+        }
+      }
+    }
+
+    .miniBanners {
+      display: none;
+    }
+  }
+
+  section.miniBannersMobile {
+    background-color: $c_main_bg;
+    display: block;
+
+    .miniBanner {
+      margin-right: 10px;
+
+      &:hover {
+
+        img:first-child {
+          transform: scale(1.05);
+        }
+
+        img:last-child {
+          opacity: 1;
+        }
+      }
+
+      img:first-child {
+        width: 100%;
+        height: 100%;
+        border-radius: $b_radius_default;
+        transition: transform .2s ease;
+      }
+
+      img:last-child {
+        width: 14px;
+        height: 10px;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        opacity: 0;
+        transition: opacity .2s ease;
+      }
+
+      .text {
+        color: $text-white;
+        position: absolute;
+        left: 33px;
+        bottom: 20px;
+
+        h5 {
+          font-size: 30px;
+          line-height: 30px;
+          color: inherit;
+          margin-bottom: 25px;
+        }
+
+        span {
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: bold;
+          display: block;
+        }
+      }
+    }
+  }
+
+  section.productSliderWrapper {
+
+    .box {
+      width: 180px;
+
+      .badges {
+
+        div {
+
+          span {
+            font-weight: normal;
+          }
+        }
+      }
+
+      .infoBarWrapper {
+
+        .infoStock {
+          font-size: 10px;
+          line-height: 7px;
+
+          &:before {
+            content: '●';
+            font-size: 10px;
+            margin-right: 3px;
+          }
+        }
+
+        .productActions {
+
+        }
+      }
+
+      h4 {
+        font-size: 16px;
+        line-height: 17px;
+      }
+
+      p {
+        font-size: 10px;
+        line-height: 15px;
+      }
+
+      .priceWrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .mainPrice {
+          display: flex;
+          flex-direction: column;
+
+          span {
+
+            &:first-child {
+              font-size: 18px;
+              line-height: 17px;
+            }
+
+            &:last-child {
+              font-size: 10px;
+              line-height: 15px;
+            }
+          }
+        }
+
+        .discountPrice {
+
+          span {
+            font-size: 14px;
+            line-height: 11px;
+          }
+        }
+      }
+    }
+  }
+
+  section.bannerLinks {
+
+    .bannerLinksGrid {
+
+      &:first-child {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 150px 150px;
+
+        div.box {
+
+          &:nth-child(1) {
+            grid-area: 1 / 1 / 2 / 3;
+
+            h3 {
+              font-size: 20px;
+              line-height: 25px;
+            }
+          }
+
+          &:nth-child(2) {
+            grid-area: 2 / 1 / 3 / 2;
+          }
+
+          &:nth-child(3) {
+            grid-area: 2 / 2 / 3 / 3;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      &:last-child {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 150px;
+        grid-column-gap: 10px;
+
+        div.box {
+          height: 100%;
+          width: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  section.testimonials {
+
+    .testimonial {
+      max-width: 100%;
+      margin: auto;
+    }
+  }
+}
+
+@media ( max-width: $md ) {
+
+  section.bannerOffer {
+    display: none;
+  }
+
+  section.bannerLinks {
+
+    .bannerLinksGrid {
+
+      .box {
+
+        h5 {
+          font-size: 18px;
+          line-height: 7px;
+        }
+
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+}

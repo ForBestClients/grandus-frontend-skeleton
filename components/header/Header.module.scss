@@ -162,4 +162,92 @@
   }
 }
 
-@import "styles/responsiveHeader";
+@media ( max-width: $xxxl ) {
+
+  .header {
+
+    .action-form {
+
+      form {
+
+        input {
+          width: 280px;
+        }
+      }
+    }
+  }
+}
+
+@media ( max-width: $xxl ) {
+
+  .header {
+
+    .mainBarWrap {
+
+      .contact {
+        display: none;
+      }
+
+      .iconActions {
+
+        a:first-child {
+          border-left: 1px solid $c_dark_green_border;
+        }
+      }
+    }
+  }
+}
+
+@media ( max-width: $xl ) {
+
+  .header {
+
+    .action-form {
+
+      form {
+
+        input {
+          width: 320px;
+        }
+      }
+    }
+
+    .mainBarWrap {
+
+      .mainBar {
+        justify-content: center;
+      }
+
+      .iconActions {
+
+        a {
+          display: none;
+        }
+
+        .iconCart {
+          border-right: none;
+          display: flex;
+
+          .cartCount {
+            position: relative;
+
+            span {
+              font-size: 14px;
+              font-weight: bold;
+              color: $text_white;
+              background-color: $c_count_badge;
+              width: 20px;
+              height: 20px;
+              line-height: 20px;
+              position: absolute;
+              right: -8px;
+              top: -8px;
+              border-radius: 50%;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

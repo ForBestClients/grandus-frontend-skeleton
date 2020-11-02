@@ -67,6 +67,26 @@
       line-height: 20px;
     }
   }
+
+  @media ( max-width: $lg ) {
+
+    & {
+      width: 43px;
+      height: 43px;
+
+      span {
+        display: block;
+        font-size: 8px;
+        line-height: 15px;
+        font-weight: normal;
+
+        strong {
+          font-size: 14px;
+          line-height: 9px;
+        }
+      }
+    }
+  }
 }
 
 button {
@@ -78,7 +98,7 @@ button {
   cursor: pointer;
 }
 
-button, a.button {
+button, a.button, span.button {
   font-size: $f_size_base;
   border-radius: $b_radius_default;
   font-weight: bold;
@@ -86,6 +106,7 @@ button, a.button {
   padding: 0 12px;
   height: 40px;
   line-height: 40px;
+  cursor: pointer;
 
   &.primary {
     background-color: $c_green;

@@ -394,6 +394,13 @@ section.blogPosts {
   align-items: center;
   justify-content: space-between;
 
+  h2 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 50px;
+    margin-bottom: 50px;
+  }
+
   a {
     display: block;
     color: $c_black;
@@ -404,6 +411,25 @@ section.blogPosts {
 
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  @media ( max-width: $md ) {
+
+    h2 {
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      display: none;
     }
   }
 }

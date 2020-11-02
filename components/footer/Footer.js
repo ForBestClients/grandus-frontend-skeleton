@@ -104,13 +104,15 @@ const Footer = ({}) => {
                         </ul>
                     </div>
                     <div className={styles.col}>
-                        <h5>Adresa</h5>
-                        <ul>
-                            <li>BigON s.r.o.</li>
-                            <li>Horná 18</li>
-                            <li>97401, Banská Bystrica</li>
-                            <li>Slovensko</li>
-                        </ul>
+                        <div>
+                            <h5>Adresa</h5>
+                            <ul>
+                                <li>BigON s.r.o.</li>
+                                <li>Horná 18</li>
+                                <li>97401, Banská Bystrica</li>
+                                <li>Slovensko</li>
+                            </ul>
+                        </div>
 
                         <div className={styles.socialContact}>
                             <div className={styles.social}>

@@ -19,6 +19,21 @@ export default function Home() {
         );
     };
 
+    const MiniBannerArrows = ({ next, previous, goToSlide, ...rest }) => {
+        const { carouselState: { currentSlide } } = rest;
+
+        return (
+            <div className="carouselArrowsMiniBanners">
+                {/*<button className="arrowPrev" onClick={ () => previous() }>*/}
+                {/*    <img src="img/arrow-left.svg" />*/}
+                {/*</button>*/}
+                <button className="arrowNext" onClick={ () => next() }>
+                    <img src="img/arrow-right.svg" />
+                </button>
+            </div>
+        );
+    };
+
     const promoSliderResponsive = {
 
         superLargeDesktop: {
@@ -44,6 +59,21 @@ export default function Home() {
         }
     };
 
+    const miniBannersSliderResponsive = {
+
+        tablet: {
+            breakpoint: { max: 1024, min: 576 },
+            items: 2,
+            slidesToSlide: 1,
+        },
+        mobile: {
+            breakpoint: { max: 576, min: 0 },
+            items: 1,
+            slidesToSlide: 1,
+            partialVisibilityGutter: 40
+        }
+    }
+
     const productSliderResponsive = {
 
         superLargeDesktop: {
@@ -58,14 +88,15 @@ export default function Home() {
             slidesToSlide: 1,
         },
         tablet: {
-            breakpoint: { max: 1024, min: 464 },
+            breakpoint: { max: 1024, min: 576 },
             items: 3,
             slidesToSlide: 1
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
+            breakpoint: { max: 576, min: 0 },
             items: 1,
-            slidesToSlide: 1
+            slidesToSlide: 1,
+            partialVisibilityGutter: 40
         }
     };
 
@@ -83,12 +114,12 @@ export default function Home() {
             slidesToSlide: 1
         },
         tablet: {
-            breakpoint: { max: 1024, min: 464 },
+            breakpoint: { max: 1024, min: 576 },
             items: 1,
             slidesToSlide: 1
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
+            breakpoint: { max: 576, min: 0 },
             items: 1,
             slidesToSlide: 1
         }
@@ -108,12 +139,12 @@ export default function Home() {
             slidesToSlide: 1
         },
         tablet: {
-            breakpoint: { max: 1024, min: 464 },
+            breakpoint: { max: 1024, min: 576 },
             items: 1,
             slidesToSlide: 1
         },
         mobile: {
-            breakpoint: { max: 464, min: 0 },
+            breakpoint: { max: 576, min: 0 },
             items: 1,
             slidesToSlide: 1
         }
@@ -123,73 +154,73 @@ export default function Home() {
       <main>
 
           {/* Start Fixed Category List */}
-          <aside className={styles.categoryWidgetFixed}>
-              <ul>
-                  <li>
-                      <img src="img/icon-notebooky.svg" className="svg" />
-                      <div className={styles.text}>
-                          <span>Notebooky</span>
-                          <img src="img/arrow-right.svg" className="svg"/>
-                      </div>
-                  </li>
-                  <li>
-                      <img src="img/icon-pc.svg" className="svg" />
-                      <div className={styles.text}>
-                          <span>Počítače</span>
-                          <img src="img/arrow-right.svg" className="svg"/>
-                      </div>
-                  </li>
-                  <li>
-                      <img src="img/icon-mobile.svg" className="svg" />
-                      <div className={styles.text}>
-                          <span>Telefón a tablety</span>
-                          <img src="img/arrow-right.svg" className="svg"/>
-                      </div>
-                  </li>
-                  <li>
-                      <img src="img/icon-monitor.svg" className="svg" />
-                      <div className={styles.text}>
-                          <span>Monitory</span>
-                          <img src="img/arrow-right.svg" className="svg"/>
-                      </div>
-                  </li>
-                  <li>
-                      <img src="img/icon-components.svg" className="svg" />
-                      <div className={styles.text}>
-                          <span>Komponenty</span>
-                          <img src="img/arrow-right.svg" className="svg"/>
-                      </div>
-                  </li>
-                  <li>
-                      <img src="img/icon-electronics.svg" className="svg" />
-                      <div className={styles.text}>
-                          <span>Doplnky a elektronika</span>
-                          <img src="img/arrow-right.svg" className="svg"/>
-                      </div>
-                  </li>
-                  <li>
-                      <img src="img/icon-software.svg" className="svg" />
-                      <div className={styles.text}>
-                          <span>Softvér a služby</span>
-                          <img src="img/arrow-right.svg" className="svg"/>
-                      </div>
-                  </li>
-                  <li className={styles.discount}>
-                      <img src="img/icon-discount.svg" className="svg" />
-                      <div className={styles.text}>
-                          <span>Výpredaj</span>
-                          <img src="img/arrow-right.svg" className="svg"/>
-                      </div>
-                  </li>
-                  <li>
-                      <img src="img/icon-all-products.svg" className="svg" />
-                      <div className={styles.text}>
-                          <span>Všetky produkty</span>
-                          <img src="img/arrow-right.svg" className="svg"/>
-                      </div>
-                  </li>
-              </ul>
-          </aside>
+          {/*<aside className={styles.categoryWidgetFixed}>*/}
+          {/*    <ul>*/}
+          {/*        <li>*/}
+          {/*            <img src="img/icon-notebooky.svg" className="svg" />*/}
+          {/*            <div className={styles.text}>*/}
+          {/*                <span>Notebooky</span>*/}
+          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
+          {/*            </div>*/}
+          {/*        </li>*/}
+          {/*        <li>*/}
+          {/*            <img src="img/icon-pc.svg" className="svg" />*/}
+          {/*            <div className={styles.text}>*/}
+          {/*                <span>Počítače</span>*/}
+          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
+          {/*            </div>*/}
+          {/*        </li>*/}
+          {/*        <li>*/}
+          {/*            <img src="img/icon-mobile.svg" className="svg" />*/}
+          {/*            <div className={styles.text}>*/}
+          {/*                <span>Telefón a tablety</span>*/}
+          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
+          {/*            </div>*/}
+          {/*        </li>*/}
+          {/*        <li>*/}
+          {/*            <img src="img/icon-monitor.svg" className="svg" />*/}
+          {/*            <div className={styles.text}>*/}
+          {/*                <span>Monitory</span>*/}
+          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
+          {/*            </div>*/}
+          {/*        </li>*/}
+          {/*        <li>*/}
+          {/*            <img src="img/icon-components.svg" className="svg" />*/}
+          {/*            <div className={styles.text}>*/}
+          {/*                <span>Komponenty</span>*/}
+          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
+          {/*            </div>*/}
+          {/*        </li>*/}
+          {/*        <li>*/}
+          {/*            <img src="img/icon-electronics.svg" className="svg" />*/}
+          {/*            <div className={styles.text}>*/}
+          {/*                <span>Doplnky a elektronika</span>*/}
+          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
+          {/*            </div>*/}
+          {/*        </li>*/}
+          {/*        <li>*/}
+          {/*            <img src="img/icon-software.svg" className="svg" />*/}
+          {/*            <div className={styles.text}>*/}
+          {/*                <span>Softvér a služby</span>*/}
+          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
+          {/*            </div>*/}
+          {/*        </li>*/}
+          {/*        <li className={styles.discount}>*/}
+          {/*            <img src="img/icon-discount.svg" className="svg" />*/}
+          {/*            <div className={styles.text}>*/}
+          {/*                <span>Výpredaj</span>*/}
+          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
+          {/*            </div>*/}
+          {/*        </li>*/}
+          {/*        <li>*/}
+          {/*            <img src="img/icon-all-products.svg" className="svg" />*/}
+          {/*            <div className={styles.text}>*/}
+          {/*                <span>Všetky produkty</span>*/}
+          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
+          {/*            </div>*/}
+          {/*        </li>*/}
+          {/*    </ul>*/}
+          {/*</aside>*/}
           {/* End Fixed Category List */}
 
           {/* Start Section Promo */}
@@ -385,7 +416,7 @@ export default function Home() {
                   </div>
                   {/* End Grid Section */}
 
-                  {/* Start Mini Banners Section */}
+                  {/* Start Mini Banners Section Desktop */}
                   <section className={styles.miniBanners}>
                       <div className={styles.gridMiniBanners}>
                           <div className={styles.miniBanner}>
@@ -442,10 +473,81 @@ export default function Home() {
                           </div>
                       </div>
                   </section>
-                  {/* End Mini Banners Section  */}
+                  {/* End Mini Banners Section Desktop */}
+
               </div>
           </section>
           {/* End Section Promo */}
+
+          {/* Start Mini Banners Section Mobile */}
+          <section className={[styles.miniBanners, styles.miniBannersMobile].join(' ')}>
+              <Carousel
+                  responsive={miniBannersSliderResponsive}
+                  swipeable={true}
+                  draggable={false}
+                  infinite={true}
+                  ssr={true}
+                  arrows={false}
+                  showDots={false}
+                  partialVisible={true}
+                  customButtonGroup={<MiniBannerArrows />}
+                  containerClass='miniBannerCarousel'
+              >
+                  <div className={styles.miniBanner}>
+                      <a href="">
+                          <img src="img/thumbnail.png" alt=""/>
+                          <div className={styles.text}>
+                              <h5>
+                                  Top 10 <br />
+                                  od HP
+                              </h5>
+                              <span>Zobraziť viac</span>
+                          </div>
+                          <img src="img/arrow-right.svg" />
+                      </a>
+                  </div>
+                  <div className={styles.miniBanner}>
+                      <a href="">
+                          <img src="img/thumbnail.png" alt=""/>
+                          <div className={styles.text}>
+                              <h5>
+                                  Top 10 <br />
+                                  od HP
+                              </h5>
+                              <span>Zobraziť viac</span>
+                          </div>
+                          <img src="img/arrow-right.svg" />
+                      </a>
+                  </div>
+                  <div className={styles.miniBanner}>
+                      <a href="">
+                          <img src="img/thumbnail.png" alt=""/>
+                          <div className={styles.text}>
+                              <h5>
+                                  Top 10 <br />
+                                  od HP
+                              </h5>
+                              <span>Zobraziť viac</span>
+                          </div>
+                          <img src="img/arrow-right.svg" className="svg" />
+                      </a>
+                  </div>
+                  <div className={styles.miniBanner}>
+                      <a href="">
+                          <img src="img/thumbnail.png" alt=""/>
+                          <div className={styles.text}>
+                              <h5>
+                                  Top 10 <br />
+                                  od HP
+                              </h5>
+                              <span>Zobraziť viac</span>
+                          </div>
+                          <img src="img/arrow-right.svg" className="svg" />
+                      </a>
+                  </div>
+              </Carousel>
+          </section>
+          {/* End Mini Banners Section Mobile */}
 
           {/* Start Favourite Products Slider */}
           <section className={[styles.productSliderWrapper, 'favouriteProducts', 'productSlider'].join(' ')}>
@@ -1124,46 +1226,54 @@ export default function Home() {
                           <h3>Vyberte si podľa vašej činnosti, kde budete zariadenie používať.</h3>
                       </div>
                       <div className={styles.box}>
-                          <img src="img/thumbnail.png" alt=""/>
-                          <div className={styles.bannerText}>
-                              <h5>Pre firmy</h5>
-                              <a href="" className="button secondary">
-                                  Zobraziť viac
-                                  <img src="img/arrow-right.svg" class="svg" />
-                              </a>
-                          </div>
+                          <a href="">
+                              <img src="img/thumbnail.png" alt=""/>
+                              <div className={styles.bannerText}>
+                                  <h5>Pre firmy</h5>
+                                  <span className="button secondary">
+                                      Zobraziť viac
+                                      <img src="img/arrow-right.svg"/>
+                                  </span>
+                              </div>
+                          </a>
                       </div>
                       <div className={styles.box}>
-                          <img src="img/thumbnail-1.png" alt=""/>
-                          <div className={styles.bannerText}>
-                              <h5>Do domácnosti</h5>
-                              <a href="" className="button secondary">
-                                  Zobraziť viac
-                                  <img src="img/arrow-right.svg" className="svg"/>
-                              </a>
-                          </div>
+                          <a href="">
+                              <img src="img/thumbnail-1.png" alt=""/>
+                              <div className={styles.bannerText}>
+                                  <h5>Do domácnosti</h5>
+                                  <span className="button secondary">
+                                      Zobraziť viac
+                                      <img src="img/arrow-right.svg"/>
+                                </span>
+                              </div>
+                          </a>
                       </div>
                   </div>
                   <div className={styles.bannerLinksGrid}>
                       <div className={styles.box}>
-                          <img src="img/thumbnail-3.png" alt=""/>
-                          <div className={styles.bannerText}>
-                              <h5>Pre hráčov</h5>
-                              <a href="" className="button secondary">
-                                  Zobraziť viac
-                                  <img src="img/arrow-right.svg" className="svg"/>
-                              </a>
-                          </div>
+                          <a href="">
+                              <img src="img/thumbnail-3.png" alt=""/>
+                              <div className={styles.bannerText}>
+                                  <h5>Pre hráčov</h5>
+                                  <span className="button secondary">
+                                      Zobraziť viac
+                                      <img src="img/arrow-right.svg"/>
+                                </span>
+                              </div>
+                          </a>
                       </div>
                       <div className={styles.box}>
-                          <img src="img/thumbnail-2.png" alt=""/>
-                          <div className={styles.bannerText}>
-                              <h5>Pre študentov</h5>
-                              <a href="" className="button secondary">
-                                  Zobraziť viac
-                                  <img src="img/arrow-right.svg" className="svg"/>
-                              </a>
-                          </div>
+                          <a href="">
+                              <img src="img/thumbnail-2.png" alt=""/>
+                              <div className={styles.bannerText}>
+                                  <h5>Pre študentov</h5>
+                                  <span className="button secondary">
+                                      Zobraziť viac
+                                      <img src="img/arrow-right.svg"/>
+                                </span>
+                              </div>
+                          </a>
                       </div>
                   </div>
               </div>
@@ -1513,7 +1623,7 @@ export default function Home() {
                   ssr={true}
                   arrows={false}
                   showDots={true}
-                  // customDot={<SliderCustomDots />}
+                  partialVisible={true}
                   customButtonGroup={<SliderArrowsGroup />}
                   containerClass='productCarousel'
               >
