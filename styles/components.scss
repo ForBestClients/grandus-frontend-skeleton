@@ -6,7 +6,7 @@
     justify-content: center;
 
     input {
-      height: 48px;
+      height: 50px;
       width: 580px;
       padding-left: 32px;
       border-radius: 10px 0 0 10px;
@@ -128,7 +128,7 @@ button, a.button, span.button {
 
     &:hover {
       color: $text-white;
-      background-color: transparent;
+      background-color: rgba(16, 16, 16, .6);
       border-color: $c_gray_border;
 
       img {
@@ -161,3 +161,118 @@ a.button {
   display: inline-block;
 }
 
+.scrollTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 58px;
+  bottom: 58px;
+  width: 58px;
+  height: 58px;
+  background-color: $c_white_bg;
+  box-shadow: 0 3px 6px $c_black;
+  border-radius: 50%;
+  z-index: 150;
+  cursor: pointer;
+  transition: all .2s ease;
+  transform: translateX(250px);
+
+  @media ( max-width: $md ) {
+    right: 25px;
+    bottom: 25px;
+  }
+
+  &.visible {
+    transform: translateX(0);
+  }
+
+  &:hover {
+    background-color: $c_black_bg;
+
+    svg {
+      fill: $c_green;
+    }
+  }
+
+  svg {
+    transition: transform .2s ease;
+    transform: rotate(-90deg);
+  }
+}
+
+.categoryWidgetFixed {
+  transition: transform .2s ease;
+  transform: translateX(-250px);
+
+  &.visible {
+    transform: translateX(0);
+  }
+}
+
+.categoryWidgetFixed {
+
+  li.open {
+    border-radius: 0 !important;
+    background-color: $c_black_bg;
+
+    svg {
+      transform: rotate(25deg);
+
+      path {
+        fill: $c_white;
+      }
+    }
+
+    .jsText {
+      width: 1371px !important;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $text_white;
+      background-color: $c_black_bg;
+      border-top-right-radius: $b_radius_default;
+
+      @media ( max-width: $xxl ) {
+
+        & {
+          width: 1150px !important;
+        }
+      }
+
+      @media ( max-width: $xl ) {
+
+        & {
+          width: 900px !important;
+        }
+      }
+
+      span {
+        margin-left: 15px;
+      }
+
+      svg {
+        margin-right: 17px !important;
+        transform: rotate(90deg);
+      }
+    }
+
+    .megamenu {
+      display: flex !important;
+
+      @media ( max-width: $xxl ) {
+
+        & {
+          width: 1090px !important;
+        }
+      }
+
+      @media ( max-width: $xl ) {
+
+        & {
+          width: 840px !important;
+        }
+      }
+    }
+  }
+}

@@ -45,6 +45,10 @@
     height: 100px;
     display: flex;
     align-items: center;
+    
+    .hamburgerWrap, .mobileSearchForm {
+      display: none;
+    }
 
     .mainBar {
       display: flex;
@@ -53,7 +57,7 @@
     }
 
     .brand {
-      margin-right: 70px;
+      margin-right: 87px;
     }
 
     .contact {
@@ -247,6 +251,145 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media ( max-width: $lg ) {
+
+  .header {
+
+    .infoBar {
+      font-size: $f_size_base;
+
+      p {
+        padding: 8px 0;
+
+        a {
+          margin-left: 12px;
+        }
+      }
+    }
+
+    .mainBarWrap {
+      height: 140px;
+      flex-direction: column;
+
+      .barContainer {
+        width: 100%;
+      }
+
+      .hamburgerWrap {
+        display: block;
+        align-self: flex-end;
+
+        .hamburger {
+          width: 30px;
+          height: 20px;
+          position: relative;
+
+          span {
+            background-color: $c_white_bg;
+            display: block;
+            width: 32px;
+            height: 3px;
+            transition: all .2s ease;
+
+            &:before, &:after {
+              content: '';
+              position: absolute;
+              left: 0;
+              right: 0;
+              height: 3px;
+              background-color: inherit;
+              transition: all .2s ease;
+            }
+
+            &:before {
+              top: 8px;
+              width: 27px;
+            }
+
+            &:after {
+              bottom: 0;
+              width: 24px;
+            }
+          }
+
+          &:hover {
+
+            span {
+
+              &:before, &:after {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      .mainBar {
+        justify-content: space-between;
+
+        .actionForm {
+          display: none;
+        }
+
+        .brand {
+          margin-top: 10px;
+          margin-right: 0;
+
+          img {
+            width: 75%;
+          }
+        }
+
+        .iconActions {
+
+          .iconCart {
+            margin-top: 13px;
+            align-items: flex-end;
+            padding: 0;
+          }
+        }
+      }
+
+      .mobileSearchForm {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .mobileSearch {
+          width: 100%;
+
+          input {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            border-radius: $b_radius_default;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media ( max-width: $sm ) {
+
+  .header {
+
+    .mainBarWrap {
+
+      .barContainer {
+        padding: 0 20px;
+        width: calc(100% - 40px);
+        margin: 0;
+      }
+
+      .mobileSearchForm {
+        padding: 0 20px;
+        width: calc(100% - 40px);
       }
     }
   }

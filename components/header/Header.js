@@ -1,5 +1,4 @@
 import styles from "./Header.module.scss";
-import Link from "next/link";
 
 const Header = ({}) => {
   return (
@@ -19,15 +18,23 @@ const Header = ({}) => {
 
       {/* Start Main Bar */}
       <div className={styles.mainBarWrap}>
-         <div className="container">
+         <div className={[styles.barContainer, 'container'].join(' ')}>
+
              <div className={styles.mainBar}>
+
+                 <div className={styles.hamburgerWrap} id="hamburger">
+                     <div className={styles.hamburger}>
+                         <span></span>
+                     </div>
+                 </div>
+
                  <div className={styles.brand}>
                      <a href="">
                          <img src="img/logo-main.png" alt=""/>
                      </a>
                  </div>
 
-                 <div className="action-form on-header">
+                 <div className={[styles.actionForm, 'action-form', 'on-header'].join(' ')}>
                      <form action="">
                          <input type="text" name="s" placeholder="Hľadaný výraz" />
                          <button type="submit" className="primary">Hľadať</button>
@@ -66,6 +73,16 @@ const Header = ({}) => {
                      </a>
                  </div>
              </div>
+          </div>
+
+          <div className={[styles.mobileSearchForm, 'container'].join(' ')}>
+              <div className={[styles.mobileSearch, 'action-form', 'on-header'].join(' ')}>
+                  <form action="">
+                      <input type="text" name="s" placeholder="Hľadaný výraz" />
+                      {/*<button type="submit" className="primary">Hľadať</button>*/}
+                  </form>
+              </div>
+
           </div>
       </div>
       {/* Start Main Header Bar */}

@@ -34,6 +34,31 @@ export default function Home() {
         );
     };
 
+    const logosSliderResponsive = {
+
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 8,
+            slidesToSlide: 1
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 8,
+            slidesToSlide: 1
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 6,
+            slidesToSlide: 1
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 2,
+            slidesToSlide: 1
+        }
+    }
+
     const promoSliderResponsive = {
 
         superLargeDesktop: {
@@ -67,10 +92,10 @@ export default function Home() {
             slidesToSlide: 1,
         },
         mobile: {
-            breakpoint: { max: 576, min: 0 },
-            items: 1,
+            breakpoint: { max: 576, min: 420 },
+            items: 2,
             slidesToSlide: 1,
-            partialVisibilityGutter: 40
+            // partialVisibilityGutter: 190
         }
     }
 
@@ -80,10 +105,16 @@ export default function Home() {
             // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
             items: 6,
-            slidesToSlide: 2
+            slidesToSlide: 1,
+            partialVisibilityGutter: 25
+        },
+        largeDesktop: {
+            breakpoint: { max: 3000, min: 1600 },
+            items: 5,
+            slidesToSlide: 1,
         },
         desktop: {
-            breakpoint: { max: 3000, min: 1024 },
+            breakpoint: { max: 1600, min: 1024 },
             items: 4,
             slidesToSlide: 1,
         },
@@ -96,7 +127,6 @@ export default function Home() {
             breakpoint: { max: 576, min: 0 },
             items: 1,
             slidesToSlide: 1,
-            partialVisibilityGutter: 40
         }
     };
 
@@ -153,74 +183,146 @@ export default function Home() {
   return (
       <main>
 
+          <div className="scrollTop" id="scrollTop">
+              <img src="img/arrow-right-2.svg" className="svg" />
+          </div>
+
+          <div className={styles.categoryTabs}>
+              <div className={[styles.categoryTabsWrapper, 'container'].join(' ')}>
+                  <img src="img/arrow-right-2.svg" className={styles.tabArrow} alt=""/>
+                  <ul>
+                      <li>
+                          <a href="">Noteboky</a>
+                      </li>
+                      <li>
+                          <a href="">Telefóny a tablety</a>
+                      </li>
+                      <li>
+                          <a href="">Počítače</a>
+                      </li>
+                      <li>
+                          <a href="">Monitory</a>
+                      </li>
+                  </ul>
+                  <ul>
+                      <li>
+                          <a href="">Doplnky a elektronika</a>
+                      </li>
+                      <li>
+                          <a href="">Komponenty</a>
+                      </li>
+                      <li>
+                          <a href="">Softvér a služby</a>
+                      </li>
+                      <li>
+                          <a href="">Všetky produkty</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+
           {/* Start Fixed Category List */}
-          {/*<aside className={styles.categoryWidgetFixed}>*/}
-          {/*    <ul>*/}
-          {/*        <li>*/}
-          {/*            <img src="img/icon-notebooky.svg" className="svg" />*/}
-          {/*            <div className={styles.text}>*/}
-          {/*                <span>Notebooky</span>*/}
-          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
-          {/*            </div>*/}
-          {/*        </li>*/}
-          {/*        <li>*/}
-          {/*            <img src="img/icon-pc.svg" className="svg" />*/}
-          {/*            <div className={styles.text}>*/}
-          {/*                <span>Počítače</span>*/}
-          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
-          {/*            </div>*/}
-          {/*        </li>*/}
-          {/*        <li>*/}
-          {/*            <img src="img/icon-mobile.svg" className="svg" />*/}
-          {/*            <div className={styles.text}>*/}
-          {/*                <span>Telefón a tablety</span>*/}
-          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
-          {/*            </div>*/}
-          {/*        </li>*/}
-          {/*        <li>*/}
-          {/*            <img src="img/icon-monitor.svg" className="svg" />*/}
-          {/*            <div className={styles.text}>*/}
-          {/*                <span>Monitory</span>*/}
-          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
-          {/*            </div>*/}
-          {/*        </li>*/}
-          {/*        <li>*/}
-          {/*            <img src="img/icon-components.svg" className="svg" />*/}
-          {/*            <div className={styles.text}>*/}
-          {/*                <span>Komponenty</span>*/}
-          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
-          {/*            </div>*/}
-          {/*        </li>*/}
-          {/*        <li>*/}
-          {/*            <img src="img/icon-electronics.svg" className="svg" />*/}
-          {/*            <div className={styles.text}>*/}
-          {/*                <span>Doplnky a elektronika</span>*/}
-          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
-          {/*            </div>*/}
-          {/*        </li>*/}
-          {/*        <li>*/}
-          {/*            <img src="img/icon-software.svg" className="svg" />*/}
-          {/*            <div className={styles.text}>*/}
-          {/*                <span>Softvér a služby</span>*/}
-          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
-          {/*            </div>*/}
-          {/*        </li>*/}
-          {/*        <li className={styles.discount}>*/}
-          {/*            <img src="img/icon-discount.svg" className="svg" />*/}
-          {/*            <div className={styles.text}>*/}
-          {/*                <span>Výpredaj</span>*/}
-          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
-          {/*            </div>*/}
-          {/*        </li>*/}
-          {/*        <li>*/}
-          {/*            <img src="img/icon-all-products.svg" className="svg" />*/}
-          {/*            <div className={styles.text}>*/}
-          {/*                <span>Všetky produkty</span>*/}
-          {/*                <img src="img/arrow-right.svg" className="svg"/>*/}
-          {/*            </div>*/}
-          {/*        </li>*/}
-          {/*    </ul>*/}
-          {/*</aside>*/}
+          <aside className={[styles.categoryWidgetFixed, 'categoryWidgetFixed'].join(' ')} id="categoryWidgetFixed">
+              <ul>
+                  <li className={[styles.hasMegamenu, 'jsHasMegaMenu'].join(' ')}>
+                      <img src="img/icon-notebooky.svg" className="svg" />
+                      <div className={[styles.text, 'jsText'].join(' ')}>
+                          <span>Notebooky</span>
+                          <img src="img/arrow-right.svg" className="svg"/>
+                      </div>
+                      <div className={[styles.megamenu, 'megamenu'].join(' ')}>
+                          <div className={styles.categoryList}>
+                              <h4>
+                                  <img src="img/icon-notebooky.svg" className="svg" />
+                                  Lorem ipsum
+                              </h4>
+                              <ul>
+                                  <li>
+                                      <a href="">Lorem ipsum dolor</a>
+                                  </li>
+                                  <li>
+                                      <a href="">Lorem ipsum dolor</a>
+                                  </li>
+                                  <li>
+                                      <a href="">Lorem ipsum dolor</a>
+                                  </li>
+                                  <li>
+                                      <a href="">Lorem ipsum dolor</a>
+                                  </li>
+                                  <li>
+                                      <a href="">Lorem ipsum dolor</a>
+                                  </li>
+                                  <li>
+                                      <a href="">Lorem ipsum dolor</a>
+                                  </li>
+                                  <li>
+                                      <a href="">Lorem ipsum dolor</a>
+                                  </li>
+                                  <li>
+                                      <a href="">Lorem ipsum dolor</a>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </li>
+                  <li>
+                      <img src="img/icon-pc.svg" className="svg" />
+                      <div className={styles.text}>
+                          <span>Počítače</span>
+                          <img src="img/arrow-right.svg" className="svg"/>
+                      </div>
+                  </li>
+                  <li>
+                      <img src="img/icon-mobile.svg" className="svg" />
+                      <div className={styles.text}>
+                          <span>Telefón a tablety</span>
+                          <img src="img/arrow-right.svg" className="svg"/>
+                      </div>
+                  </li>
+                  <li>
+                      <img src="img/icon-monitor.svg" className="svg" />
+                      <div className={styles.text}>
+                          <span>Monitory</span>
+                          <img src="img/arrow-right.svg" className="svg"/>
+                      </div>
+                  </li>
+                  <li>
+                      <img src="img/icon-components.svg" className="svg" />
+                      <div className={styles.text}>
+                          <span>Komponenty</span>
+                          <img src="img/arrow-right.svg" className="svg"/>
+                      </div>
+                  </li>
+                  <li>
+                      <img src="img/icon-electronics.svg" className="svg" />
+                      <div className={styles.text}>
+                          <span>Doplnky a elektronika</span>
+                          <img src="img/arrow-right.svg" className="svg"/>
+                      </div>
+                  </li>
+                  <li>
+                      <img src="img/icon-software.svg" className="svg" />
+                      <div className={styles.text}>
+                          <span>Softvér a služby</span>
+                          <img src="img/arrow-right.svg" className="svg"/>
+                      </div>
+                  </li>
+                  <li className={styles.discount}>
+                      <img src="img/icon-discount.svg" className="svg" />
+                      <div className={styles.text}>
+                          <span>Výpredaj</span>
+                          <img src="img/arrow-right.svg" className="svg"/>
+                      </div>
+                  </li>
+                  <li>
+                      <img src="img/icon-all-products.svg" className="svg" />
+                      <div className={styles.text}>
+                          <span>Všetky produkty</span>
+                          <img src="img/arrow-right.svg" className="svg"/>
+                      </div>
+                  </li>
+              </ul>
+          </aside>
           {/* End Fixed Category List */}
 
           {/* Start Section Promo */}
@@ -374,7 +476,7 @@ export default function Home() {
                               containerClass='promoCarousel'
                           >
                               <div className={styles.slide} >
-                                  <img src="img/thumbnail-1.png"
+                                  <img src="img/image.png"
                                         alt=""
                                         title=""
                                         className={styles.slideImage}
@@ -388,7 +490,7 @@ export default function Home() {
                                   </div>
                               </div>
                               <div className={styles.slide} >
-                                  <img src="img/thumbnail-1.png"
+                                  <img src="img/image.png"
                                        alt=""
                                        title=""
                                        className={styles.slideImage}
@@ -406,7 +508,7 @@ export default function Home() {
                       <div className={styles.adBanner}>
                           <img src="img/lenovo.png" alt=""/>
                           <div className={styles.text}>
-                              <h3>Predajňa <br /> BigON</h3>
+                              <h3>Predajňa <br/> BigON</h3>
                               <a href="" className="button secondary">
                                   Zobraziť viac
                                   <img src="img/arrow-right.svg" className="svg" />
@@ -529,6 +631,19 @@ export default function Home() {
                               </h5>
                               <span>Zobraziť viac</span>
                           </div>
+                          <img src="img/arrow-right.svg" />
+                      </a>
+                  </div>
+                  <div className={styles.miniBanner}>
+                      <a href="">
+                          <img src="img/thumbnail.png" alt=""/>
+                          <div className={styles.text}>
+                              <h5>
+                                  Top 10 <br />
+                                  od HP
+                              </h5>
+                              <span>Zobraziť viac</span>
+                          </div>
                           <img src="img/arrow-right.svg" className="svg" />
                       </a>
                   </div>
@@ -567,290 +682,360 @@ export default function Home() {
                    ssr={true}
                    arrows={false}
                    showDots={true}
+                   partialVisible={true}
                    customButtonGroup={<SliderArrowsGroup />}
                    containerClass='productCarousel'
                >
                    <div className={styles.box}>
-                       <div className={styles.badges}>
-                           <div className={styles.badgeNew}>
-                               <span>Novinka!</span>
+                       <a href="">
+                           <div className={styles.badges}>
+                               <div className={styles.badgeNew}>
+                                   <span>Novinka!</span>
+                               </div>
+                               <div className={styles.favourite}>
+                                   <span>Obľúbené</span>
+                               </div>
+                               <div className={styles.delivery}>
+                                   <span>do 24h.</span>
+                               </div>
                            </div>
-                           <div className={styles.favourite}>
-                               <span>Obľúbené</span>
-                           </div>
-                           <div className={styles.delivery}>
-                               <span>do 24h.</span>
-                           </div>
-                       </div>
-                       <a href="" className={styles.productThumb}>
-                           <img src="img/product-image.png" alt=""/>
-                           <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                           <div className={styles.productThumb}>
+                               <img src="img/product-image.png" alt=""/>
+                               <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
                            <span>
                                Ušetri až <br/>
                                <strong>-60%</strong>
                            </span>
+                               </div>
+                           </div>
+                           <div className={styles.infoBarWrapper}>
+                               <span className={styles.infoStock}>
+                                   Skladom viac ako 2ks
+                               </span>
+                               <div className={styles.productActions}>
+                                   <span>
+                                       <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                   <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                   <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                               </div>
+                           </div>
+                           <h4>
+                               Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
+                           </h4>
+                           <p>
+                               Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                               (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                           </p>
+                           <div className={styles.priceWrapper}>
+                               <div className={styles.mainPrice}>
+                                   <span>13 599.00€</span>
+                                   <span>25 700.30 bez DPH</span>
+                               </div>
+                               <div className={styles.discountPrice}>
+                                   <span>11 399.00€</span>
+                               </div>
                            </div>
                        </a>
-                       <div className={styles.infoBarWrapper}>
-                       <span className={styles.infoStock}>
-                           Skladom viac ako 2ks
-                       </span>
-                           <div className={styles.productActions}>
-                           </div>
-                       </div>
-                       <h4>
-                           <a href="">
-                               Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                           </a>
-                       </h4>
-                       <p>
-                           Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                           (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                       </p>
-                       <div className={styles.priceWrapper}>
-                           <div className={styles.mainPrice}>
-                               <span>13 599.00€</span>
-                               <span>25 700.30 bez DPH</span>
-                           </div>
-                           <div className={styles.discountPrice}>
-                               <span>11 399.00€</span>
-                           </div>
-                       </div>
                    </div>
                    <div className={styles.box}>
-                       <div className={styles.badges}>
-                           <div className={styles.badgeNew}>
-                               <span>Novinka!</span>
+                       <a href="">
+                           <div className={styles.badges}>
+                               <div className={styles.badgeNew}>
+                                   <span>Novinka!</span>
+                               </div>
+                               <div className={styles.favourite}>
+                                   <span>Obľúbené</span>
+                               </div>
+                               <div className={styles.delivery}>
+                                   <span>do 24h.</span>
+                               </div>
                            </div>
-                           <div className={styles.favourite}>
-                               <span>Obľúbené</span>
-                           </div>
-                           <div className={styles.delivery}>
-                               <span>do 24h.</span>
-                           </div>
-                       </div>
-                       <a href="" className={styles.productThumb}>
-                           <img src="img/product-image.png" alt=""/>
-                           <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                           <div className={styles.productThumb}>
+                               <img src="img/product-image.png" alt=""/>
+                               <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
                            <span>
                                Ušetri až <br/>
                                <strong>-60%</strong>
                            </span>
+                               </div>
+                           </div>
+                           <div className={styles.infoBarWrapper}>
+                               <span className={styles.infoStock}>
+                                   Skladom viac ako 2ks
+                               </span>
+                               <span className={styles.infoStockMobile}>
+                                   Skladom
+                               </span>
+                               <div className={styles.productActions}>
+                                   <span>
+                                       <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                   <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                   <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                               </div>
+                           </div>
+                           <h4>
+                               Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
+                           </h4>
+                           <p>
+                               Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                               (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                           </p>
+                           <div className={styles.priceWrapper}>
+                               <div className={styles.mainPrice}>
+                                   <span>13 599.00€</span>
+                                   <span>25 700.30 bez DPH</span>
+                               </div>
+                               <div className={styles.discountPrice}>
+                                   <span>11 399.00€</span>
+                               </div>
                            </div>
                        </a>
-                       <div className={styles.infoBarWrapper}>
-                       <span className={styles.infoStock}>
-                           Skladom viac ako 2ks
-                       </span>
-                           <div className={styles.productActions}>
-                           </div>
-                       </div>
-                       <h4>
-                           <a href="">
-                               Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                           </a>
-                       </h4>
-                       <p>
-                           Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                           (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                       </p>
-                       <div className={styles.priceWrapper}>
-                           <div className={styles.mainPrice}>
-                               <span>13 599.00€</span>
-                               <span>25 700.30 bez DPH</span>
-                           </div>
-                           <div className={styles.discountPrice}>
-                               <span>11 399.00€</span>
-                           </div>
-                       </div>
                    </div>
                    <div className={styles.box}>
-                       <div className={styles.badges}>
-                           <div className={styles.badgeNew}>
-                               <span>Novinka!</span>
+                       <a href="">
+                           <div className={styles.badges}>
+                               <div className={styles.badgeNew}>
+                                   <span>Novinka!</span>
+                               </div>
+                               <div className={styles.favourite}>
+                                   <span>Obľúbené</span>
+                               </div>
+                               <div className={styles.delivery}>
+                                   <span>do 24h.</span>
+                               </div>
                            </div>
-                           <div className={styles.favourite}>
-                               <span>Obľúbené</span>
-                           </div>
-                           <div className={styles.delivery}>
-                               <span>do 24h.</span>
-                           </div>
-                       </div>
-                       <a href="" className={styles.productThumb}>
-                           <img src="img/product-image.png" alt=""/>
-                           <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                           <div className={styles.productThumb}>
+                               <img src="img/product-image.png" alt=""/>
+                               <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
                            <span>
                                Ušetri až <br/>
                                <strong>-60%</strong>
                            </span>
+                               </div>
+                           </div>
+                           <div className={styles.infoBarWrapper}>
+                               <span className={styles.infoStock}>
+                                   Skladom viac ako 2ks
+                               </span>
+                               <span className={styles.infoStockMobile}>
+                                   Skladom
+                               </span>
+                               <div className={styles.productActions}>
+                                   <span>
+                                       <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                   <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                   <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                               </div>
+                           </div>
+                           <h4>
+                               Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
+                           </h4>
+                           <p>
+                               Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                               (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                           </p>
+                           <div className={styles.priceWrapper}>
+                               <div className={styles.mainPrice}>
+                                   <span>13 599.00€</span>
+                                   <span>25 700.30 bez DPH</span>
+                               </div>
+                               <div className={styles.discountPrice}>
+                                   <span>11 399.00€</span>
+                               </div>
                            </div>
                        </a>
-                       <div className={styles.infoBarWrapper}>
-                       <span className={styles.infoStock}>
-                           Skladom viac ako 2ks
-                       </span>
-                           <div className={styles.productActions}>
-                           </div>
-                       </div>
-                       <h4>
-                           <a href="">
-                               Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                           </a>
-                       </h4>
-                       <p>
-                           Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                           (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                       </p>
-                       <div className={styles.priceWrapper}>
-                           <div className={styles.mainPrice}>
-                               <span>13 599.00€</span>
-                               <span>25 700.30 bez DPH</span>
-                           </div>
-                           <div className={styles.discountPrice}>
-                               <span>11 399.00€</span>
-                           </div>
-                       </div>
                    </div>
                    <div className={styles.box}>
-                       <div className={styles.badges}>
-                           <div className={styles.badgeNew}>
-                               <span>Novinka!</span>
+                       <a href="">
+                           <div className={styles.badges}>
+                               <div className={styles.badgeNew}>
+                                   <span>Novinka!</span>
+                               </div>
+                               <div className={styles.favourite}>
+                                   <span>Obľúbené</span>
+                               </div>
+                               <div className={styles.delivery}>
+                                   <span>do 24h.</span>
+                               </div>
                            </div>
-                           <div className={styles.favourite}>
-                               <span>Obľúbené</span>
-                           </div>
-                           <div className={styles.delivery}>
-                               <span>do 24h.</span>
-                           </div>
-                       </div>
-                       <a href="" className={styles.productThumb}>
-                           <img src="img/product-image.png" alt=""/>
-                           <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                           <div className={styles.productThumb}>
+                               <img src="img/product-image.png" alt=""/>
+                               <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
                            <span>
                                Ušetri až <br/>
                                <strong>-60%</strong>
                            </span>
+                               </div>
+                           </div>
+                           <div className={styles.infoBarWrapper}>
+                               <span className={styles.infoStock}>
+                                   Skladom viac ako 2ks
+                               </span>
+                               <span className={styles.infoStockMobile}>
+                                   Skladom
+                               </span>
+                               <div className={styles.productActions}>
+                                   <span>
+                                       <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                   <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                   <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                               </div>
+                           </div>
+                           <h4>
+                               Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
+                           </h4>
+                           <p>
+                               Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                               (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                           </p>
+                           <div className={styles.priceWrapper}>
+                               <div className={styles.mainPrice}>
+                                   <span>13 599.00€</span>
+                                   <span>25 700.30 bez DPH</span>
+                               </div>
+                               <div className={styles.discountPrice}>
+                                   <span>11 399.00€</span>
+                               </div>
                            </div>
                        </a>
-                       <div className={styles.infoBarWrapper}>
-                       <span className={styles.infoStock}>
-                           Skladom viac ako 2ks
-                       </span>
-                           <div className={styles.productActions}>
-                           </div>
-                       </div>
-                       <h4>
-                           <a href="">
-                               Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                           </a>
-                       </h4>
-                       <p>
-                           Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                           (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                       </p>
-                       <div className={styles.priceWrapper}>
-                           <div className={styles.mainPrice}>
-                               <span>13 599.00€</span>
-                               <span>25 700.30 bez DPH</span>
-                           </div>
-                           <div className={styles.discountPrice}>
-                               <span>11 399.00€</span>
-                           </div>
-                       </div>
                    </div>
                    <div className={styles.box}>
-                       <div className={styles.badges}>
-                           <div className={styles.badgeNew}>
-                               <span>Novinka!</span>
+                       <a href="">
+                           <div className={styles.badges}>
+                               <div className={styles.badgeNew}>
+                                   <span>Novinka!</span>
+                               </div>
+                               <div className={styles.favourite}>
+                                   <span>Obľúbené</span>
+                               </div>
+                               <div className={styles.delivery}>
+                                   <span>do 24h.</span>
+                               </div>
                            </div>
-                           <div className={styles.favourite}>
-                               <span>Obľúbené</span>
-                           </div>
-                           <div className={styles.delivery}>
-                               <span>do 24h.</span>
-                           </div>
-                       </div>
-                       <a href="" className={styles.productThumb}>
-                           <img src="img/product-image.png" alt=""/>
-                           <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                           <div className={styles.productThumb}>
+                               <img src="img/product-image.png" alt=""/>
+                               <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
                            <span>
                                Ušetri až <br/>
                                <strong>-60%</strong>
                            </span>
+                               </div>
+                           </div>
+                           <div className={styles.infoBarWrapper}>
+                               <span className={styles.infoStock}>
+                                   Skladom viac ako 2ks
+                               </span>
+                               <span className={styles.infoStockMobile}>
+                                   Skladom
+                               </span>
+                               <div className={styles.productActions}>
+                                   <span>
+                                       <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                   <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                   <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                               </div>
+                           </div>
+                           <h4>
+                               Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
+                           </h4>
+                           <p>
+                               Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                               (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                           </p>
+                           <div className={styles.priceWrapper}>
+                               <div className={styles.mainPrice}>
+                                   <span>13 599.00€</span>
+                                   <span>25 700.30 bez DPH</span>
+                               </div>
+                               <div className={styles.discountPrice}>
+                                   <span>11 399.00€</span>
+                               </div>
                            </div>
                        </a>
-                       <div className={styles.infoBarWrapper}>
-                       <span className={styles.infoStock}>
-                           Skladom viac ako 2ks
-                       </span>
-                           <div className={styles.productActions}>
-                           </div>
-                       </div>
-                       <h4>
-                           <a href="">
-                               Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                           </a>
-                       </h4>
-                       <p>
-                           Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                           (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                       </p>
-                       <div className={styles.priceWrapper}>
-                           <div className={styles.mainPrice}>
-                               <span>13 599.00€</span>
-                               <span>25 700.30 bez DPH</span>
-                           </div>
-                           <div className={styles.discountPrice}>
-                               <span>11 399.00€</span>
-                           </div>
-                       </div>
                    </div>
                    <div className={styles.box}>
-                       <div className={styles.badges}>
-                           <div className={styles.badgeNew}>
-                               <span>Novinka!</span>
+                       <a href="">
+                           <div className={styles.badges}>
+                               <div className={styles.badgeNew}>
+                                   <span>Novinka!</span>
+                               </div>
+                               <div className={styles.favourite}>
+                                   <span>Obľúbené</span>
+                               </div>
+                               <div className={styles.delivery}>
+                                   <span>do 24h.</span>
+                               </div>
                            </div>
-                           <div className={styles.favourite}>
-                               <span>Obľúbené</span>
+                           <div className={styles.productThumb}>
+                               <img src="img/product-image.png" alt=""/>
+                               <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                               <span>
+                                   Ušetri až <br/>
+                                   <strong>-60%</strong>
+                               </span>
+                               </div>
                            </div>
-                           <div className={styles.delivery}>
-                               <span>do 24h.</span>
+                           <div className={styles.infoBarWrapper}>
+                               <span className={styles.infoStock}>
+                                   Skladom viac ako 2ks
+                               </span>
+                               <span className={styles.infoStockMobile}>
+                                   Skladom
+                               </span>
+                               <div className={styles.productActions}>
+                                   <span>
+                                       <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                   <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                   <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                               </div>
                            </div>
-                       </div>
-                       <a href="" className={styles.productThumb}>
-                           <img src="img/product-image.png" alt=""/>
-                           <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
-                           <span>
-                               Ušetri až <br/>
-                               <strong>-60%</strong>
-                           </span>
+                           <h4>
+                               Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
+                           </h4>
+                           <p>
+                               Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                               (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                           </p>
+                           <div className={styles.priceWrapper}>
+                               <div className={styles.mainPrice}>
+                                   <span>13 599.00€</span>
+                                   <span>25 700.30 bez DPH</span>
+                               </div>
+                               <div className={styles.discountPrice}>
+                                   <span>11 399.00€</span>
+                               </div>
                            </div>
                        </a>
-                       <div className={styles.infoBarWrapper}>
-                       <span className={styles.infoStock}>
-                           Skladom viac ako 2ks
-                       </span>
-                           <div className={styles.productActions}>
-                           </div>
-                       </div>
-                       <h4>
-                           <a href="">
-                               Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                           </a>
-                       </h4>
-                       <p>
-                           Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                           (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                       </p>
-                       <div className={styles.priceWrapper}>
-                           <div className={styles.mainPrice}>
-                               <span>13 599.00€</span>
-                               <span>25 700.30 bez DPH</span>
-                           </div>
-                           <div className={styles.discountPrice}>
-                               <span>11 399.00€</span>
-                           </div>
-                       </div>
                    </div>
                </Carousel>
           </section>
@@ -879,286 +1064,349 @@ export default function Home() {
                   containerClass='productCarousel'
               >
                   <div className={[styles.box, 'benefitBox'].join(' ')}>
-                      <div className={[styles.badges, 'benefitBadges'].join(' ')}>
-                          <div className={styles.badgeNew}>
-                              <span>Novinka!</span>
+                      <a href="">
+                          <div className={[styles.badges, 'benefitBadges'].join(' ')}>
+                              <div className={styles.badgeNew}>
+                                  <span>Novinka!</span>
+                              </div>
+                              <div className={styles.favourite}>
+                                  <span>Obľúbené</span>
+                              </div>
+                              <div className={styles.delivery}>
+                                  <span>do 24h.</span>
+                              </div>
                           </div>
-                          <div className={styles.favourite}>
-                              <span>Obľúbené</span>
+                          <div href="" className={styles.productThumb}>
+                              <img src="img/product-image.png" alt=""/>
+                              <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                               <span>
+                                   Ušetri až <br/>
+                                   <strong>-60%</strong>
+                               </span>
+                              </div>
                           </div>
-                          <div className={styles.delivery}>
-                              <span>do 24h.</span>
+                          <div className={styles.infoBarWrapper}>
+                           <span className={styles.infoStock}>
+                               Skladom viac ako 2ks
+                           </span>
+                              <div className={styles.productActions}>
+                                   <span>
+                                       <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                              </div>
                           </div>
-                      </div>
-                      <a href="" className={styles.productThumb}>
-                          <img src="img/product-image.png" alt=""/>
-                          <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
-                       <span>
-                           Ušetri až <br/>
-                           <strong>-60%</strong>
-                       </span>
+                          <h4>
+                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
+                          </h4>
+                          <p>
+                              Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                              (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                          </p>
+                          <div className={styles.priceWrapper}>
+                              <div className={styles.mainPrice}>
+                                  <span>13 599.00€</span>
+                                  <span>25 700.30 bez DPH</span>
+                              </div>
+                              <div className={styles.discountPrice}>
+                                  <span>11 399.00€</span>
+                              </div>
                           </div>
                       </a>
-                      <div className={styles.infoBarWrapper}>
-                   <span className={styles.infoStock}>
-                       Skladom viac ako 2ks
-                   </span>
-                          <div className={styles.productActions}>
-                          </div>
-                      </div>
-                      <h4>
-                          <a href="">
-                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                          </a>
-                      </h4>
-                      <p>
-                          Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                          (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                      </p>
-                      <div className={styles.priceWrapper}>
-                          <div className={styles.mainPrice}>
-                              <span>13 599.00€</span>
-                              <span>25 700.30 bez DPH</span>
-                          </div>
-                          <div className={styles.discountPrice}>
-                              <span>11 399.00€</span>
-                          </div>
-                      </div>
                   </div>
                   <div className={[styles.box, 'benefitBox'].join(' ')}>
-                      <div className={[styles.badges, 'benefitBadges'].join(' ')}>
-                          <div className={styles.badgeNew}>
-                              <span>Novinka!</span>
+                      <a href="">
+                          <div className={[styles.badges, 'benefitBadges'].join(' ')}>
+                              <div className={styles.badgeNew}>
+                                  <span>Novinka!</span>
+                              </div>
+                              <div className={styles.favourite}>
+                                  <span>Obľúbené</span>
+                              </div>
+                              <div className={styles.delivery}>
+                                  <span>do 24h.</span>
+                              </div>
                           </div>
-                          <div className={styles.favourite}>
-                              <span>Obľúbené</span>
-                          </div>
-                          <div className={styles.delivery}>
-                              <span>do 24h.</span>
-                          </div>
-                      </div>
-                      <a href="" className={styles.productThumb}>
-                          <img src="img/product-image.png" alt=""/>
-                          <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                          <div href="" className={styles.productThumb}>
+                              <img src="img/product-image.png" alt=""/>
+                              <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
                        <span>
                            Ušetri až <br/>
                            <strong>-60%</strong>
                        </span>
+                              </div>
+                          </div>
+                          <div className={styles.infoBarWrapper}>
+                           <span className={styles.infoStock}>
+                               Skladom viac ako 2ks
+                           </span>
+                              <div className={styles.productActions}>
+                                  <span>
+                                       <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                              </div>
+                          </div>
+                          <h4>
+                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
+                          </h4>
+                          <p>
+                              Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                              (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                          </p>
+                          <div className={styles.priceWrapper}>
+                              <div className={styles.mainPrice}>
+                                  <span>13 599.00€</span>
+                                  <span>25 700.30 bez DPH</span>
+                              </div>
+                              <div className={styles.discountPrice}>
+                                  <span>11 399.00€</span>
+                              </div>
                           </div>
                       </a>
-                      <div className={styles.infoBarWrapper}>
-                   <span className={styles.infoStock}>
-                       Skladom viac ako 2ks
-                   </span>
-                          <div className={styles.productActions}>
-                          </div>
-                      </div>
-                      <h4>
-                          <a href="">
-                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                          </a>
-                      </h4>
-                      <p>
-                          Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                          (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                      </p>
-                      <div className={styles.priceWrapper}>
-                          <div className={styles.mainPrice}>
-                              <span>13 599.00€</span>
-                              <span>25 700.30 bez DPH</span>
-                          </div>
-                          <div className={styles.discountPrice}>
-                              <span>11 399.00€</span>
-                          </div>
-                      </div>
                   </div>
                   <div className={[styles.box, 'benefitBox'].join(' ')}>
-                      <div className={[styles.badges, 'benefitBadges'].join(' ')}>
-                          <div className={styles.badgeNew}>
-                              <span>Novinka!</span>
+                      <a href="">
+                          <div className={[styles.badges, 'benefitBadges'].join(' ')}>
+                              <div className={styles.badgeNew}>
+                                  <span>Novinka!</span>
+                              </div>
+                              <div className={styles.favourite}>
+                                  <span>Obľúbené</span>
+                              </div>
+                              <div className={styles.delivery}>
+                                  <span>do 24h.</span>
+                              </div>
                           </div>
-                          <div className={styles.favourite}>
-                              <span>Obľúbené</span>
+                          <div href="" className={styles.productThumb}>
+                              <img src="img/product-image.png" alt=""/>
+                              <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                               <span>
+                                   Ušetri až <br/>
+                                   <strong>-60%</strong>
+                               </span>
+                              </div>
                           </div>
-                          <div className={styles.delivery}>
-                              <span>do 24h.</span>
+                          <div className={styles.infoBarWrapper}>
+                               <span className={styles.infoStock}>
+                                   Skladom viac ako 2ks
+                               </span>
+                                 <span className={styles.infoStockMobile}>
+                                   Skladom
+                               </span>
+                              <div className={styles.productActions}>
+                                 <span>
+                                       <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                              </div>
                           </div>
-                      </div>
-                      <a href="" className={styles.productThumb}>
-                          <img src="img/product-image.png" alt=""/>
-                          <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
-                       <span>
-                           Ušetri až <br/>
-                           <strong>-60%</strong>
-                       </span>
+                          <h4>
+                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
+                          </h4>
+                          <p>
+                              Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                              (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                          </p>
+                          <div className={styles.priceWrapper}>
+                              <div className={styles.mainPrice}>
+                                  <span>13 599.00€</span>
+                                  <span>25 700.30 bez DPH</span>
+                              </div>
+                              <div className={styles.discountPrice}>
+                                  <span>11 399.00€</span>
+                              </div>
                           </div>
                       </a>
-                      <div className={styles.infoBarWrapper}>
-                   <span className={styles.infoStock}>
-                       Skladom viac ako 2ks
-                   </span>
-                          <div className={styles.productActions}>
-                          </div>
-                      </div>
-                      <h4>
-                          <a href="">
-                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                          </a>
-                      </h4>
-                      <p>
-                          Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                          (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                      </p>
-                      <div className={styles.priceWrapper}>
-                          <div className={styles.mainPrice}>
-                              <span>13 599.00€</span>
-                              <span>25 700.30 bez DPH</span>
-                          </div>
-                          <div className={styles.discountPrice}>
-                              <span>11 399.00€</span>
-                          </div>
-                      </div>
                   </div>
                   <div className={[styles.box, 'benefitBox'].join(' ')}>
-                      <div className={[styles.badges, 'benefitBadges'].join(' ')}>
-                          <div className={styles.badgeNew}>
-                              <span>Novinka!</span>
+                      <a href="">
+                          <div className={[styles.badges, 'benefitBadges'].join(' ')}>
+                              <div className={styles.badgeNew}>
+                                  <span>Novinka!</span>
+                              </div>
+                              <div className={styles.favourite}>
+                                  <span>Obľúbené</span>
+                              </div>
+                              <div className={styles.delivery}>
+                                  <span>do 24h.</span>
+                              </div>
                           </div>
-                          <div className={styles.favourite}>
-                              <span>Obľúbené</span>
-                          </div>
-                          <div className={styles.delivery}>
-                              <span>do 24h.</span>
-                          </div>
-                      </div>
-                      <a href="" className={styles.productThumb}>
-                          <img src="img/product-image.png" alt=""/>
-                          <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                          <div href="" className={styles.productThumb}>
+                              <img src="img/product-image.png" alt=""/>
+                              <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
                        <span>
                            Ušetri až <br/>
                            <strong>-60%</strong>
                        </span>
+                              </div>
+                          </div>
+                          <div className={styles.infoBarWrapper}>
+                           <span className={styles.infoStock}>
+                               Skladom viac ako 2ks
+                           </span>
+                              <div className={styles.productActions}>
+                                 <span>
+                                       <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                              </div>
+                          </div>
+                          <h4>
+                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
+                          </h4>
+                          <p>
+                              Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                              (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                          </p>
+                          <div className={styles.priceWrapper}>
+                              <div className={styles.mainPrice}>
+                                  <span>13 599.00€</span>
+                                  <span>25 700.30 bez DPH</span>
+                              </div>
+                              <div className={styles.discountPrice}>
+                                  <span>11 399.00€</span>
+                              </div>
                           </div>
                       </a>
-                      <div className={styles.infoBarWrapper}>
-                   <span className={styles.infoStock}>
-                       Skladom viac ako 2ks
-                   </span>
-                          <div className={styles.productActions}>
-                          </div>
-                      </div>
-                      <h4>
-                          <a href="">
-                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                          </a>
-                      </h4>
-                      <p>
-                          Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                          (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                      </p>
-                      <div className={styles.priceWrapper}>
-                          <div className={styles.mainPrice}>
-                              <span>13 599.00€</span>
-                              <span>25 700.30 bez DPH</span>
-                          </div>
-                          <div className={styles.discountPrice}>
-                              <span>11 399.00€</span>
-                          </div>
-                      </div>
                   </div>
                   <div className={[styles.box, 'benefitBox'].join(' ')}>
-                      <div className={[styles.badges, 'benefitBadges'].join(' ')}>
-                          <div className={styles.badgeNew}>
-                              <span>Novinka!</span>
+                      <a href="">
+                          <div className={[styles.badges, 'benefitBadges'].join(' ')}>
+                              <div className={styles.badgeNew}>
+                                  <span>Novinka!</span>
+                              </div>
+                              <div className={styles.favourite}>
+                                  <span>Obľúbené</span>
+                              </div>
+                              <div className={styles.delivery}>
+                                  <span>do 24h.</span>
+                              </div>
                           </div>
-                          <div className={styles.favourite}>
-                              <span>Obľúbené</span>
+                          <div href="" className={styles.productThumb}>
+                              <img src="img/product-image.png" alt=""/>
+                              <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                               <span>
+                                   Ušetri až <br/>
+                                   <strong>-60%</strong>
+                               </span>
+                              </div>
                           </div>
-                          <div className={styles.delivery}>
-                              <span>do 24h.</span>
+                          <div className={styles.infoBarWrapper}>
+                               <span className={styles.infoStock}>
+                                   Skladom viac ako 2ks
+                               </span>
+                              <span className={styles.infoStockMobile}>
+                                   Skladom
+                               </span>
+                              <div className={styles.productActions}>
+                                 <span>
+                                   <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                              </div>
                           </div>
-                      </div>
-                      <a href="" className={styles.productThumb}>
-                          <img src="img/product-image.png" alt=""/>
-                          <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
-                       <span>
-                           Ušetri až <br/>
-                           <strong>-60%</strong>
-                       </span>
+                          <h4>
+                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
+                          </h4>
+                          <p>
+                              Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                              (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                          </p>
+                          <div className={styles.priceWrapper}>
+                              <div className={styles.mainPrice}>
+                                  <span>13 599.00€</span>
+                                  <span>25 700.30 bez DPH</span>
+                              </div>
+                              <div className={styles.discountPrice}>
+                                  <span>11 399.00€</span>
+                              </div>
                           </div>
                       </a>
-                      <div className={styles.infoBarWrapper}>
-                   <span className={styles.infoStock}>
-                       Skladom viac ako 2ks
-                   </span>
-                          <div className={styles.productActions}>
-                          </div>
-                      </div>
-                      <h4>
-                          <a href="">
-                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                          </a>
-                      </h4>
-                      <p>
-                          Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                          (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                      </p>
-                      <div className={styles.priceWrapper}>
-                          <div className={styles.mainPrice}>
-                              <span>13 599.00€</span>
-                              <span>25 700.30 bez DPH</span>
-                          </div>
-                          <div className={styles.discountPrice}>
-                              <span>11 399.00€</span>
-                          </div>
-                      </div>
                   </div>
                   <div className={[styles.box, 'benefitBox'].join(' ')}>
-                      <div className={[styles.badges, 'benefitBadges'].join(' ')}>
-                          <div className={styles.badgeNew}>
-                              <span>Novinka!</span>
+                      <a href="">
+                          <div className={[styles.badges, 'benefitBadges'].join(' ')}>
+                              <div className={styles.badgeNew}>
+                                  <span>Novinka!</span>
+                              </div>
+                              <div className={styles.favourite}>
+                                  <span>Obľúbené</span>
+                              </div>
+                              <div className={styles.delivery}>
+                                  <span>do 24h.</span>
+                              </div>
                           </div>
-                          <div className={styles.favourite}>
-                              <span>Obľúbené</span>
+                          <div href="" className={styles.productThumb}>
+                              <img src="img/product-image.png" alt=""/>
+                              <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                               <span>
+                                   Ušetri až <br/>
+                                   <strong>-60%</strong>
+                               </span>
+                              </div>
                           </div>
-                          <div className={styles.delivery}>
-                              <span>do 24h.</span>
+                          <div className={styles.infoBarWrapper}>
+                               <span className={styles.infoStock}>
+                                   Skladom viac ako 2ks
+                               </span>
+                              <span className={styles.infoStockMobile}>
+                                   Skladom
+                               </span>
+                              <div className={styles.productActions}>
+                                 <span>
+                                       <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                              </div>
                           </div>
-                      </div>
-                      <a href="" className={styles.productThumb}>
-                          <img src="img/product-image.png" alt=""/>
-                          <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
-                       <span>
-                           Ušetri až <br/>
-                           <strong>-60%</strong>
-                       </span>
+                          <h4>
+                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
+                          </h4>
+                          <p>
+                              Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                              (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                          </p>
+                          <div className={styles.priceWrapper}>
+                              <div className={styles.mainPrice}>
+                                  <span>13 599.00€</span>
+                                  <span>25 700.30 bez DPH</span>
+                              </div>
+                              <div className={styles.discountPrice}>
+                                  <span>11 399.00€</span>
+                              </div>
                           </div>
                       </a>
-                      <div className={styles.infoBarWrapper}>
-                   <span className={styles.infoStock}>
-                       Skladom viac ako 2ks
-                   </span>
-                          <div className={styles.productActions}>
-                          </div>
-                      </div>
-                      <h4>
-                          <a href="">
-                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                          </a>
-                      </h4>
-                      <p>
-                          Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                          (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                      </p>
-                      <div className={styles.priceWrapper}>
-                          <div className={styles.mainPrice}>
-                              <span>13 599.00€</span>
-                              <span>25 700.30 bez DPH</span>
-                          </div>
-                          <div className={styles.discountPrice}>
-                              <span>11 399.00€</span>
-                          </div>
-                      </div>
                   </div>
               </Carousel>
           </section>
@@ -1172,6 +1420,18 @@ export default function Home() {
                       <h2>Špeciálna ponuka týždňa!</h2>
                   </div>
                   <div className={styles.bannerWrapper}>
+                      <div className={styles.bannerOfferImageWrapper}>
+                          <div className={styles.image}>
+                              <img src="img/offer.png" alt=""/>
+                              <div className={[styles.discountBadge, 'discountBadge'].join(' ')}>
+                               <span>
+                                   Ušetri až <br/>
+                                   <strong>-45%</strong>
+                               </span>
+                              </div>
+                          </div>
+                      </div>
+
                       <div className={styles.first}>
                           <h3>HP ZBook Studio G5 Mobile</h3>
                           <p>
@@ -1193,23 +1453,25 @@ export default function Home() {
                           </div>
                       </div>
                       <div className={styles.second}>
-                          <h5>Ponuka končí už o...</h5>
-                          <div className={styles.countdown}>
-                              <div className={styles.days}>
-                                  <span>3</span>
-                                  <span>dni</span>
-                              </div>
-                              <div className={styles.hours}>
-                                  <span>11</span>
-                                  <span>hod</span>
-                              </div>
-                              <div className={styles.minutes}>
-                                  <span>42</span>
-                                  <span>min</span>
-                              </div>
-                              <div className={styles.seconds}>
-                                  <span>17</span>
-                                  <span>sek</span>
+                          <div className={styles.wrapper}>
+                              <h5>Ponuka končí už o...</h5>
+                              <div className={styles.countdown} id="jsCountdown">
+                                  <div className={styles.days}>
+                                      <span id="jsDay">3</span>
+                                      <span>dni</span>
+                                  </div>
+                                  <div className={styles.hours}>
+                                      <span id="jsHour">11</span>
+                                      <span>hod</span>
+                                  </div>
+                                  <div className={styles.minutes}>
+                                      <span id="jsMinute">42</span>
+                                      <span>min</span>
+                                  </div>
+                                  <div className={styles.seconds}>
+                                      <span id="jsSecond">17</span>
+                                      <span>sek</span>
+                                  </div>
                               </div>
                           </div>
                       </div>
@@ -1303,304 +1565,388 @@ export default function Home() {
                   containerClass='productCarousel'
               >
                   <div className={styles.box}>
-                      <div className={styles.badges}>
-                          <div className={styles.badgeNew}>
-                              <span>Novinka!</span>
+                      <a href="">
+                          <div className={styles.badges}>
+                              <div className={styles.badgeNew}>
+                                  <span>Novinka!</span>
+                              </div>
+                              <div className={styles.favourite}>
+                                  <span>Obľúbené</span>
+                              </div>
+                              <div className={styles.delivery}>
+                                  <span>do 24h.</span>
+                              </div>
                           </div>
-                          <div className={styles.favourite}>
-                              <span>Obľúbené</span>
-                          </div>
-                          <div className={styles.delivery}>
-                              <span>do 24h.</span>
-                          </div>
-                      </div>
-                      <a href="" className={styles.productThumb}>
-                          <img src="img/product-image.png" alt=""/>
-                          <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                          <div href="" className={styles.productThumb}>
+                              <img src="img/product-image.png" alt=""/>
+                              <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
                                <span>
                                    Ušetri až <br/>
                                    <strong>-60%</strong>
                                </span>
+                              </div>
                           </div>
-                      </a>
-                      <div className={styles.infoBarWrapper}>
-                           <span className={styles.infoStock}>
-                               Skladom viac ako 2ks
-                           </span>
-                          <div className={styles.productActions}>
-                          </div>
-                      </div>
-                      <h4>
-                          <a href="">
-                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                          </a>
-                      </h4>
-                      <p>
-                          Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                          (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                      </p>
-                      <div className={styles.priceWrapper}>
-                          <div className={styles.mainPrice}>
-                              <span>13 599.00€</span>
-                              <span>25 700.30 bez DPH</span>
-                          </div>
-                          <div className={styles.discountPrice}>
-                              <span>11 399.00€</span>
-                          </div>
-                      </div>
-                  </div>
-                  <div className={styles.box}>
-                      <div className={styles.badges}>
-                          <div className={styles.badgeNew}>
-                              <span>Novinka!</span>
-                          </div>
-                          <div className={styles.favourite}>
-                              <span>Obľúbené</span>
-                          </div>
-                          <div className={styles.delivery}>
-                              <span>do 24h.</span>
-                          </div>
-                      </div>
-                      <a href="" className={styles.productThumb}>
-                          <img src="img/product-image.png" alt=""/>
-                          <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
-                               <span>
-                                   Ušetri až <br/>
-                                   <strong>-60%</strong>
-                               </span>
-                          </div>
-                      </a>
-                      <div className={styles.infoBarWrapper}>
-                           <span className={styles.infoStock}>
-                               Skladom viac ako 2ks
-                           </span>
-                          <div className={styles.productActions}>
-                          </div>
-                      </div>
-                      <h4>
-                          <a href="">
-                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                          </a>
-                      </h4>
-                      <p>
-                          Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                          (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                      </p>
-                      <div className={styles.priceWrapper}>
-                          <div className={styles.mainPrice}>
-                              <span>13 599.00€</span>
-                              <span>25 700.30 bez DPH</span>
-                          </div>
-                          <div className={styles.discountPrice}>
-                              <span>11 399.00€</span>
-                          </div>
-                      </div>
-                  </div>
-                  <div className={styles.box}>
-                      <div className={styles.badges}>
-                          <div className={styles.badgeNew}>
-                              <span>Novinka!</span>
-                          </div>
-                          <div className={styles.favourite}>
-                              <span>Obľúbené</span>
-                          </div>
-                          <div className={styles.delivery}>
-                              <span>do 24h.</span>
-                          </div>
-                      </div>
-                      <a href="" className={styles.productThumb}>
-                          <img src="img/product-image.png" alt=""/>
-                          <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
-                               <span>
-                                   Ušetri až <br/>
-                                   <strong>-60%</strong>
-                               </span>
-                          </div>
-                      </a>
-                      <div className={styles.infoBarWrapper}>
-                           <span className={styles.infoStock}>
-                               Skladom viac ako 2ks
-                           </span>
-                          <div className={styles.productActions}>
-                          </div>
-                      </div>
-                      <h4>
-                          <a href="">
-                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                          </a>
-                      </h4>
-                      <p>
-                          Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                          (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                      </p>
-                      <div className={styles.priceWrapper}>
-                          <div className={styles.mainPrice}>
-                              <span>13 599.00€</span>
-                              <span>25 700.30 bez DPH</span>
-                          </div>
-                          <div className={styles.discountPrice}>
-                              <span>11 399.00€</span>
-                          </div>
-                      </div>
-                  </div>
-                  <div className={styles.box}>
-                      <div className={styles.badges}>
-                          <div className={styles.badgeNew}>
-                              <span>Novinka!</span>
-                          </div>
-                          <div className={styles.favourite}>
-                              <span>Obľúbené</span>
-                          </div>
-                          <div className={styles.delivery}>
-                              <span>do 24h.</span>
-                          </div>
-                      </div>
-                      <a href="" className={styles.productThumb}>
-                          <img src="img/product-image.png" alt=""/>
-                          <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
-                               <span>
-                                   Ušetri až <br/>
-                                   <strong>-60%</strong>
-                               </span>
-                          </div>
-                      </a>
-                      <div className={styles.infoBarWrapper}>
-                           <span className={styles.infoStock}>
-                               Skladom viac ako 2ks
-                           </span>
-                          <div className={styles.productActions}>
-                          </div>
-                      </div>
-                      <h4>
-                          <a href="">
-                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                          </a>
-                      </h4>
-                      <p>
-                          Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                          (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                      </p>
-                      <div className={styles.priceWrapper}>
-                          <div className={styles.mainPrice}>
-                              <span>13 599.00€</span>
-                              <span>25 700.30 bez DPH</span>
-                          </div>
-                          <div className={styles.discountPrice}>
-                              <span>11 399.00€</span>
-                          </div>
-                      </div>
-                  </div>
-                  <div className={styles.box}>
-                      <div className={styles.badges}>
-                          <div className={styles.badgeNew}>
-                              <span>Novinka!</span>
-                          </div>
-                          <div className={styles.favourite}>
-                              <span>Obľúbené</span>
-                          </div>
-                          <div className={styles.delivery}>
-                              <span>do 24h.</span>
-                          </div>
-                      </div>
-                      <a href="" className={styles.productThumb}>
-                          <img src="img/product-image.png" alt=""/>
-                          <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
-                                   <span>
-                                       Ušetri až <br/>
-                                       <strong>-60%</strong>
+                          <div className={styles.infoBarWrapper}>
+                                   <span className={styles.infoStock}>
+                                       Skladom viac ako 2ks
                                    </span>
+                                 <span className={styles.infoStockMobile}>
+                                   Skladom
+                               </span>
+                              <div className={styles.productActions}>
+                                <span>
+                                   <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                              </div>
+                          </div>
+                          <h4>
+                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
+                          </h4>
+                          <p>
+                              Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                              (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                          </p>
+                          <div className={styles.priceWrapper}>
+                              <div className={styles.mainPrice}>
+                                  <span>13 599.00€</span>
+                                  <span>25 700.30 bez DPH</span>
+                              </div>
+                              <div className={styles.discountPrice}>
+                                  <span>11 399.00€</span>
+                              </div>
                           </div>
                       </a>
-                      <div className={styles.infoBarWrapper}>
+                  </div>
+                  <div className={styles.box}>
+                      <a href="">
+                          <div className={styles.badges}>
+                              <div className={styles.badgeNew}>
+                                  <span>Novinka!</span>
+                              </div>
+                              <div className={styles.favourite}>
+                                  <span>Obľúbené</span>
+                              </div>
+                              <div className={styles.delivery}>
+                                  <span>do 24h.</span>
+                              </div>
+                          </div>
+                          <div href="" className={styles.productThumb}>
+                              <img src="img/product-image.png" alt=""/>
+                              <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                               <span>
+                                   Ušetri až <br/>
+                                   <strong>-60%</strong>
+                               </span>
+                              </div>
+                          </div>
+                          <div className={styles.infoBarWrapper}>
                                <span className={styles.infoStock}>
                                    Skladom viac ako 2ks
                                </span>
-                          <div className={styles.productActions}>
+                                 <span className={styles.infoStockMobile}>
+                                   Skladom
+                               </span>
+                              <div className={styles.productActions}>
+                                 <span>
+                                       <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                              </div>
                           </div>
-                      </div>
-                      <h4>
-                          <a href="">
+                          <h4>
                               Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                          </a>
-                      </h4>
-                      <p>
-                          Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                          (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                      </p>
-                      <div className={styles.priceWrapper}>
-                          <div className={styles.mainPrice}>
-                              <span>13 599.00€</span>
-                              <span>25 700.30 bez DPH</span>
+                          </h4>
+                          <p>
+                              Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                              (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                          </p>
+                          <div className={styles.priceWrapper}>
+                              <div className={styles.mainPrice}>
+                                  <span>13 599.00€</span>
+                                  <span>25 700.30 bez DPH</span>
+                              </div>
+                              <div className={styles.discountPrice}>
+                                  <span>11 399.00€</span>
+                              </div>
                           </div>
-                          <div className={styles.discountPrice}>
-                              <span>11 399.00€</span>
-                          </div>
-                      </div>
+                      </a>
                   </div>
                   <div className={styles.box}>
-                      <div className={styles.badges}>
-                          <div className={styles.badgeNew}>
-                              <span>Novinka!</span>
+                      <a href="">
+                          <div className={styles.badges}>
+                              <div className={styles.badgeNew}>
+                                  <span>Novinka!</span>
+                              </div>
+                              <div className={styles.favourite}>
+                                  <span>Obľúbené</span>
+                              </div>
+                              <div className={styles.delivery}>
+                                  <span>do 24h.</span>
+                              </div>
                           </div>
-                          <div className={styles.favourite}>
-                              <span>Obľúbené</span>
-                          </div>
-                          <div className={styles.delivery}>
-                              <span>do 24h.</span>
-                          </div>
-                      </div>
-                      <a href="" className={styles.productThumb}>
-                          <img src="img/product-image.png" alt=""/>
-                          <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                          <div href="" className={styles.productThumb}>
+                              <img src="img/product-image.png" alt=""/>
+                              <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
                                <span>
                                    Ušetri až <br/>
                                    <strong>-60%</strong>
                                </span>
+                              </div>
+                          </div>
+                          <div className={styles.infoBarWrapper}>
+                               <span className={styles.infoStock}>
+                                   Skladom viac ako 2ks
+                               </span>
+                              <span className={styles.infoStockMobile}>
+                                   Skladom
+                               </span>
+                              <div className={styles.productActions}>
+                                    <span>
+                                       <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                              </div>
+                          </div>
+                          <h4>
+                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
+                          </h4>
+                          <p>
+                              Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                              (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                          </p>
+                          <div className={styles.priceWrapper}>
+                              <div className={styles.mainPrice}>
+                                  <span>13 599.00€</span>
+                                  <span>25 700.30 bez DPH</span>
+                              </div>
+                              <div className={styles.discountPrice}>
+                                  <span>11 399.00€</span>
+                              </div>
                           </div>
                       </a>
-                      <div className={styles.infoBarWrapper}>
-                           <span className={styles.infoStock}>
-                               Skladom viac ako 2ks
-                           </span>
-                          <div className={styles.productActions}>
+                  </div>
+                  <div className={styles.box}>
+                      <a href="">
+                          <div className={styles.badges}>
+                              <div className={styles.badgeNew}>
+                                  <span>Novinka!</span>
+                              </div>
+                              <div className={styles.favourite}>
+                                  <span>Obľúbené</span>
+                              </div>
+                              <div className={styles.delivery}>
+                                  <span>do 24h.</span>
+                              </div>
                           </div>
-                      </div>
-                      <h4>
-                          <a href="">
+                          <div href="" className={styles.productThumb}>
+                              <img src="img/product-image.png" alt=""/>
+                              <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                               <span>
+                                   Ušetri až <br/>
+                                   <strong>-60%</strong>
+                               </span>
+                              </div>
+                          </div>
+                          <div className={styles.infoBarWrapper}>
+                               <span className={styles.infoStock}>
+                                   Skladom viac ako 2ks
+                               </span>
+                              <span className={styles.infoStockMobile}>
+                                   Skladom
+                               </span>
+                              <div className={styles.productActions}>
+                             <span>
+                                       <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                              </div>
+                          </div>
+                          <h4>
                               Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
-                          </a>
-                      </h4>
-                      <p>
-                          Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
-                          (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
-                      </p>
-                      <div className={styles.priceWrapper}>
-                          <div className={styles.mainPrice}>
-                              <span>13 599.00€</span>
-                              <span>25 700.30 bez DPH</span>
+                          </h4>
+                          <p>
+                              Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                              (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                          </p>
+                          <div className={styles.priceWrapper}>
+                              <div className={styles.mainPrice}>
+                                  <span>13 599.00€</span>
+                                  <span>25 700.30 bez DPH</span>
+                              </div>
+                              <div className={styles.discountPrice}>
+                                  <span>11 399.00€</span>
+                              </div>
                           </div>
-                          <div className={styles.discountPrice}>
-                              <span>11 399.00€</span>
+                      </a>
+                  </div>
+                  <div className={styles.box}>
+                      <a href="">
+                          <div className={styles.badges}>
+                              <div className={styles.badgeNew}>
+                                  <span>Novinka!</span>
+                              </div>
+                              <div className={styles.favourite}>
+                                  <span>Obľúbené</span>
+                              </div>
+                              <div className={styles.delivery}>
+                                  <span>do 24h.</span>
+                              </div>
                           </div>
-                      </div>
+                          <div href="" className={styles.productThumb}>
+                              <img src="img/product-image.png" alt=""/>
+                              <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                               <span>
+                                   Ušetri až <br/>
+                                   <strong>-60%</strong>
+                               </span>
+                              </div>
+                          </div>
+                          <div className={styles.infoBarWrapper}>
+                               <span className={styles.infoStock}>
+                                   Skladom viac ako 2ks
+                               </span>
+                              <span className={styles.infoStockMobile}>
+                                   Skladom
+                               </span>
+                              <div className={styles.productActions}>
+                             <span>
+                                       <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                              </div>
+                          </div>
+                          <h4>
+                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
+                          </h4>
+                          <p>
+                              Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                              (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                          </p>
+                          <div className={styles.priceWrapper}>
+                              <div className={styles.mainPrice}>
+                                  <span>13 599.00€</span>
+                                  <span>25 700.30 bez DPH</span>
+                              </div>
+                              <div className={styles.discountPrice}>
+                                  <span>11 399.00€</span>
+                              </div>
+                          </div>
+                      </a>
+                  </div>
+                  <div className={styles.box}>
+                      <a href="">
+                          <div className={styles.badges}>
+                              <div className={styles.badgeNew}>
+                                  <span>Novinka!</span>
+                              </div>
+                              <div className={styles.favourite}>
+                                  <span>Obľúbené</span>
+                              </div>
+                              <div className={styles.delivery}>
+                                  <span>do 24h.</span>
+                              </div>
+                          </div>
+                          <div href="" className={styles.productThumb}>
+                              <img src="img/product-image.png" alt=""/>
+                              <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                               <span>
+                                   Ušetri až <br/>
+                                   <strong>-60%</strong>
+                               </span>
+                              </div>
+                          </div>
+                          <div className={styles.infoBarWrapper}>
+                               <span className={styles.infoStock}>
+                                   Skladom viac ako 2ks
+                               </span>
+                              <span className={styles.infoStockMobile}>
+                                   Skladom
+                               </span>
+                              <div className={styles.productActions}>
+                              <span>
+                                       <img src="img/icon-compare-products.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/icon-favourite-2.svg" className="svg" />
+                                   </span>
+                                  <span>
+                                       <img src="img/+A.svg" className="svg" />
+                                   </span>
+                              </div>
+                          </div>
+                          <h4>
+                              Lenovo ThinkPad L460 ThinkPad X1 Yoga 1st Gen
+                          </h4>
+                          <p>
+                              Intel Core i3-6100U, 4 GB RAM, 128 GB SSD Intel HD Graphics 520, 14”
+                              (1366 x 768), Windows 10 Pro, Intel Core i3-6100U, 4 GB RAM, 128 GB…
+                          </p>
+                          <div className={styles.priceWrapper}>
+                              <div className={styles.mainPrice}>
+                                  <span>13 599.00€</span>
+                                  <span>25 700.30 bez DPH</span>
+                              </div>
+                              <div className={styles.discountPrice}>
+                                  <span>11 399.00€</span>
+                              </div>
+                          </div>
+                      </a>
                   </div>
               </Carousel>
           </section>
           {/* End News Products Slider */}
 
           {/* Start Brands Section */}
-          <section className={styles.brands}>
+          <section className={[styles.brands, 'brands'].join(' ')}>
               <div className="container">
-                  <div className={styles.brandsWrapper}>
-                      <img src="img/dell-logo.png" alt=""/>
-                      <img src="img/eizo-logo.png" alt=""/>
-                      <img src="img/samsung-logo.png" alt=""/>
-                      <img src="img/toshiba-logo.png" alt=""/>
-                      <img src="img/fujitsu-logo.png" alt=""/>
-                      <img src="img/applelogo.png" alt=""/>
-                      <img src="img/hp-logo.png" alt=""/>
-                      <img src="img/lenovo-logo.png" alt=""/>
-                  </div>
+                  {/*<div className={styles.brandsWrapper}>*/}
+                      <Carousel
+                          responsive={logosSliderResponsive}
+                          autoPlay={true}
+                          swipeable={true}
+                          draggable={false}
+                          infinite={true}
+                          ssr={true}
+                          arrows={false}
+                          showDots={false}
+                          containerClass='logoCarousel'
+                      >
+                          <img src="img/dell-logo.png" alt=""/>
+                          <img src="img/eizo-logo.png" alt=""/>
+                          <img src="img/samsung-logo.png" alt=""/>
+                          <img src="img/toshiba-logo.png" alt=""/>
+                          <img src="img/fujitsu-logo.png" alt=""/>
+                          <img src="img/applelogo.png" alt=""/>
+                          <img src="img/hp-logo.png" alt=""/>
+                          <img src="img/lenovo-logo.png" alt=""/>
+                      </Carousel>
+                  {/*</div>*/}
               </div>
           </section>
           {/* End Brands Section */}
@@ -1610,7 +1956,7 @@ export default function Home() {
               <div className="container">
                   <div className="sliderTitle">
                       <h2>Prečítajte si <br /> náš blog.</h2>
-                      <a href="">
+                      <a href="" className="imageTitle">
                           <img src="img/logo-bigblog.png" alt=""/>
                       </a>
                   </div>
@@ -1856,7 +2202,7 @@ export default function Home() {
           {/* End Blog Posts Slider */}
 
           {/* Start Testimonials Section */}
-          <section className={styles.testimonials}>
+          <section className={[styles.testimonials, 'testimonialsCarousel'].join(' ')}>
               <div className="container">
                   <div className={styles.testimonialsWrapper}>
                       <Carousel
@@ -1868,6 +2214,8 @@ export default function Home() {
                           arrows={false}
                           showDots={false}
                           autoPlay={true}
+                          customButtonGroup={<SliderArrowsGroup />}
+                          containerClass='testimonialsCarousel'
                       >
                           <div className={styles.testimonial}>
                               <h5 className="text-center">Peter</h5>

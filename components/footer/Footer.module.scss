@@ -24,6 +24,10 @@
     div {
       margin-top: 45px;
     }
+
+    .btn {
+      margin-right: 0;
+    }
   }
 
   .benefitIcons {
@@ -62,10 +66,22 @@
       display: flex;
 
       .col {
-        width: calc(100% / 4);
+        //width: calc(100% / 4);
 
         &:first-child {
-          width: 40%;
+          width: 35%;
+        }
+
+        &:nth-child(2) {
+          width: 26%
+        }
+
+        &:nth-child(3) {
+          width: 26%;
+        }
+
+        &:last-child {
+          width: 12%;
         }
 
         .brand {
@@ -175,6 +191,46 @@
       line-height: 15px;
       color: $text_gray_dark;
       margin-bottom: 0;
+    }
+  }
+}
+
+@media ( max-width: $xxl ) {
+
+  .footer {
+
+    .links {
+
+      .colWrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        .col {
+
+          &:first-child {
+            width: 40%;
+          }
+
+          &:nth-child(2) {
+            width: 22.5%;
+          }
+
+          &:nth-child(3) {
+            width: 22.5%;
+          }
+
+          &:last-child {
+            width: 15%;
+          }
+
+          .socialContact {
+
+            a {
+              white-space: nowrap !important;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -292,6 +348,7 @@
   .footer {
 
     .links {
+      margin-top: 30px;
 
       .colWrapper {
         display: flex;
@@ -326,6 +383,28 @@
               width: 50%;
             }
           }
+
+          .socialContact {
+            margin-top: 25px;
+
+            .contact {
+
+              a {
+                white-space: nowrap !important;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .logos {
+
+      .logosWrapper {
+
+        img {
+          padding: 10px 15px;
+          margin: 0;
         }
       }
     }

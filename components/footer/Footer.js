@@ -15,7 +15,7 @@ const Footer = ({}) => {
                 <div className="action-form">
                     <form action="">
                         <input type="text" placeholder="Vaša emailová adresa" />
-                        <button type="submit" className="primary">Odoberať</button>
+                        <button type="submit" className={[styles.btn, 'primary'].join(' ')}>Odoberať</button>
                     </form>
                 </div>
             </div>
