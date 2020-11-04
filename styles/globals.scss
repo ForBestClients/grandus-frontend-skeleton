@@ -118,7 +118,7 @@ form {
   }
 
   @media ( min-width: $xxxl ) {
-    max-width: 1600px;
+    max-width: 1570px;
 
     &.sliderContainer {
       max-width: 1630px;
@@ -151,6 +151,9 @@ section.newsProducts {
 section.blogPosts {
   background-color: $c_main_bg;
 
+  ul {
+    padding-left: 0 !important;
+  }
 
   a {
     display: block;
@@ -328,41 +331,28 @@ section.blogPosts {
   position: relative;
 
   ul {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
 
     li {
-      width: auto !important;
+      //width: auto !important;
     }
   }
 
   .productCarousel {
     padding-top: 3px;
     padding-bottom: 140px;
-    max-width: 1750px;
-    margin-left: auto;
 
-    @media ( max-width: $xxxl ) {
-
-      & {
-        max-width: 1420px;
-      }
-    }
-
-    @media ( max-width: $xxl ) {
-
-      & {
-        max-width: 100%;
-      }
+    ul {
+      padding-left: 7px;
     }
 
     .react-multi-carousel-dot-list {
+      display: flex;
+      justify-content: flex-start;
       width: auto;
       position: absolute;
       left: 0;
       top: 84%;
-      //padding-left: 150px;
+      padding-left: 10px;
 
       li {
         margin-right: 4px;
@@ -500,6 +490,10 @@ section.blogPosts {
       }
     }
   }
+}
+
+.iconColor {
+  fill: $c_icon;
 }
 
 @import "components";

@@ -126,6 +126,7 @@
               margin-right: 20px;
 
               svg {
+                fill: $c_white;
                 width: 27px;
                 height: 27px;
 
@@ -407,6 +408,39 @@
           margin: 0;
         }
       }
+    }
+  }
+}
+
+@media ( max-width: $sm ) {
+
+  .footer {
+
+    .newsletter {
+
+      .newsletterWrapper {
+        margin-top: 0;
+      }
+
+      h2 {
+        font-size: 20px;
+        line-height: 25px;
+        margin-top: 0;
+        text-align: center;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .actionForm {
+        margin-top: 20px;
+      }
+    }
+
+    .benefitIcons {
+      margin-top: 40px;
     }
   }
 }

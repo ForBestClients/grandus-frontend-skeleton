@@ -508,10 +508,11 @@ section.productSliderWrapper {
 
   .box {
     background-color: $c_white_bg;
-    width: 330px;
+    width: 290px;
     padding: 20px;
     box-shadow: 0 0 5px $c_shadow;
-    margin-right: 20px;
+    margin-right: 15px;
+    //margin-left: 10px;
     position: relative;
     border-radius: $b_radius_default;
 
@@ -520,6 +521,7 @@ section.productSliderWrapper {
       left: -10px;
       top: 20px;
       z-index: 10;
+      overflow: hidden;
 
       div {
         display: flex;
@@ -604,8 +606,12 @@ section.productSliderWrapper {
 
       .productActions {
 
-        a {
+        span {
           margin-right: 6px;
+
+          svg {
+            fill: #d9d9d9;
+          }
 
           img, svg {
             transition: all .2s ease;
@@ -615,6 +621,18 @@ section.productSliderWrapper {
 
             img, svg {
               transform: rotate(-25deg);
+            }
+
+            &:nth-child(1) {
+              svg {
+                fill: $c_black;
+              }
+            }
+
+            &:nth-child(2) {
+              svg {
+                fill: #FF0000;
+              }
             }
           }
         }
@@ -1297,13 +1315,6 @@ section.testimonials {
       }
     }
   }
-
-  section.productSliderWrapper {
-
-    .box {
-
-    }
-  }
 }
 
 @media ( max-width: $xl ) {
@@ -1662,7 +1673,13 @@ section.testimonials {
           font-size: $f_size_base;
           font-weight: bold;
           line-height: 20px;
-          padding: 10px 13px;
+          padding: 7px 13px;
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin-right: 6px;
+          }
         }
       }
     }
@@ -1741,6 +1758,35 @@ section.testimonials {
 }
 
 @media ( max-width: $sm ) {
+
+  section.productSliderWrapper {
+
+    .box {
+      width: 160px;
+    }
+  }
+
+  section.bannerLinks {
+    padding-top: 30px;
+
+    .bannerLinksGrid {
+
+      &:first-child {
+
+        div.box {
+
+          &:nth-child(1) {
+            //grid-area: 1 / 1 / 2 / 3;
+
+            h3 {
+              //font-size: 20px;
+              line-height: 21px;
+            }
+          }
+        }
+      }
+    }
+  }
 
   section.miniBannersMobile {
 

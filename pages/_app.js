@@ -5,25 +5,25 @@ import Footer from "../components/footer/Footer";
 
 import Head from 'next/head'
 
-const convertImages = (query, callback) => {
-    const images = document.querySelectorAll(query);
-
-    images.forEach(image => {
-        fetch ( image.src )
-            .then( res => res.text() )
-            .then( data => {
-                const parser = new DOMParser();
-                const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
-
-                if ( image.id ) svg.id = image.id;
-                if ( image.className ) svg.classList = image.classList;
-
-                image.parentNode.replaceChild(svg, image);
-            })
-            .then(callback)
-            .catch(error => console.error(error))
-    });
-}
+// const convertImages = (query, callback) => {
+//     const images = document.querySelectorAll(query);
+//
+//     images.forEach(image => {
+//         fetch ( image.src )
+//             .then( res => res.text() )
+//             .then( data => {
+//                 const parser = new DOMParser();
+//                 const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
+//
+//                 if ( image.id ) svg.id = image.id;
+//                 if ( image.className ) svg.classList = image.classList;
+//
+//                 image.parentNode.replaceChild(svg, image);
+//             })
+//             .then(callback)
+//             .catch(error => console.error(error))
+//     });
+// }
 
 function scrollToTop (duration) {
 
@@ -52,7 +52,7 @@ function scrollToTop (duration) {
 
 if ( typeof window !== 'undefined' ) {
 
-    convertImages('.svg');
+    // convertImages('.svg');
 
     let widgetFixedMegaMenuItems = document.querySelectorAll('.jsHasMegaMenu');
 
@@ -119,6 +119,51 @@ if ( typeof window !== 'undefined' ) {
             clearInterval(x);
         }
     }, 1000);
+
+    let getStyle = function(e, styleName) {
+        let styleValue = '';
+
+        if ( document.defaultView && document.defaultView.getComputedStyle ) {
+            styleValue = document.defaultView.getComputedStyle(e, '').getPropertyValue(styleName);
+        } else if (e.currentStyle) {
+            styleName = styleName.replace(/\-(\w)/g, function(strMatch, p1) {
+                return p1.toUpperCase();
+            });
+            styleValue = e.currentStyle[styleName];
+        }
+        return styleValue;
+    }
+
+    let sliders          = document.querySelectorAll('.productCarousel');
+    let miniBannerSlider = document.querySelector('.miniBannerCarousel');
+    let container        = document.getElementById('container');
+
+    function recalculateSliderContainer() {
+
+        setTimeout( () => {
+
+            let marginLeft = getStyle(container, 'margin-left').replace('px', '');
+
+            miniBannerSlider.style.marginLeft = parseInt(marginLeft) + 15 + 'px';
+            miniBannerSlider.firstChild.style.marginLeft = parseInt(marginLeft) + 15 + 'px';
+
+            marginLeft = parseInt(marginLeft) + 15 + 'px';
+
+            sliders.forEach( (item) => {
+                item.style.marginLeft = marginLeft
+                item.style.width =  'calc(100% - ' + marginLeft + ')';
+
+                // item.firstChild.style.marginLeft = parseInt(marginLeft) + 15 + 'px';
+                item.firstChild.style.width = '100%';
+            });
+        }, 500);
+    }
+
+    recalculateSliderContainer();
+
+    window.addEventListener('resize', function () {
+        recalculateSliderContainer();
+    });
 }
 
 function MyApp({ Component, pageProps }) {
