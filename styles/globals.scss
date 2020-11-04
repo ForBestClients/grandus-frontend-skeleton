@@ -1,3 +1,4 @@
+@import "~bootstrap-4-grid";
 @import "variables";
 @import "helpers";
 
@@ -76,7 +77,7 @@ form {
 }
 
 
-.container {
+.custom-container {
   //width: 100%;
   padding-right: 15px;
   padding-left: 15px;

@@ -2,7 +2,7 @@ import styles from "../styles/Product.module.scss";
 
 const Product = () => {
   return (
-    <section className={styles.wrapper}>
+    <section className="container">
       <h1>Detail produktu</h1>
       <p>
         Kazda stranka ma vlastne scss, ktore v sebe includuje globalne

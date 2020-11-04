@@ -65,60 +65,76 @@ if ( typeof window !== 'undefined' ) {
         });
     });
 
-    window.addEventListener('scroll', function() {
-        let fixedWidget = document.getElementById('categoryWidgetFixed'),
-            scrollTop   = document.getElementById('scrollTop');
+    let scrollTopEl = document.getElementById('scrollTop') ;
 
+    if ( typeof(scrollTopEl) != 'undefined' && scrollTopEl != null )  {
 
-        setTimeout(() => {
-            if ( window.scrollY > (fixedWidget.offsetTop + fixedWidget.offsetHeight) ) {
-                fixedWidget.classList.add('visible');
-                scrollTop.classList.add('visible');
-            } else {
-                fixedWidget.classList.remove('visible');
-                scrollTop.classList.remove('visible');
+        window.addEventListener('scroll', function() {
+            if ( window.scrollY > 700 )
+                scrollTopEl.classList.add('visible')
+            else
+                scrollTopEl.classList.remove('visible');
+        });
 
-                widgetFixedMegaMenuItems.forEach( (item) => {
-                   if ( item.classList.contains('open') )
-                       item.classList.remove('open');
-                });
+        scrollTopEl.addEventListener('click', () => {
+            scrollToTop(1000);
+        });
+    }
+
+    let fixedWidget = document.getElementById('categoryWidgetFixed');
+
+    if ( typeof(fixedWidget) != 'undefined' && fixedWidget != null )  {
+
+        window.addEventListener('scroll', function() {
+
+            setTimeout(() => {
+                if ( window.scrollY > (fixedWidget.offsetTop + fixedWidget.offsetHeight) ) {
+                    fixedWidget.classList.add('visible');
+                } else {
+                    fixedWidget.classList.remove('visible');
+
+                    widgetFixedMegaMenuItems.forEach( (item) => {
+                        if ( item.classList.contains('open') )
+                            item.classList.remove('open');
+                    });
+                }
+            }, 250)
+        });
+    }
+
+    let countdown = document.getElementById('jsCountdown');
+
+    if ( typeof(countdown) != 'undefined' && countdown != null  ) {
+        // Set the date we're counting down to
+        let countDownDate = new Date('Jan 5, 2021 15:37:25').getTime();
+
+        // Update the count down every 1 second
+        let x = setInterval(function() {
+
+            // Get today's date and time
+            let now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            let distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the results
+            document.getElementById('jsDay').innerText = days;
+            document.getElementById('jsHour').innerText = hours;
+            document.getElementById('jsMinute').innerText = minutes;
+            document.getElementById('jsSecond').innerText = seconds;
+
+            // If the count down is over, write some text
+            if ( distance < 0 ) {
+                clearInterval(x);
             }
-        }, 250)
-    });
-
-    document.getElementById('scrollTop').addEventListener('click', () => {
-       scrollToTop(1000);
-    });
-
-    // Set the date we're counting down to
-    let countDownDate = new Date('Jan 5, 2021 15:37:25').getTime();
-
-    // Update the count down every 1 second
-    let x = setInterval(function() {
-
-        // Get today's date and time
-        let now = new Date().getTime();
-
-        // Find the distance between now and the count down date
-        let distance = countDownDate - now;
-
-        // Time calculations for days, hours, minutes and seconds
-        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Output the results
-        document.getElementById('jsDay').innerText = days;
-        document.getElementById('jsHour').innerText = hours;
-        document.getElementById('jsMinute').innerText = minutes;
-        document.getElementById('jsSecond').innerText = seconds;
-
-        // If the count down is over, write some text
-        if ( distance < 0 ) {
-            clearInterval(x);
-        }
-    }, 1000);
+        }, 1000);
+    }
 
     let getStyle = function(e, styleName) {
         let styleValue = '';
@@ -159,11 +175,14 @@ if ( typeof window !== 'undefined' ) {
         }, 500);
     }
 
-    recalculateSliderContainer();
+    if ( typeof(container) != 'undefined' && container != null  ) {
 
-    window.addEventListener('resize', function () {
         recalculateSliderContainer();
-    });
+
+        window.addEventListener('resize', function () {
+            recalculateSliderContainer();
+        });
+    }
 }
 
 function MyApp({ Component, pageProps }) {

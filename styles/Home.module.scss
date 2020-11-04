@@ -200,7 +200,6 @@ section.promo {
           align-items: center;
 
           &:hover {
-            width: calc(100% + 10px);
             background-color: $c_black;
 
             a.mainCategoryLink {
@@ -236,6 +235,7 @@ section.promo {
             transition: color .2s ease;
 
             svg {
+              width: 35px;
 
               &:first-child {
                 transition: transform .2s ease;
@@ -290,6 +290,7 @@ section.promo {
           }
 
           &.hasMegamenu {
+            width: calc(100% + 10px);
             position: relative;
             
             &:hover {
@@ -512,7 +513,6 @@ section.productSliderWrapper {
     padding: 20px;
     box-shadow: 0 0 5px $c_shadow;
     margin-right: 15px;
-    //margin-left: 10px;
     position: relative;
     border-radius: $b_radius_default;
 
@@ -554,15 +554,27 @@ section.productSliderWrapper {
       }
 
       .badgeNew {
+        max-width: 75px;
         background-color: $c_blue_badge;
       }
 
       .favourite {
+        max-width: 80px;
         background-color: $c_favourite_badge;
       }
 
       .delivery {
+        padding-right: 10px;
         background-color: $c_info_badge;
+
+        svg {
+          fill: $c_white;
+          margin-right: 5px;
+
+          path, rect {
+            fill: $c_white;
+          }
+        }
       }
     }
 
@@ -582,6 +594,7 @@ section.productSliderWrapper {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-top: 10px;
 
       .infoStock, .infoStockMobile {
         display: flex;
@@ -591,7 +604,6 @@ section.productSliderWrapper {
         font-weight: bold;
         color: $text_red_stock;
         text-transform: uppercase;
-        margin-top: 10px;
 
         &:before {
           content: '●';
@@ -964,7 +976,6 @@ section.bannerLinks {
       }
 
       span {
-        max-width: 116px;
         margin-bottom: 20px;
         margin-left: 20px;
 
@@ -1171,6 +1182,13 @@ section.testimonials {
           box-shadow: 0 0 5px $c_shadow;
 
           li.categoryWidgetItem {
+
+            a {
+
+              svg {
+                width: 40px;
+              }
+            }
 
             &.hasMegamenu {
 
@@ -1679,6 +1697,7 @@ section.testimonials {
 
           svg {
             margin-right: 6px;
+            height: 20px;
           }
         }
       }
@@ -1713,7 +1732,7 @@ section.testimonials {
         position: absolute;
         z-index: 11;
         right: 20px;
-        top: 50%;
+        top: 40%;
       }
 
       ul {

@@ -1,4 +1,5 @@
 import styles from "./Footer.module.scss";
+import Link from "next/link";
 
 const Footer = ({}) => {
   return (
@@ -6,7 +7,7 @@ const Footer = ({}) => {
 
         {/* Start Newsletter */}
         <section className={styles.newsletter}>
-            <div className={[styles.newsletterWrapper, 'container'].join(' ')}>
+            <div className={[styles.newsletterWrapper, 'custom-container'].join(' ')}>
                 <h2 className="text-center">Newsletter</h2>
                 <p className="text-center">
                     Neváhajte sa prihlásiť do sekcie newsletter. Môžete občas dostať e-mail o našich nových produktoch,
@@ -24,7 +25,7 @@ const Footer = ({}) => {
 
         {/* Start Benefit Icons */}
         <section className={styles.benefitIcons}>
-             <div className="container">
+             <div className="custom-container">
                  <div className={styles.benefitIconsWrapper}>
                      <div className={styles.box}>
                          <img src="img/natrhu.png" alt=""/>
@@ -53,7 +54,7 @@ const Footer = ({}) => {
 
         {/* Start Links */}
         <section className={styles.links}>
-            <div className="container">
+            <div className="custom-container">
                 <div className={styles.colWrapper}>
                     <div className={styles.col}>
                         <div className={styles.brand}>
@@ -99,8 +100,16 @@ const Footer = ({}) => {
                             <li><a href="">Monitory</a></li>
                             <li><a href="">Komponenty</a></li>
                             <li><a href="">Doplnky a elektronika</a></li>
-                            <li><a href="">Softvér a služby</a></li>
-                            <li><a href="">Výpredaj HP</a></li>
+                            <li>
+                                <Link href={"/produkt"}>
+                                    <a>Produkt</a>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={"/kategoria"}>
+                                    <a>Kategoria</a>
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                     <div className={styles.col}>
@@ -171,7 +180,7 @@ const Footer = ({}) => {
         {/* End Links */}
 
         <section className={styles.logos}>
-            <div className="container">
+            <div className="custom-container">
                 <div className={styles.logosWrapper}>
                     <img src="img/eset.png" alt=""/>
                     <img src="img/hppartner.png" alt=""/>
