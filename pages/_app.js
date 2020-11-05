@@ -54,6 +54,12 @@ if ( typeof window !== 'undefined' ) {
 
     // convertImages('.svg');
 
+    let homepageWrapper = document.getElementById('homepage');
+
+    if ( typeof(homepageWrapper) != 'undefined' && homepageWrapper != null )  {
+        document.getElementById('categoryMenu').style.display = 'none';
+    }
+
     document.getElementById('hamburger').addEventListener('click', function () {
         let menu = document.getElementById('jsMobileMenu');
 

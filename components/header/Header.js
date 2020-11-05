@@ -183,7 +183,7 @@ const Header = ({}) => {
       {/* Start Main Header Bar */}
 
 
-      <div className={styles.categoriesWrapper}>
+      <div className={styles.categoriesWrapper} id="categoryMenu">
           <div className={[styles.container, 'custom-container'].join(' ')}>
               <ul>
                   <li>
