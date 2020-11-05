@@ -20,11 +20,27 @@ main.categoryPage {
       .box {
         padding: 0 20px;
 
-        h3 {
-          font-size: 20px;
-          line-height: 25px;
-          margin-bottom: 17px;
-          margin-top: 20px;
+        .title {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+
+          h3 {
+            font-size: 20px;
+            line-height: 25px;
+            margin-bottom: 17px;
+            margin-top: 20px;
+          }
+
+          svg {
+            transform: rotate(90deg);
+            transition: transform .2s ease;
+          }
+        }
+
+        .filterCheckboxes {
+          display: none;
         }
       }
     }
@@ -112,10 +128,15 @@ main.categoryPage {
             max-height: 90px;
           }
 
-          h5 {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 0;
+          div {
+            display: flex;
+            align-items: center;
+
+            h5 {
+              font-size: 20px;
+              font-weight: bold;
+              margin: 0 10px 0 0;
+            }
           }
         }
       }
@@ -182,6 +203,22 @@ main.categoryPage {
     }
   }
 
+  @media ( max-width: $xxl ) {
+
+    .categoryWrapper {
+
+      .productsWrapper {
+
+        .categoriesWrapper {
+
+          .category {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+
   @media ( max-width: $xl ) {
 
     .categoryWrapper {
@@ -227,6 +264,13 @@ main.categoryPage {
             }
           }
         }
+
+        .categoriesWrapper {
+
+          .category {
+            flex-direction: row;
+          }
+        }
       }
     }
   }
@@ -246,6 +290,13 @@ main.categoryPage {
           }
         }
 
+        .categoriesWrapper {
+
+          .category {
+            flex-direction: column;
+          }
+        }
+
         .productListing {
 
           .showMore {
@@ -262,6 +313,31 @@ main.categoryPage {
 
               a {
                 margin-top: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media ( max-width: $sm ) {
+
+    .categoryWrapper {
+
+      .productsWrapper {
+
+        .categoriesWrapper {
+
+          .category {
+
+            div {
+              flex-direction: column;
+
+              h5 {
+                font-size: 18px;
+                white-space: nowrap;
+                margin-right: 0;
               }
             }
           }

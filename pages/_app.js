@@ -203,6 +203,35 @@ if ( typeof window !== 'undefined' ) {
             recalculateSliderContainer();
         });
     }
+
+    let filters = document.querySelectorAll('.jsShowFilter');
+
+    filters.forEach( (filter) => {
+        filter.addEventListener('click', function () {
+            if ( !this.nextSibling.classList.contains('d-block') )
+                this.nextSibling.classList.add('d-block')
+            else
+                this.nextSibling.classList.remove('d-block')
+        });
+    });
+
+    let showAllFilters = document.getElementById('jsShowAllFilters');
+
+    if ( typeof(showAllFilters) != 'undefined' && showAllFilters != null  ) {
+
+        showAllFilters.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            let hiddenFilters = document.querySelectorAll('.js-filter-hidden');
+
+            hiddenFilters.forEach( (hiddenFilter) => {
+               if ( hiddenFilter.classList.contains('d-none') )
+                   hiddenFilter.classList.remove('d-none')
+            });
+
+            this.classList.add('d-none');
+        });
+    }
 }
 
 function MyApp({ Component, pageProps }) {

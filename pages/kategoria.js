@@ -142,73 +142,132 @@ const Category = () => {
                        <PriceFilter />
                    </div>
                    <div className={styles.box}>
-                       <h3>Značka</h3>
-                       <div className="custom-checkbox">
-                           <label>
-                               <input type="checkbox" />
+                       <div className={[styles.title, 'jsShowFilter'].join(' ')}>
+                           <h3>Značka</h3>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                viewBox="0 0 13.939 9.547">
+                               <path d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                     transform="translate(0 0)"/>
+                           </svg>
+                       </div>
+                       <div className={[styles.filterCheckboxes, 'jsFilterCheckboxes'].join(' ')}>
+                           <div className="custom-checkbox">
+                               <label>
+                                   <input type="checkbox" />
                                    <span className="check"></span>
                                    <span className="label">Filter kategórie</span>
-                           </label>
-                       </div>
-                       <div className="custom-checkbox">
-                           <label>
-                               <input type="checkbox" />
-                               <span className="check"></span>
-                               <span className="label">Filter kategórie</span>
-                           </label>
-                       </div>
-                       <div className="custom-checkbox">
-                           <label>
-                               <input type="checkbox" />
-                               <span className="check"></span>
-                               <span className="label">Filter kategórie</span>
-                           </label>
-                       </div>
-                       <div className="custom-checkbox">
-                           <label>
-                               <input type="checkbox" />
-                               <span className="check"></span>
-                               <span className="label">Filter kategórie</span>
-                           </label>
-                       </div>
-                   </div>
-
-                   <div className={styles.box}>
-                       <h3>Značka</h3>
-                       <div className="custom-checkbox">
-                           <label>
-                               <input type="checkbox" />
-                               <span className="check"></span>
-                               <span className="label">Filter kategórie</span>
-                           </label>
-                       </div>
-                       <div className="custom-checkbox">
-                           <label>
-                               <input type="checkbox" />
-                               <span className="check"></span>
-                               <span className="label">Filter kategórie</span>
-                           </label>
-                       </div>
-                       <div className="custom-checkbox">
-                           <label>
-                               <input type="checkbox" />
-                               <span className="check"></span>
-                               <span className="label">Filter kategórie</span>
-                           </label>
-                       </div>
-                       <div className="custom-checkbox">
-                           <label>
-                               <input type="checkbox" />
-                               <span className="check"></span>
-                               <span className="label">Filter kategórie</span>
-                           </label>
+                               </label>
+                           </div>
+                           <div className="custom-checkbox">
+                               <label>
+                                   <input type="checkbox" />
+                                   <span className="check"></span>
+                                   <span className="label">Filter kategórie</span>
+                               </label>
+                           </div>
+                           <div className="custom-checkbox">
+                               <label>
+                                   <input type="checkbox" />
+                                   <span className="check"></span>
+                                   <span className="label">Filter kategórie</span>
+                               </label>
+                           </div>
+                           <div className="custom-checkbox">
+                               <label>
+                                   <input type="checkbox" />
+                                   <span className="check"></span>
+                                   <span className="label">Filter kategórie</span>
+                               </label>
+                           </div>
                        </div>
                    </div>
 
                    <div className={styles.box}>
-                       <a href="" className="showMore">
+                       <div className={[styles.title, 'jsShowFilter'].join(' ')}>
+                           <h3>Značka</h3>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                viewBox="0 0 13.939 9.547">
+                               <path d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                     transform="translate(0 0)"/>
+                           </svg>
+                       </div>
+                       <div className={[styles.filterCheckboxes, 'jsFilterCheckboxes'].join(' ')}>
+                           <div className="custom-checkbox">
+                               <label>
+                                   <input type="checkbox" />
+                                   <span className="check"></span>
+                                   <span className="label">Filter kategórie</span>
+                               </label>
+                           </div>
+                           <div className="custom-checkbox">
+                               <label>
+                                   <input type="checkbox" />
+                                   <span className="check"></span>
+                                   <span className="label">Filter kategórie</span>
+                               </label>
+                           </div>
+                           <div className="custom-checkbox">
+                               <label>
+                                   <input type="checkbox" />
+                                   <span className="check"></span>
+                                   <span className="label">Filter kategórie</span>
+                               </label>
+                           </div>
+                           <div className="custom-checkbox">
+                               <label>
+                                   <input type="checkbox" />
+                                   <span className="check"></span>
+                                   <span className="label">Filter kategórie</span>
+                               </label>
+                           </div>
+                       </div>
+                   </div>
+
+                   <div className={styles.box} id="jsShowAllFilters">
+                       <a href="#" className="showMore">
                            Zobraziť viac
                        </a>
+                   </div>
+
+                   <div className={[styles.box, 'd-none', 'js-filter-hidden'].join(' ')}>
+                       <div className={[styles.title, 'jsShowFilter'].join(' ')}>
+                           <h3>Značka</h3>
+                           <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                viewBox="0 0 13.939 9.547">
+                               <path d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                     transform="translate(0 0)"/>
+                           </svg>
+                       </div>
+                       <div className={[styles.filterCheckboxes, 'jsFilterCheckboxes'].join(' ')}>
+                           <div className="custom-checkbox">
+                               <label>
+                                   <input type="checkbox" />
+                                   <span className="check"></span>
+                                   <span className="label">Filter kategórie</span>
+                               </label>
+                           </div>
+                           <div className="custom-checkbox">
+                               <label>
+                                   <input type="checkbox" />
+                                   <span className="check"></span>
+                                   <span className="label">Filter kategórie</span>
+                               </label>
+                           </div>
+                           <div className="custom-checkbox">
+                               <label>
+                                   <input type="checkbox" />
+                                   <span className="check"></span>
+                                   <span className="label">Filter kategórie</span>
+                               </label>
+                           </div>
+                           <div className="custom-checkbox">
+                               <label>
+                                   <input type="checkbox" />
+                                   <span className="check"></span>
+                                   <span className="label">Filter kategórie</span>
+                               </label>
+                           </div>
+                       </div>
                    </div>
                </aside>
                {/* End Filter Aside */}
@@ -240,112 +299,130 @@ const Category = () => {
                        </p>
 
                        <div className={[styles.row, 'row'].join(' ')}>
-                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
                        </div>
@@ -374,7 +451,7 @@ const Category = () => {
                        </nav>
 
                        <div className={[styles.row, 'row'].join(' ')}>
-                           <div className={[styles.column, 'col-xxl-3', 'col-xl-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column, 'col-xxl-3', 'col-xl-4', 'col-md-6', 'col-sm-6', 'col-12'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -451,7 +528,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className={[styles.column, 'col-xxl-3', 'col-xl-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column, 'col-xxl-3', 'col-xl-4', 'col-md-6', 'col-sm-6', 'col-12'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -528,7 +605,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className={[styles.column, 'col-xxl-3', 'col-xl-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column, 'col-xxl-3', 'col-xl-4', 'col-md-6', 'col-sm-6', 'col-12'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -605,7 +682,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className={[styles.column,'col-xxl-3', 'col-xl-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column,'col-xxl-3', 'col-xl-4', 'col-md-6', 'col-sm-6', 'col-12'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -682,7 +759,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className={[styles.column,'col-xxl-3', 'col-xl-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column,'col-xxl-3', 'col-xl-4', 'col-md-6', 'col-sm-6', 'col-12'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -759,7 +836,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className={[styles.column,'col-xxl-3', 'col-xl-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column,'col-xxl-3', 'col-xl-4', 'col-md-6', 'col-sm-6', 'col-12'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -836,7 +913,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className={[styles.column,'col-xxl-3', 'col-xl-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column,'col-xxl-3', 'col-xl-4', 'col-md-6', 'col-sm-6', 'col-12'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -913,7 +990,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className={[styles.column,'col-xxl-3', 'col-xl-4', 'col-md-6'].join(' ')}>
+                           <div className={[styles.column,'col-xxl-3', 'col-xl-4', 'col-md-6', 'col-sm-6', 'col-12'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -1037,112 +1114,130 @@ const Category = () => {
 
                    <div className={styles.categoriesWrapper}>
                        <div className={[styles.row, 'row'].join(' ')}>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6', 'col-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
-                                   <h5>Do domácnosti</h5>
-                                   <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
-                                        viewBox="0 0 13.939 9.547">
-                                       <path className="a"
-                                             d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
-                                             transform="translate(0 0)"/>
-                                   </svg>
+                                   <div>
+                                       <h5>Do domácnosti</h5>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="13.939" height="9.547"
+                                            viewBox="0 0 13.939 9.547">
+                                           <path className="a"
+                                                 d="M8.577,9.353h0a.661.661,0,0,0,.936,0L13.745,5.48a.662.662,0,0,0,0-.936L9.513.194A.662.662,0,1,0,8.6,1.15l3.089,3.192H.662A.662.662,0,0,0,0,5v.029a.661.661,0,0,0,.662.661H11.674L8.6,8.4a.661.661,0,0,0-.021.955"
+                                                 transform="translate(0 0)"/>
+                                       </svg>
+                                   </div>
                                </a>
                            </div>
                        </div>
