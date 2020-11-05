@@ -62,7 +62,6 @@ const Category = () => {
 
        <div className="categoryTabs">
            <div className="categoryTabsWrapper">
-               {/*<img src="img/arrow-right-2.svg" className="tabArrow" alt=""/>*/}
                <ul>
                    <li>
                        <a href="">
@@ -405,9 +404,9 @@ const Category = () => {
                                                <span>do 24h.</span>
                                            </div>
                                        </div>
-                                       <div className={[styles.productThumb, 'productThumbs'].join(' ')}>
+                                       <div className={[styles.productThumb, 'productThumb'].join(' ')}>
                                            <img src="img/product-image.png" alt=""/>
-                                           <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                                           <div className={[styles.productDiscountBadge, 'productDiscountBadge', 'discountBadge'].join(' ')}>
                                            <span>
                                                Ušetri až <br/>
                                                <strong>-60%</strong>
@@ -415,7 +414,7 @@ const Category = () => {
                                            </div>
                                        </div>
                                        <div className={[styles.infoBarWrapper, 'infoBarWrapper'].join(' ')}>
-                                       <span className={styles.infoStock}>
+                                       <span className={[styles.infoStock, 'infoStock'].join(' ')}>
                                            Skladom viac ako 2ks
                                        </span>
                                        <div className={[styles.productActions, 'productActions'].join(' ')}>
@@ -482,9 +481,9 @@ const Category = () => {
                                                <span>do 24h.</span>
                                            </div>
                                        </div>
-                                       <div className={[styles.productThumb, 'productThumbs'].join(' ')}>
+                                       <div className={[styles.productThumb, 'productThumb'].join(' ')}>
                                            <img src="img/product-image.png" alt=""/>
-                                           <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                                           <div className={[styles.productDiscountBadge, 'productDiscountBadge', 'discountBadge'].join(' ')}>
                                            <span>
                                                Ušetri až <br/>
                                                <strong>-60%</strong>
@@ -492,7 +491,7 @@ const Category = () => {
                                            </div>
                                        </div>
                                        <div className={[styles.infoBarWrapper, 'infoBarWrapper'].join(' ')}>
-                                       <span className={styles.infoStock}>
+                                       <span className={[styles.infoStock, 'infoStock'].join(' ')}>
                                            Skladom viac ako 2ks
                                        </span>
                                            <div className={[styles.productActions, 'productActions'].join(' ')}>
@@ -559,9 +558,9 @@ const Category = () => {
                                                <span>do 24h.</span>
                                            </div>
                                        </div>
-                                       <div className={[styles.productThumb, 'productThumbs'].join(' ')}>
+                                       <div className={[styles.productThumb, 'productThumb'].join(' ')}>
                                            <img src="img/product-image.png" alt=""/>
-                                           <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                                           <div className={[styles.productDiscountBadge, 'productDiscountBadge', 'discountBadge'].join(' ')}>
                                            <span>
                                                Ušetri až <br/>
                                                <strong>-60%</strong>
@@ -569,7 +568,7 @@ const Category = () => {
                                            </div>
                                        </div>
                                        <div className={[styles.infoBarWrapper, 'infoBarWrapper'].join(' ')}>
-                                       <span className={styles.infoStock}>
+                                       <span className={[styles.infoStock, 'infoStock'].join(' ')}>
                                            Skladom viac ako 2ks
                                        </span>
                                            <div className={[styles.productActions, 'productActions'].join(' ')}>
@@ -636,9 +635,9 @@ const Category = () => {
                                                <span>do 24h.</span>
                                            </div>
                                        </div>
-                                       <div className={[styles.productThumb, 'productThumbs'].join(' ')}>
+                                       <div className={[styles.productThumb, 'productThumb'].join(' ')}>
                                            <img src="img/product-image.png" alt=""/>
-                                           <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                                           <div className={[styles.productDiscountBadge, 'productDiscountBadge', 'discountBadge'].join(' ')}>
                                            <span>
                                                Ušetri až <br/>
                                                <strong>-60%</strong>
@@ -646,7 +645,7 @@ const Category = () => {
                                            </div>
                                        </div>
                                        <div className={[styles.infoBarWrapper, 'infoBarWrapper'].join(' ')}>
-                                       <span className={styles.infoStock}>
+                                       <span className={[styles.infoStock, 'infoStock'].join(' ')}>
                                            Skladom viac ako 2ks
                                        </span>
                                            <div className={[styles.productActions, 'productActions'].join(' ')}>
@@ -713,9 +712,9 @@ const Category = () => {
                                                <span>do 24h.</span>
                                            </div>
                                        </div>
-                                       <div className={[styles.productThumb, 'productThumbs'].join(' ')}>
+                                       <div className={[styles.productThumb, 'productThumb'].join(' ')}>
                                            <img src="img/product-image.png" alt=""/>
-                                           <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                                           <div className={[styles.productDiscountBadge, 'productDiscountBadge', 'discountBadge'].join(' ')}>
                                            <span>
                                                Ušetri až <br/>
                                                <strong>-60%</strong>
@@ -723,7 +722,7 @@ const Category = () => {
                                            </div>
                                        </div>
                                        <div className={[styles.infoBarWrapper, 'infoBarWrapper'].join(' ')}>
-                                       <span className={styles.infoStock}>
+                                      <span className={[styles.infoStock, 'infoStock'].join(' ')}>
                                            Skladom viac ako 2ks
                                        </span>
                                            <div className={[styles.productActions, 'productActions'].join(' ')}>
@@ -790,9 +789,9 @@ const Category = () => {
                                                <span>do 24h.</span>
                                            </div>
                                        </div>
-                                       <div className={[styles.productThumb, 'productThumbs'].join(' ')}>
+                                       <div className={[styles.productThumb, 'productThumb'].join(' ')}>
                                            <img src="img/product-image.png" alt=""/>
-                                           <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                                           <div className={[styles.productDiscountBadge, 'productDiscountBadge', 'discountBadge'].join(' ')}>
                                            <span>
                                                Ušetri až <br/>
                                                <strong>-60%</strong>
@@ -800,7 +799,7 @@ const Category = () => {
                                            </div>
                                        </div>
                                        <div className={[styles.infoBarWrapper, 'infoBarWrapper'].join(' ')}>
-                                       <span className={styles.infoStock}>
+                                       <span className={[styles.infoStock, 'infoStock'].join(' ')}>
                                            Skladom viac ako 2ks
                                        </span>
                                            <div className={[styles.productActions, 'productActions'].join(' ')}>
@@ -867,9 +866,9 @@ const Category = () => {
                                                <span>do 24h.</span>
                                            </div>
                                        </div>
-                                       <div className={[styles.productThumb, 'productThumbs'].join(' ')}>
+                                       <div className={[styles.productThumb, 'productThumb'].join(' ')}>
                                            <img src="img/product-image.png" alt=""/>
-                                           <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                                           <div className={[styles.productDiscountBadge, 'productDiscountBadge', 'discountBadge'].join(' ')}>
                                            <span>
                                                Ušetri až <br/>
                                                <strong>-60%</strong>
@@ -877,7 +876,7 @@ const Category = () => {
                                            </div>
                                        </div>
                                        <div className={[styles.infoBarWrapper, 'infoBarWrapper'].join(' ')}>
-                                       <span className={styles.infoStock}>
+                                       <span className={[styles.infoStock, 'infoStock'].join(' ')}>
                                            Skladom viac ako 2ks
                                        </span>
                                            <div className={[styles.productActions, 'productActions'].join(' ')}>
@@ -944,9 +943,9 @@ const Category = () => {
                                                <span>do 24h.</span>
                                            </div>
                                        </div>
-                                       <div className={[styles.productThumb, 'productThumbs'].join(' ')}>
+                                       <div className={[styles.productThumb, 'productThumb'].join(' ')}>
                                            <img src="img/product-image.png" alt=""/>
-                                           <div className={[styles.productDiscountBadge, 'discountBadge'].join(' ')}>
+                                           <div className={[styles.productDiscountBadge, 'productDiscountBadge', 'discountBadge'].join(' ')}>
                                            <span>
                                                Ušetri až <br/>
                                                <strong>-60%</strong>
@@ -954,7 +953,7 @@ const Category = () => {
                                            </div>
                                        </div>
                                        <div className={[styles.infoBarWrapper, 'infoBarWrapper'].join(' ')}>
-                                       <span className={styles.infoStock}>
+                                       <span className={[styles.infoStock, 'infoStock'].join(' ')}>
                                            Skladom viac ako 2ks
                                        </span>
                                            <div className={[styles.productActions, 'productActions'].join(' ')}>
