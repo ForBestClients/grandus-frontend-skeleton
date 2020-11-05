@@ -36,7 +36,8 @@ const Header = ({}) => {
 
                  <div className={styles.brand}>
                      <a href="">
-                         <img src="img/logo-main.png" alt=""/>
+                         <img src="img/logo-main-2.png" alt=""/>
+                         <img src="img/logo-hover.png" alt=""/>
                      </a>
                  </div>
 
