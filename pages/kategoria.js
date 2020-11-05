@@ -240,7 +240,7 @@ const Category = () => {
                        </p>
 
                        <div className={[styles.row, 'row'].join(' ')}>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
                                    <h5>Do domácnosti</h5>
@@ -252,7 +252,7 @@ const Category = () => {
                                    </svg>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
                                    <h5>Do domácnosti</h5>
@@ -264,7 +264,7 @@ const Category = () => {
                                    </svg>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
                                    <h5>Do domácnosti</h5>
@@ -276,7 +276,7 @@ const Category = () => {
                                    </svg>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
                                    <h5>Do domácnosti</h5>
@@ -288,7 +288,7 @@ const Category = () => {
                                    </svg>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
                                    <h5>Do domácnosti</h5>
@@ -300,7 +300,7 @@ const Category = () => {
                                    </svg>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
                                    <h5>Do domácnosti</h5>
@@ -312,7 +312,7 @@ const Category = () => {
                                    </svg>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
                                    <h5>Do domácnosti</h5>
@@ -324,7 +324,7 @@ const Category = () => {
                                    </svg>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
                                    <h5>Do domácnosti</h5>
@@ -336,7 +336,7 @@ const Category = () => {
                                    </svg>
                                </a>
                            </div>
-                           <div className={[styles.column, 'col-md-4'].join(' ')}>
+                           <div className={[styles.column, 'col-lg-4', 'col-md-6'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
                                    <h5>Do domácnosti</h5>
@@ -374,7 +374,7 @@ const Category = () => {
                        </nav>
 
                        <div className={[styles.row, 'row'].join(' ')}>
-                           <div className={[styles.column, 'col-xxl-3', 'col-xl-4'].join(' ')}>
+                           <div className={[styles.column, 'col-xxl-3', 'col-xl-4', 'col-md-6'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -451,7 +451,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className={[styles.column, 'col-xxl-3', 'col-xl-4'].join(' ')}>
+                           <div className={[styles.column, 'col-xxl-3', 'col-xl-4', 'col-md-6'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -528,7 +528,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className={[styles.column, 'col-xxl-3', 'col-xl-4'].join(' ')}>
+                           <div className={[styles.column, 'col-xxl-3', 'col-xl-4', 'col-md-6'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -605,7 +605,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className={[styles.column,'col-xxl-3', 'col-xl-4'].join(' ')}>
+                           <div className={[styles.column,'col-xxl-3', 'col-xl-4', 'col-md-6'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -682,7 +682,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className={[styles.column,'col-xxl-3', 'col-xl-4'].join(' ')}>
+                           <div className={[styles.column,'col-xxl-3', 'col-xl-4', 'col-md-6'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -759,7 +759,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className={[styles.column,'col-xxl-3', 'col-xl-4'].join(' ')}>
+                           <div className={[styles.column,'col-xxl-3', 'col-xl-4', 'col-md-6'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -836,7 +836,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className={[styles.column,'col-xxl-3', 'col-xl-4'].join(' ')}>
+                           <div className={[styles.column,'col-xxl-3', 'col-xl-4', 'col-md-6'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -913,7 +913,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className={[styles.column,'col-xxl-3', 'col-xl-4'].join(' ')}>
+                           <div className={[styles.column,'col-xxl-3', 'col-xl-4', 'col-md-6'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>

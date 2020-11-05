@@ -8,6 +8,7 @@
 }
 
 body {
+  color: $c_black;
   font-family: $f_family_primary;
   font-size: $f_size_base;
   line-height: $line_height_base;
@@ -476,6 +477,7 @@ section.blogPosts {
 }
 
 .showMore {
+  color: $c_black;
   display: inline-block;
   font-size: 16px;
   font-weight: bold;
