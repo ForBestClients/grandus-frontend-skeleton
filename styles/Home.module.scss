@@ -426,6 +426,7 @@ section.promo {
 
   .miniBanner {
     position: relative;
+    z-index: 0;
     //margin-right: 10px;
     overflow: hidden;
     border-radius: $b_radius_default;

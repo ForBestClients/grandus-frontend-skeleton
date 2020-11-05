@@ -126,7 +126,7 @@ const Category = () => {
                            Windows v cene produktu. Na výber zo značiek HP, Lenovo, Dell, Asus, Fujitsu Siemens, Toshiba.
                        </p>
 
-                       <div className="row">
+                       <div className={[styles.row, 'row'].join(' ')}>
                            <div className={[styles.column, 'col-md-4'].join(' ')}>
                                <a href="" className={styles.category}>
                                    <img src="img/img-small.png" alt=""/>
@@ -260,8 +260,8 @@ const Category = () => {
                            </p>
                        </nav>
 
-                       <div className="row">
-                           <div className="col-xl-4">
+                       <div className={[styles.row, 'row'].join(' ')}>
+                           <div className={[styles.column, 'col-xl-4'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -338,7 +338,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className="col-xl-4">
+                           <div className={[styles.column, 'col-xl-4'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -415,7 +415,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className="col-xl-4">
+                           <div className={[styles.column, 'col-xl-4'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>
@@ -492,7 +492,7 @@ const Category = () => {
                                    </a>
                                </div>
                            </div>
-                           <div className="col-xl-4">
+                           <div className={[styles.column, 'col-xl-4'].join(' ')}>
                                <div className={[styles.box, 'box'].join(' ')}>
                                    <a href="">
                                        <div className={[styles.badges, 'badges'].join(' ')}>

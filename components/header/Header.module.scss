@@ -309,6 +309,8 @@
       }
 
       .hamburgerWrap {
+        position: relative;
+        top: 2px;
         display: block;
         align-self: flex-end;
 
@@ -359,6 +361,7 @@
 
       .mainBar {
         justify-content: space-between;
+        height: auto;
 
         .actionForm {
           display: none;
@@ -367,6 +370,7 @@
         .brand {
           margin-top: 10px;
           margin-right: 0;
+          text-align: center;
 
           img {
             width: 75%;
@@ -376,9 +380,13 @@
         .iconActions {
 
           .iconCart {
-            margin-top: 13px;
             align-items: flex-end;
             padding: 0;
+            height: 61px;
+
+            span.cartCount:first-child {
+              top: 10px;
+            }
           }
         }
       }
