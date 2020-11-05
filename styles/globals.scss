@@ -349,13 +349,6 @@ section.blogPosts {
 .productSlider {
   position: relative;
 
-  ul {
-
-    li {
-      //width: auto !important;
-    }
-  }
-
   .productCarousel {
     padding-top: 3px;
     padding-bottom: 140px;
@@ -428,6 +421,15 @@ section.blogPosts {
   align-items: center;
   justify-content: space-between;
 
+  &.hasCategories {
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    h2 {
+      margin-right: 30px;
+    }
+  }
+
   h2 {
     font-size: 40px;
     font-weight: bold;
@@ -453,6 +455,53 @@ section.blogPosts {
 
     &.imageTitle:after {
       display: none;
+    }
+  }
+
+  .categories {
+    display: flex;
+    align-items: center;
+
+    a {
+      display: flex !important;
+      align-items: center !important;
+      margin-right: 30px;
+      margin-bottom: 0;
+
+      &.active {
+        color: $c_white !important;
+        background-color: $c_black_bg !important;
+
+        svg {
+          fill: $c_white !important;
+
+          rect, path, circle {
+            fill: $c_white !important;
+          }
+        }
+      }
+
+      &:hover {
+        color: $c_black !important;
+        background-color: $c_white_bg !important;
+
+        svg {
+          fill: $c_black !important;
+          transform: none !important;
+
+          path, rect, circle {
+            fill: $c_black !important;
+          }
+        }
+      }
+
+      svg {
+        margin-right: 10px;
+      }
+
+      &:after {
+        display: none;
+      }
     }
   }
 

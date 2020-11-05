@@ -2,20 +2,6 @@
 
   .productSlider {
 
-      ul {
-
-        li {
-          //width: auto !important;
-        }
-      }
-
-    .productCarousel {
-
-      .react-multi-carousel-dot-list {
-        //padding-left: 105px;
-      }
-    }
-
     .carouselArrows {
       padding-right: 105px;
     }
@@ -40,21 +26,12 @@
 
         li {
           width: auto !important;
-          //width: 290px !important;
-          //margin-right: 60px;
         }
       }
     }
   }
 
   section.blogPosts {
-
-    ul {
-
-      li {
-        //width: 100% !important;
-      }
-    }
 
     .blogPostBox {
       width: 300px !important;
@@ -146,21 +123,7 @@
 
 @media ( max-width: $sm ) {
 
-  .productSlider {
-
-    .productCarousel {
-      //width: calc( 100% - 17px );
-    }
-  }
-
   section.blogPosts {
-
-    ul {
-
-      li {
-        //width: auto !important;
-      }
-    }
 
     .blogPostBox {
       width: 280px !important;
@@ -190,7 +153,6 @@
   }
 
   .miniBannerCarousel {
-    //padding-left: 15px;
 
     li {
 
