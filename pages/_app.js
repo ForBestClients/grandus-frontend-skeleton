@@ -54,6 +54,20 @@ if ( typeof window !== 'undefined' ) {
 
     // convertImages('.svg');
 
+    document.getElementById('hamburger').addEventListener('click', function () {
+        let menu = document.getElementById('jsMobileMenu');
+
+        if ( !menu.classList.contains('d-flex') && !this.classList.contains('open') ) {
+            menu.classList.add('d-flex');
+            this.classList.add('open')
+        }
+        else {
+            menu.classList.remove('d-flex');
+            this.classList.remove('open');
+        }
+
+    });
+
     let widgetFixedMegaMenuItems = document.querySelectorAll('.jsHasMegaMenu');
 
     widgetFixedMegaMenuItems.forEach( (item) => {

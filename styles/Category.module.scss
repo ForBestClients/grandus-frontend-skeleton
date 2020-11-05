@@ -11,7 +11,7 @@ main.categoryPage {
       margin-right: 16px;
       padding-top: 47px;
       padding-bottom: 32px;
-      width: 344px;
+      min-width: 344px;
       background-color: $c_white_bg;
       box-shadow: 0 0 5px $c_shadow;
       border: 1px solid $text_light_gray;
@@ -31,8 +31,13 @@ main.categoryPage {
 
     .productsWrapper {
       width: 100%;
+      padding-bottom: 75px;
 
       .headlineImage {
+
+        img {
+          object-fit: cover;
+        }
 
         a {
           display: block;
@@ -117,6 +122,8 @@ main.categoryPage {
 
       .productListing {
         margin-top: 75px;
+        margin-bottom: 75px;
+        position: relative;
 
         .filters {
           display: flex;
@@ -162,6 +169,14 @@ main.categoryPage {
         .box {
           width: 100%;
           margin-bottom: 15px;
+        }
+
+        .showMore {
+          position: absolute;
+          top: calc(100% - 55px);
+          left: 0;
+          right: 0;
+          text-align: center;
         }
       }
     }
