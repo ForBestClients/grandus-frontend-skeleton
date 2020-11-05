@@ -181,7 +181,7 @@ if ( typeof window !== 'undefined' ) {
             let marginLeft = getStyle(container, 'margin-left').replace('px', '');
 
             miniBannerSlider.style.marginLeft = parseInt(marginLeft) + 15 + 'px';
-            miniBannerSlider.firstChild.style.marginLeft = parseInt(marginLeft) + 15 + 'px';
+            // miniBannerSlider.firstChild.style.marginLeft = parseInt(marginLeft) + 15 + 'px';
 
             marginLeft = parseInt(marginLeft) + 15 + 'px';
 

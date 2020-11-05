@@ -910,6 +910,9 @@ export default function Home() {
                                <span className={styles.infoStock}>
                                    Skladom viac ako 2ks
                                </span>
+                               <span className={styles.infoStockMobile}>
+                                   Skladom
+                               </span>
                                <div className={styles.productActions}>
                                    <span>
                                        <svg xmlns="http://www.w3.org/2000/svg" width="23.536" height="16.896"
