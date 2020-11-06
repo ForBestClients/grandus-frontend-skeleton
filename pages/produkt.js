@@ -63,6 +63,62 @@ const Product = () => {
        </div>
 
        <div className="custom-container" id="container">
+
+           <div className={[styles.categoryTabs, 'categoryTabs'].join(' ')}>
+               <div className="categoryTabsWrapper">
+                   <ul>
+                       <li>
+                           <a href="">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 34.026 21.969"><path d="M480.579,294.82V281.2a3.44,3.44,0,0,0-3.436-3.437H456.457a3.441,3.441,0,0,0-3.437,3.437V294.82h-3.234V296.3a3.441,3.441,0,0,0,3.437,3.437h27.152a3.441,3.441,0,0,0,3.437-3.437V294.82ZM455.043,281.2a1.415,1.415,0,0,1,1.414-1.413h20.685a1.415,1.415,0,0,1,1.413,1.413V294.82H455.043Zm25.333,16.509H453.224a1.417,1.417,0,0,1-1.3-.869H481.68A1.416,1.416,0,0,1,480.376,297.711Z" transform="translate(-449.787 -277.765)"/></svg>
+                               Noteboky
+                           </a>
+                       </li>
+                       <li>
+                           <a href="">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="33.519" height="34.567" viewBox="0 0 33.519 34.567"><path d="M557.35,266.9h-18.3a3.3,3.3,0,0,0-3.3,3.3v4.884h-5.336a3.3,3.3,0,0,0-3.3,3.294v19.8a3.3,3.3,0,0,0,3.3,3.3H540.4a3.3,3.3,0,0,0,3.3-3.3v-.812H557.35a3.3,3.3,0,0,0,3.294-3.294v-23.87A3.3,3.3,0,0,0,557.35,266.9Zm-18.3,1.962h18.3a1.334,1.334,0,0,1,1.333,1.333v1.153H537.719v-1.153A1.335,1.335,0,0,1,539.052,268.861Zm-1.333,4.448h20.964v17.668H543.7v-12.6a3.3,3.3,0,0,0-3.3-3.294h-2.683ZM529.088,295.4V281.075h12.647V295.4Zm1.333-18.356H540.4a1.334,1.334,0,0,1,1.333,1.332v.739H529.088v-.739A1.334,1.334,0,0,1,530.421,277.041ZM540.4,299.5h-9.981a1.336,1.336,0,0,1-1.333-1.333v-.812h5.063a1.326,1.326,0,1,0,2.521,0h5.063v.812A1.335,1.335,0,0,1,540.4,299.5ZM557.35,295.4H543.7v-2.457h14.986v1.125A1.334,1.334,0,0,1,557.35,295.4Z" transform="translate(-527.126 -266.899)"/></svg>
+                               Telefóny a tablety
+                           </a>
+                       </li>
+                       <li>
+                           <a href="">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="41.382" height="22.478" viewBox="0 0 41.382 22.478"><path d="M329.913,506.288H307.082a2.974,2.974,0,0,0-2.97,2.97v13.22a2.972,2.972,0,0,0,2.97,2.969h10.531V527h-3.828v1.768h9.425V527h-3.828v-1.55h10.531a2.972,2.972,0,0,0,2.97-2.969v-13.22A2.973,2.973,0,0,0,329.913,506.288Zm1.2,16.19a1.2,1.2,0,0,1-1.2,1.2H307.082a1.2,1.2,0,0,1-1.2-1.2v-.555h25.233Zm0-2.323H305.881v-10.9a1.2,1.2,0,0,1,1.2-1.2h22.831a1.2,1.2,0,0,1,1.2,1.2Z" transform="translate(-291.501 -506.288)"/><path d="M292.316,510.45h-5.861A2.558,2.558,0,0,0,283.9,513V524.49a2.558,2.558,0,0,0,2.556,2.554h5.861a2.558,2.558,0,0,0,2.555-2.554V513A2.558,2.558,0,0,0,292.316,510.45Zm.786,14.04a.787.787,0,0,1-.786.786h-5.861a.787.787,0,0,1-.787-.786V513a.787.787,0,0,1,.787-.786h5.861a.787.787,0,0,1,.786.786Z" transform="translate(-283.9 -507.853)"/></svg>
+                               Počítače
+                           </a>
+                       </li>
+                       <li>
+                           <a href="">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="32.607" height="25.475" viewBox="0 0 32.607 25.475"><path d="M29.242,0H3.366A3.37,3.37,0,0,0,0,3.366V18.348a3.369,3.369,0,0,0,3.366,3.365H15.3v1.757H10.963v2H21.644v-2H17.306V21.714H29.242a3.369,3.369,0,0,0,3.365-3.365V3.366A3.369,3.369,0,0,0,29.242,0ZM3.366,2H29.242A1.362,1.362,0,0,1,30.6,3.366v12.35H2V3.366A1.362,1.362,0,0,1,3.366,2Zm25.876,17.7H3.366A1.362,1.362,0,0,1,2,18.348V17.72H30.6v.628A1.362,1.362,0,0,1,29.242,19.709Z"/></svg>
+                               Monitory
+                           </a>
+                       </li>
+                       <li>
+                           <a href="">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="25" viewBox="0 0 34.026 21.969"><path d="M480.579,294.82V281.2a3.44,3.44,0,0,0-3.436-3.437H456.457a3.441,3.441,0,0,0-3.437,3.437V294.82h-3.234V296.3a3.441,3.441,0,0,0,3.437,3.437h27.152a3.441,3.441,0,0,0,3.437-3.437V294.82ZM455.043,281.2a1.415,1.415,0,0,1,1.414-1.413h20.685a1.415,1.415,0,0,1,1.413,1.413V294.82H455.043Zm25.333,16.509H453.224a1.417,1.417,0,0,1-1.3-.869H481.68A1.416,1.416,0,0,1,480.376,297.711Z" transform="translate(-449.787 -277.765)"/></svg>
+                               Doplnky a elektronika
+                           </a>
+                       </li>
+                       <li>
+                           <a href="">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="34.667" height="21.251" viewBox="0 0 34.667 21.251"><path d="M325.647,468.491l.295-.254v-3.693H291.275l0,3.691.287.253a2.549,2.549,0,0,1,.854,1.674,3.007,3.007,0,0,1-.873,1.865l-.272.252v9.531h0V485.8h3.091l1.6-1.045L297.7,485.8h3.874l1.4-1,1.352,1h2.647l1.626-3.036,1.626,3.036h2.648l1.352-1,1.4,1h3.874l1.736-1.045,1.6,1.045h3.091V472.279l-.273-.252a3,3,0,0,1-.873-1.865A2.546,2.546,0,0,1,325.647,468.491ZM305.966,484.1h-1.073L303,482.7l-1.964,1.4h-2.861l-2.244-1.349-2.071,1.349h-.89V481.81h14.22Zm18.279,0h-.89l-2.071-1.349L319.04,484.1h-2.861l-1.964-1.4-1.892,1.4H311.25l-1.225-2.289h14.219Zm-14.219-3.986H292.972v-7.13a4.573,4.573,0,0,0,1.145-2.788,4.005,4.005,0,0,0-1.145-2.7v-1.254h31.273v1.254a4,4,0,0,0-1.145,2.7,4.572,4.572,0,0,0,1.145,2.788v7.13Z" transform="translate(-291.274 -464.544)"/><path d="M298.5,480.665h5.325V470.351H298.5Zm1.7-8.617h1.931v6.921h-1.931Z" transform="translate(-294.173 -466.875)"/><path d="M309.97,480.665h5.325V470.351H309.97Zm1.7-8.617H313.6v6.921h-1.931Z" transform="translate(-298.778 -466.875)"/><path d="M321.484,480.665h5.325V470.351h-5.325Zm1.7-8.617h1.931v6.921h-1.931Z" transform="translate(-303.399 -466.875)"/><path d="M333,480.665h5.325V470.351H333Zm1.7-8.617h1.931v6.921H334.7Z" transform="translate(-308.021 -466.875)"/></svg>
+                               Komponenty
+                           </a>
+                       </li>
+                       <li>
+                           <a href="">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="33.114" height="28.344" viewBox="0 0 33.114 28.344"><path d="M608.322,432.09v28.344h33.114V432.09Zm30.775,2.339v3.122H610.661v-3.122Zm-28.435,23.665v-18.2H639.1v18.2Z" transform="translate(-608.322 -432.09)"/><rect width="23.516" height="2.339" transform="translate(4.799 10.091)"/><rect width="1.297" height="1.807" transform="translate(4.836 2.889)"/><rect width="1.297" height="1.807" transform="translate(7.088 2.889)"/><rect width="1.297" height="1.807" transform="translate(9.267 2.889)"/><rect width="23.516" height="2.339" transform="translate(4.799 13.78)"/><rect width="23.516" height="2.339" transform="translate(4.799 17.47)"/><rect width="13.538" height="2.339" transform="translate(14.777 21.16)"/></svg>
+                               Softvér a služby
+                           </a>
+                       </li>
+                       <li>
+                           <a href="">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="31.151" height="32.201" viewBox="0 0 31.151 32.201"><path d="M304.525,349.753v2.261h24.954v27.679H304.525v2.261h27.216v-32.2Z" transform="translate(-300.59 -349.753)"/><path d="M311.516,376.684l1.6,1.6,10.431-10.431L313.116,357.42l-1.6,1.6,7.712,7.712H299.592v2.261h19.615Z" transform="translate(-299.592 -351.304)"/></svg>
+                               Všetky produkty
+                           </a>
+                       </li>
+                   </ul>
+               </div>
+           </div>
+
            <div className="breadcrumbs">
                <ol>
                    <li>
@@ -85,7 +141,7 @@ const Product = () => {
 
            <div className={styles.productWrapper}>
                <div className="row">
-                   <div className="col-xl-6">
+                   <div className="col-xl-6 col-lg-6">
                        <div className={styles.product}>
                            <div className={styles.heading}>
                                <h1>Lenovo ThinkPad L460</h1>
@@ -108,6 +164,125 @@ const Product = () => {
                                    </a>
                                </div>
                            </div>
+
+                           <div className={[styles.priceBox, styles.priceBoxMobile].join(' ')}>
+                               <p className={styles.stock}><strong>Skladom viac ako 2ks</strong></p>
+                               <img src="img/big-on-character.png" alt=""/>
+                               <div className={styles.save}>
+                                   <span>Šetrenie:</span>
+                                   <span>
+                                       63%
+                                   </span>
+                               </div>
+                               <div className={styles.prices}>
+                                   <div className={styles.mainPrice}>
+                                       <span>Pôvodná cena:</span>
+                                       <span>1 599.00 €</span>
+                                   </div>
+                                   <div className={styles.discountPrice}>
+                                       <span>Teraz iba:</span>
+                                       <span>999.00 €</span>
+                                       <span>700.30 bez DPH</span>
+                                   </div>
+                               </div>
+                           </div>
+
+                           <div className={[styles.addCartBox, styles.addCartMobile].join(' ')}>
+                               <div className={styles.quantity}>
+                                   <a href="" className="minus spin-button">
+                                       <img src="img/icon-plus.svg" alt=""/>
+                                   </a>
+                                   <input type="number"
+                                          className="js-quantity"
+                                          value="1"
+                                          min="0"
+                                          max="99"
+                                          readOnly=""
+                                   />
+                                   <a href="" className="plus spin-button">
+                                       -
+                                   </a>
+                               </div>
+
+                               <div className={styles.addCart}>
+                                   <a href="" className="button primary">
+                                       Vložiť do košíka
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20"
+                                            viewBox="0 0 28.982 26.301">
+                                           <g transform="translate(0 0)">
+                                               <path
+                                                   d="M303.809,197.223H286.443l-2.092-14.265-5.514-4.088,1.43-1.928,6.315,4.682,1.936,13.2h13.452l2.721-10.132H290.437v-2.4h17.382Z"
+                                                   transform="translate(-278.836 -176.941)"/>
+                                               <circle cx="2.531" cy="2.531" r="2.531"
+                                                       transform="translate(8.432 21.239)"/>
+                                               <circle cx="2.531" cy="2.531" r="2.531"
+                                                       transform="translate(19.467 21.239)"/>
+                                           </g>
+                                       </svg>
+                                   </a>
+                               </div>
+                           </div>
+
+                           <div className={[styles.deliveryInfo, styles.deliveryInfoMobile].join(' ')}>
+                               <p>
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="23.772" height="15.458"
+                                        viewBox="0 0 23.772 15.458">
+                                       <path d="M743.347,23.864h-12.68V24.95h11.594v8.273H730.667v1.086h12.68Z"
+                                             transform="translate(-727.102 -23.864)"/>
+                                       <path d="M788.824,30.985l-2.089-3.663h-3.922v9.626H789.7V31.486ZM786.1,28.408l1.309,2.3H783.9v-2.3Zm2.511,7.454H783.9V31.789h4.143l.243.139.33.188Z"
+                                             transform="translate(-765.929 -26.439)"/>
+                                       <path d="M735.116,67.849a2.112,2.112,0,1,0,2.112,2.112A2.112,2.112,0,0,0,735.116,67.849Zm0,3.138a1.026,1.026,0,1,1,1.026-1.026A1.027,1.027,0,0,1,735.116,70.987Z"
+                                             transform="translate(-728.842 -56.615)"/>
+                                       <path d="M781.9,67.849a2.112,2.112,0,1,0,2.112,2.112A2.112,2.112,0,0,0,781.9,67.849Zm0,3.138a1.026,1.026,0,1,1,1.026-1.026A1.027,1.027,0,0,1,781.9,70.987Z"
+                                             transform="translate(-763.675 -56.615)"/>
+                                       <rect width="7.982" height="1.086" transform="translate(1.831 2.261)"/>
+                                       <rect width="7.982" height="1.086" transform="translate(0 4.453)"/>
+                                       <rect width="7.982" height="1.086" transform="translate(1.653 6.646)"/>
+                                   </svg>
+                                   Môžete mať už zajtra. Doba dodania je približne 24 hod.
+                               </p>
+                           </div>
+
+                           <div className={[styles.actions, styles.actionsMobile].join(' ')}>
+                               <div className={styles.box}>
+                                   <p>
+                                       <a href="">
+                                           <svg xmlns="http://www.w3.org/2000/svg" width="26.347" height="22.344"
+                                                viewBox="0 0 26.347 22.344">
+                                               <path d="M373.027,203.507l-10.814-9.923a7.027,7.027,0,0,1,0-10.508,7.6,7.6,0,0,1,10.084,0l.73.669.729-.669a7.6,7.6,0,0,1,10.084,0h0a7.029,7.029,0,0,1,0,10.507Zm-5.772-19.862a4.957,4.957,0,0,0-3.354,1.272,4.531,4.531,0,0,0,0,6.827l9.125,8.372,9.124-8.373a4.532,4.532,0,0,0,0-6.827h0a5.056,5.056,0,0,0-6.706,0l-2.418,2.218-2.419-2.218A4.954,4.954,0,0,0,367.255,183.645Z"
+                                                     transform="translate(-359.852 -181.163)"/>
+                                           </svg>
+                                           Pridať medzi obľúbené
+                                       </a>
+                                   </p>
+                                   <p>
+                                       <a href="">
+                                           <svg xmlns="http://www.w3.org/2000/svg" width="26.347" height="22.344"
+                                                viewBox="0 0 35.866 25.747">
+                                               <path d="M248.228,330.781H241a3.383,3.383,0,0,0-6.462,0h-7.229s-7.473,11.767-7.473,15.894a7.473,7.473,0,1,0,14.946,0c0-3.067-4.125-10.349-6.245-13.89h6a3.383,3.383,0,0,0,6.462,0h6c-2.12,3.541-6.245,10.823-6.245,13.89a7.473,7.473,0,1,0,14.946,0C255.7,342.548,248.228,330.781,248.228,330.781Zm-20.92,3.847c2.294,3.9,4.7,8.558,5.317,11.045H221.991C222.6,343.187,225.015,338.527,227.308,334.628Zm0,17.516a5.474,5.474,0,0,1-5.372-4.467h10.745A5.475,5.475,0,0,1,227.308,352.144Zm10.46-18.982a1.378,1.378,0,1,1,1.379-1.378A1.38,1.38,0,0,1,237.768,333.162ZM253.7,346.675c0,.022,0,.042,0,.064v-.105C253.694,346.646,253.7,346.663,253.7,346.675Zm-.151-1H242.911c.612-2.486,3.024-7.146,5.317-11.045C250.521,338.527,252.932,343.187,253.545,345.673Zm-5.317,6.471a5.475,5.475,0,0,1-5.373-4.467H253.6A5.475,5.475,0,0,1,248.228,352.144Z"
+                                                     transform="translate(-219.835 -328.401)"/>
+                                           </svg>
+                                           Porovnať
+                                       </a>
+                                   </p>
+                               </div>
+                               <div className={styles.box}>
+                                   <p>Nákup na splátky</p>
+                                   <a href="">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="24.309" height="21.733"
+                                            viewBox="0 0 24.309 21.733">
+                                           <g transform="translate(-495.637 -260.732)">
+                                               <path d="M506.505,264.976h-1.023a9.845,9.845,0,1,0,6.961,16.806l.724-.723-6.662-6.661Zm3.722,16.037a7.8,7.8,0,1,1-5.768-13.924v8.156Z"
+                                                     transform="translate(0 -2.202)"/>
+                                               <path d="M522.966,260.732h-1.023v11.65h11.65v-1.023A10.639,10.639,0,0,0,522.966,260.732Zm1.023,9.6v-7.5a8.6,8.6,0,0,1,7.5,7.5Z"
+                                                     transform="translate(-13.647)"/>
+                                           </g>
+                                       </svg>
+                                       Quatro kalkulačka splátok
+                                   </a>
+                               </div>
+                           </div>
+
                            <div className={styles.productContact}>
                                <div className={styles.box}>
                                    <p>Objednať telefonicky</p>
@@ -137,8 +312,8 @@ const Product = () => {
                            </div>
                        </div>
                    </div>
-                   <div className="col-xl-5 offset-xl-1">
-                       <div className={styles.productInfo}>
+                   <div className={[styles.colWithBg, 'col-xl-5', 'col-lg-6', 'offset-xl-1'].join(' ')}>
+                       <div className={[styles.productInfo, styles.product].join(' ')}>
                            <div className={styles.brand}>
                                <img src="img/brand-lenovo.png" alt=""/>
                            </div>
@@ -179,7 +354,7 @@ const Product = () => {
                                </div>
                            </div>
 
-                           <div className={styles.priceBox}>
+                           <div className={[styles.priceBox, styles.priceBoxDesktop].join(' ')}>
                                <img src="img/detail-logo.png" alt=""/>
                                <div className={styles.save}>
                                    <span>Šetrenie:</span>
@@ -200,7 +375,7 @@ const Product = () => {
                                </div>
                            </div>
 
-                           <div className={styles.addCartBox}>
+                           <div className={[styles.addCartBox, styles.addCartDesktop].join(' ')}>
                                <div className={styles.quantity}>
                                    <a href="" className="minus spin-button">
                                        <img src="img/icon-plus.svg" alt=""/>
@@ -236,7 +411,7 @@ const Product = () => {
                                </div>
                            </div>
 
-                           <div className={styles.deliveryInfo}>
+                           <div className={[styles.deliveryInfo, styles.deliveryInfoDesktop].join(' ')}>
                                <p>
                                    <svg xmlns="http://www.w3.org/2000/svg" width="23.772" height="15.458"
                                         viewBox="0 0 23.772 15.458">
@@ -256,7 +431,7 @@ const Product = () => {
                                </p>
                            </div>
 
-                           <div className={styles.actions}>
+                           <div className={[styles.actions, styles.actionsDesktop].join(' ')}>
                                <div className={styles.box}>
                                    <p>
                                        <a href="">
@@ -837,48 +1012,52 @@ const Product = () => {
 
                <div className={styles.zigZag}>
                    <div className="row">
-                       <div className={[styles.column, styles.mainBg ,'col-xl-6'].join(' ')}>
-                           <h3>Lenovo ThinkPad L460</h3>
-                           <p>
-                               Notebook Lenovo ThinkPad L460 vám prináša viac, než by ste čakali.
-                               Je tenký, ľahký a napriek tomu vyniká odolnou konštrukciou, vysokým výkonom
-                               a dlhou výdržou batérie. ThinkPad L460 oceníte pre každodennú prácu a stane sa
-                               spoľahlivým partnerom pre vaše podnikanie alebo príjemným spoločníkom v domácnosti.
-                               Spoznajte pohodlie mobilnej kancelárie v podaní notebooku ThinkPad L460.
-                           </p>
-                           <h3>Lenovo ThinkPad L460</h3>
-                           <p>
-                               Notebook Lenovo ThinkPad L460 vám prináša viac, než by ste čakali.
-                               Je tenký, ľahký a napriek tomu vyniká odolnou konštrukciou, vysokým výkonom
-                               a dlhou výdržou batérie. ThinkPad L460 oceníte pre každodennú prácu a stane sa
-                               spoľahlivým partnerom pre vaše podnikanie alebo príjemným spoločníkom v domácnosti.
-                               Spoznajte pohodlie mobilnej kancelárie v podaní notebooku ThinkPad L460.
-                           </p>
+                       <div className={[styles.column, styles.mainBg ,'col-xl-6', 'order-md-1', 'order-1'].join(' ')}>
+                           <div>
+                               <h3>Lenovo ThinkPad L460</h3>
+                               <p>
+                                   Notebook Lenovo ThinkPad L460 vám prináša viac, než by ste čakali.
+                                   Je tenký, ľahký a napriek tomu vyniká odolnou konštrukciou, vysokým výkonom
+                                   a dlhou výdržou batérie. ThinkPad L460 oceníte pre každodennú prácu a stane sa
+                                   spoľahlivým partnerom pre vaše podnikanie alebo príjemným spoločníkom v domácnosti.
+                                   Spoznajte pohodlie mobilnej kancelárie v podaní notebooku ThinkPad L460.
+                               </p>
+                               <h3>Lenovo ThinkPad L460</h3>
+                               <p>
+                                   Notebook Lenovo ThinkPad L460 vám prináša viac, než by ste čakali.
+                                   Je tenký, ľahký a napriek tomu vyniká odolnou konštrukciou, vysokým výkonom
+                                   a dlhou výdržou batérie. ThinkPad L460 oceníte pre každodennú prácu a stane sa
+                                   spoľahlivým partnerom pre vaše podnikanie alebo príjemným spoločníkom v domácnosti.
+                                   Spoznajte pohodlie mobilnej kancelárie v podaní notebooku ThinkPad L460.
+                               </p>
+                           </div>
                        </div>
-                       <div className={[styles.column, 'col-xl-6']. join(' ')}>
+                       <div className={[styles.column, 'col-xl-6', 'order-md-2', 'order-2']. join(' ')}>
                            <img src="img/img-big.png" alt=""/>
                        </div>
 
-                       <div className={[styles.column, 'col-xl-6']. join(' ')}>
+                       <div className={[styles.column, 'col-xl-6', 'order-md-4', 'order-4']. join(' ')}>
                            <img src="img/img-big.png" alt=""/>
                        </div>
-                       <div className={[styles.column, styles.darkBg ,'col-xl-6'].join(' ')}>
-                           <h3>Lenovo ThinkPad L460</h3>
-                           <p>
-                               Notebook Lenovo ThinkPad L460 vám prináša viac, než by ste čakali.
-                               Je tenký, ľahký a napriek tomu vyniká odolnou konštrukciou, vysokým výkonom
-                               a dlhou výdržou batérie. ThinkPad L460 oceníte pre každodennú prácu a stane sa
-                               spoľahlivým partnerom pre vaše podnikanie alebo príjemným spoločníkom v domácnosti.
-                               Spoznajte pohodlie mobilnej kancelárie v podaní notebooku ThinkPad L460.
-                           </p>
-                           <h3>Lenovo ThinkPad L460</h3>
-                           <p>
-                               Notebook Lenovo ThinkPad L460 vám prináša viac, než by ste čakali.
-                               Je tenký, ľahký a napriek tomu vyniká odolnou konštrukciou, vysokým výkonom
-                               a dlhou výdržou batérie. ThinkPad L460 oceníte pre každodennú prácu a stane sa
-                               spoľahlivým partnerom pre vaše podnikanie alebo príjemným spoločníkom v domácnosti.
-                               Spoznajte pohodlie mobilnej kancelárie v podaní notebooku ThinkPad L460.
-                           </p>
+                       <div className={[styles.column, styles.darkBg ,'col-xl-6', 'order-md-3', 'order-3'].join(' ')}>
+                           <div>
+                               <h3>Lenovo ThinkPad L460</h3>
+                               <p>
+                                   Notebook Lenovo ThinkPad L460 vám prináša viac, než by ste čakali.
+                                   Je tenký, ľahký a napriek tomu vyniká odolnou konštrukciou, vysokým výkonom
+                                   a dlhou výdržou batérie. ThinkPad L460 oceníte pre každodennú prácu a stane sa
+                                   spoľahlivým partnerom pre vaše podnikanie alebo príjemným spoločníkom v domácnosti.
+                                   Spoznajte pohodlie mobilnej kancelárie v podaní notebooku ThinkPad L460.
+                               </p>
+                               <h3>Lenovo ThinkPad L460</h3>
+                               <p>
+                                   Notebook Lenovo ThinkPad L460 vám prináša viac, než by ste čakali.
+                                   Je tenký, ľahký a napriek tomu vyniká odolnou konštrukciou, vysokým výkonom
+                                   a dlhou výdržou batérie. ThinkPad L460 oceníte pre každodennú prácu a stane sa
+                                   spoľahlivým partnerom pre vaše podnikanie alebo príjemným spoločníkom v domácnosti.
+                                   Spoznajte pohodlie mobilnej kancelárie v podaní notebooku ThinkPad L460.
+                               </p>
+                           </div>
                        </div>
                    </div>
                </div>

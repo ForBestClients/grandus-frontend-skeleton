@@ -326,6 +326,15 @@ a.button {
       }
     }
   }
+
+  @media ( max-width: $sm ) {
+
+    ol {
+      background-color: $c_main_bg;
+      padding: 8px 8px 8px 22px;
+      margin: 0 -15px 40px;
+    }
+  }
 }
 
 .custom-checkbox {

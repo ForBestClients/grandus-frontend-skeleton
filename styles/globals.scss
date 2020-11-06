@@ -470,7 +470,20 @@ section.blogPosts {
 
       &.active {
         color: $c_white !important;
-        background-color: $c_black_bg !important;
+        background-color: $c_black !important;
+
+        &:hover {
+          color: $c_white !important;
+          background-color: $c_black !important;
+
+          svg {
+            fill: $c_white !important;
+
+            rect, path, circle {
+              fill: $c_white !important;
+            }
+          }
+        }
 
         svg {
           fill: $c_white !important;
@@ -505,7 +518,30 @@ section.blogPosts {
     }
   }
 
+  @media ( max-width: $xxl ) {
+
+    &.hasCategories {
+
+      h2 {
+        font-size: 32px;
+        line-height: 1.2;
+      }
+    }
+
+    .categories {
+      flex-wrap: wrap;
+
+      a {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
   @media ( max-width: $md ) {
+
+    &.hasCategories {
+      flex-direction: column;
+    }
 
     h2 {
       font-size: 20px;
