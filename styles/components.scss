@@ -149,7 +149,7 @@ button, a.button, span.button {
 
     &:hover {
       color: $text-white;
-      background-color: rgba(16, 16, 16, .6);
+      background-color: rgba(16, 16, 16, .3);
       border-color: $c_gray_border;
 
       img {
@@ -192,7 +192,7 @@ a.button {
   width: 58px;
   height: 58px;
   background-color: $c_white_bg;
-  box-shadow: 0 3px 6px $c_black;
+  box-shadow: 0 3px 6px #00000029;
   border-radius: 50%;
   z-index: 150;
   cursor: pointer;
@@ -213,12 +213,13 @@ a.button {
 
     svg {
       fill: $c_green;
+      transform: rotate(-90deg) scale(2);
     }
   }
 
   svg {
     transition: transform .2s ease;
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) scale(1.6);
   }
 }
 
@@ -353,7 +354,11 @@ a.button {
     }
 
     input:checked + span.check {
-      background-color: $c_black_bg;
+      background-color: $c_green;
+
+      .check-icon {
+        opacity: 1;
+      }
     }
 
     span.check {
@@ -367,6 +372,13 @@ a.button {
       font-size: 12px;
       text-align: center;
       border-radius: 50%;
+
+      .check-icon {
+        font-size: 14px;
+        font-weight: bold;
+        color: $c_white;
+        opacity: 0;
+      }
     }
 
     span.label {

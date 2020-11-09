@@ -143,7 +143,7 @@
           }
 
           svg {
-            stroke: $c_black;
+            fill: $c_black;
 
             circle {
               fill: $c_black;
@@ -259,6 +259,7 @@
     }
 
     .categoriesWrapper {
+      height: 65px;
 
       .container {
         max-width: 100%;

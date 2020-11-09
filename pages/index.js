@@ -127,12 +127,18 @@ export default function Home() {
             items: 3,
             slidesToSlide: 1
         },
-        mobile: {
-            breakpoint: { max: 576, min: 0 },
-            items: 1,
+        mobile1: {
+            breakpoint: { max: 576, min: 370 },
+            items: 2,
             slidesToSlide: 1,
-            partialVisibilityGutter: 185
-        }
+            partialVisibilityGutter: -13
+        },
+        mobile2: {
+            breakpoint: { max: 370, min: 0 },
+            items: 2,
+            slidesToSlide: 1,
+            partialVisibilityGutter: -27
+        },
     };
 
     const blogSliderResponsive = {
@@ -860,7 +866,6 @@ export default function Home() {
                    responsive={productSliderResponsive}
                    swipeable={true}
                    draggable={false}
-                   infinite={false}
                    ssr={true}
                    arrows={false}
                    showDots={true}
@@ -1355,7 +1360,6 @@ export default function Home() {
                   responsive={productSliderResponsive}
                   swipeable={true}
                   draggable={false}
-                  infinite={false}
                   ssr={true}
                   arrows={false}
                   showDots={true}
@@ -1887,7 +1891,10 @@ export default function Home() {
                       </div>
                       <div className={styles.box}>
                           <a href="">
-                              <img src="img/thumbnail.png" alt=""/>
+                              <picture>
+                                  <source media="(max-width: 576px)" srcset="img/m1.png" />
+                                  <img src="img/thumbnail.png" alt=""/>
+                              </picture>
                               <div className={styles.bannerText}>
                                   <h5>Pre firmy</h5>
                                   <div>
@@ -1901,7 +1908,10 @@ export default function Home() {
                       </div>
                       <div className={styles.box}>
                           <a href="">
-                              <img src="img/thumbnail-1.png" alt=""/>
+                              <picture>
+                                  <source media="(max-width: 576px)" srcSet="img/m2.png"/>
+                                  <img src="img/thumbnail-1.png" alt=""/>
+                              </picture>
                               <div className={styles.bannerText}>
                                   <h5>Do domácnosti</h5>
                                   <div>
@@ -1917,7 +1927,10 @@ export default function Home() {
                   <div className={styles.bannerLinksGrid}>
                       <div className={styles.box}>
                           <a href="">
-                              <img src="img/thumbnail-3.png" alt=""/>
+                              <picture>
+                                  <source media="(max-width: 576px)" srcSet="img/m3.png"/>
+                                  <img src="img/thumbnail-3.png" alt=""/>
+                              </picture>
                               <div className={styles.bannerText}>
                                   <h5>Pre hráčov</h5>
                                   <div>
@@ -1931,7 +1944,10 @@ export default function Home() {
                       </div>
                       <div className={styles.box}>
                           <a href="">
-                              <img src="img/thumbnail-2.png" alt=""/>
+                              <picture>
+                                  <source media="(max-width: 576px)" srcSet="img/m4.png"/>
+                                  <img src="img/thumbnail-2.png" alt=""/>
+                              </picture>
                               <div className={styles.bannerText}>
                                   <h5>Pre študentov</h5>
                                   <div>
@@ -1962,7 +1978,6 @@ export default function Home() {
                   responsive={productSliderResponsive}
                   swipeable={true}
                   draggable={false}
-                  infinite={false}
                   ssr={true}
                   arrows={false}
                   showDots={true}

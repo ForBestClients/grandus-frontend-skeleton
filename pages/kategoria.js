@@ -154,28 +154,36 @@ const Category = () => {
                            <div className="custom-checkbox">
                                <label>
                                    <input type="checkbox" />
-                                   <span className="check"></span>
+                                   <span className="check">
+                                       <span className="check-icon">✓</span>
+                                   </span>
                                    <span className="label">Filter kategórie</span>
                                </label>
                            </div>
                            <div className="custom-checkbox">
                                <label>
                                    <input type="checkbox" />
-                                   <span className="check"></span>
+                                   <span className="check">
+                                       <span className="check-icon">✓</span>
+                                   </span>
                                    <span className="label">Filter kategórie</span>
                                </label>
                            </div>
                            <div className="custom-checkbox">
                                <label>
                                    <input type="checkbox" />
-                                   <span className="check"></span>
+                                   <span className="check">
+                                       <span className="check-icon">✓</span>
+                                   </span>
                                    <span className="label">Filter kategórie</span>
                                </label>
                            </div>
                            <div className="custom-checkbox">
                                <label>
                                    <input type="checkbox" />
-                                   <span className="check"></span>
+                                   <span className="check">
+                                       <span className="check-icon">✓</span>
+                                   </span>
                                    <span className="label">Filter kategórie</span>
                                </label>
                            </div>
@@ -195,28 +203,36 @@ const Category = () => {
                            <div className="custom-checkbox">
                                <label>
                                    <input type="checkbox" />
-                                   <span className="check"></span>
+                                   <span className="check">
+                                       <span className="check-icon">✓</span>
+                                   </span>
                                    <span className="label">Filter kategórie</span>
                                </label>
                            </div>
                            <div className="custom-checkbox">
                                <label>
                                    <input type="checkbox" />
-                                   <span className="check"></span>
+                                   <span className="check">
+                                       <span className="check-icon">✓</span>
+                                   </span>
                                    <span className="label">Filter kategórie</span>
                                </label>
                            </div>
                            <div className="custom-checkbox">
                                <label>
                                    <input type="checkbox" />
-                                   <span className="check"></span>
+                                   <span className="check">
+                                       <span className="check-icon">✓</span>
+                                   </span>
                                    <span className="label">Filter kategórie</span>
                                </label>
                            </div>
                            <div className="custom-checkbox">
                                <label>
                                    <input type="checkbox" />
-                                   <span className="check"></span>
+                                   <span className="check">
+                                       <span className="check-icon">✓</span>
+                                   </span>
                                    <span className="label">Filter kategórie</span>
                                </label>
                            </div>
@@ -242,28 +258,36 @@ const Category = () => {
                            <div className="custom-checkbox">
                                <label>
                                    <input type="checkbox" />
-                                   <span className="check"></span>
+                                   <span className="check">
+                                       <span className="check-icon">✓</span>
+                                   </span>
                                    <span className="label">Filter kategórie</span>
                                </label>
                            </div>
                            <div className="custom-checkbox">
                                <label>
                                    <input type="checkbox" />
-                                   <span className="check"></span>
+                                   <span className="check">
+                                       <span className="check-icon">✓</span>
+                                   </span>
                                    <span className="label">Filter kategórie</span>
                                </label>
                            </div>
                            <div className="custom-checkbox">
                                <label>
                                    <input type="checkbox" />
-                                   <span className="check"></span>
+                                   <span className="check">
+                                       <span className="check-icon">✓</span>
+                                   </span>
                                    <span className="label">Filter kategórie</span>
                                </label>
                            </div>
                            <div className="custom-checkbox">
                                <label>
                                    <input type="checkbox" />
-                                   <span className="check"></span>
+                                   <span className="check">
+                                       <span className="check-icon">✓</span>
+                                   </span>
                                    <span className="label">Filter kategórie</span>
                                </label>
                            </div>

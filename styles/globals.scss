@@ -230,6 +230,11 @@ section.blogPosts {
         transition: background-color .2s ease;
       }
 
+      img:first-child {
+        border-top-left-radius: $b_radius_default;
+        border-top-right-radius: $b_radius_default;
+      }
+
       img:last-child {
         z-index: 10;
         position: absolute;
@@ -239,6 +244,7 @@ section.blogPosts {
         top: 50%;
         opacity: 0;
         transition: opacity .2s ease;
+        transform: scale(2);
       }
     }
 

@@ -10,7 +10,7 @@ aside.categoryWidgetFixed {
   top: 15%;
   border-radius: 0 10px 10px 0;
   z-index: 100;
-  box-shadow: 0 0 5px $c_black;
+  box-shadow: 0 0 5px $c_shadow;
   background-color: $c_white_bg;
 
   ul {
@@ -113,7 +113,7 @@ aside.categoryWidgetFixed {
           left: calc(100% + 10px);
           top: 56px;
           background-color: $c_white_bg;
-          box-shadow: 0 3px 5px $c_black;
+          box-shadow: 0 3px 5px $c_shadow;
           border-bottom-right-radius: $b_radius_default;
           border-bottom-left-radius: $b_radius_default;
           overflow-y: auto;
@@ -290,10 +290,13 @@ section.promo {
           }
 
           &.hasMegamenu {
-            width: calc(100% + 10px);
             position: relative;
             
             &:hover {
+
+              & {
+                width: calc(100% + 10px);
+              }
               
               .megamenu {
                 display: flex;
@@ -919,24 +922,13 @@ section.bannerOffer {
               font-size: 40px;
               line-height: 50px;
               color: $text_white;
-              width: 100px;
+              width: 98px;
+              border: 1px solid $c_black_bg;
               text-align: center;
               background-color: $c_black_bg;
               border-radius: 0 0 $b_radius_default $b_radius_default;
             }
           }
-        }
-
-        .days {
-
-        }
-
-        .hours {
-
-        }
-
-        .minutes {
-
         }
 
         .seconds {
@@ -971,13 +963,15 @@ section.bannerLinks {
       h5 {
         font-size: 40px;
         color: $text_white;
-        text-shadow: 0 3px 6px $c_black;
+        text-shadow: 0 3px 6px #00000029;
         margin-bottom: 0;
         margin-top: 30px;
         margin-left: 20px;
       }
 
       span {
+        display: inline-flex;
+        align-items: center;
         margin-bottom: 20px;
         margin-left: 20px;
 
@@ -1006,6 +1000,7 @@ section.bannerLinks {
       margin-bottom: 10px;
 
       div.box {
+        border-radius: $b_radius_default;
         position: relative;
         overflow: hidden;
 
@@ -1046,6 +1041,7 @@ section.bannerLinks {
       display: flex;
 
       div.box {
+        border-radius: $b_radius_default;
         width: 50%;
         margin-right: 10px;
         position: relative;
@@ -1142,7 +1138,7 @@ section.testimonials {
 
               &:last-child {
                 font-size: 30px;
-                width: 62px;
+                width: 60px;
               }
             }
           }
@@ -1300,7 +1296,7 @@ section.testimonials {
 
               &:last-child {
                 font-size: 25px;
-                width: 52px;
+                width: 50px;
                 height: 30px;
                 line-height: 30px;
               }
@@ -1728,6 +1724,7 @@ section.testimonials {
   section.productSliderWrapper {
 
     .box {
+      //width: auto;
       width: 180px;
 
       .infoBarWrapper {
