@@ -132,7 +132,8 @@ button, a.button, span.button {
   }
 
   &.secondary {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     height: 40px;
     line-height: 40px;
     color: $text_black;
@@ -640,6 +641,7 @@ a.button {
     li.prev, li.next {
 
       &:hover {
+        color: $c_white;
         background-color: $c_black;
       }
     }

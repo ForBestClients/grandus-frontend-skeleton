@@ -102,7 +102,6 @@ export default function Home() {
     const productSliderResponsive = {
 
         superLargeDesktop: {
-            // the naming can be any, depends on you.
             breakpoint: { max: 4000, min: 3000 },
             items: 6,
             slidesToSlide: 1,
@@ -137,8 +136,14 @@ export default function Home() {
             breakpoint: { max: 370, min: 0 },
             items: 2,
             slidesToSlide: 1,
-            partialVisibilityGutter: -27
+            // partialVisibilityGutter: -27
         },
+        // mobile: {
+        //     breakpoint: { max: 576, min: 0 },
+        //     items: 2,
+        //     slidesToSlide: 1,
+        //     // partialVisibilityGutter: -13
+        // }
     };
 
     const blogSliderResponsive = {

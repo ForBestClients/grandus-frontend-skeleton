@@ -1123,7 +1123,7 @@ const Category = () => {
                                       </a>
                                   </li>
                                   <li className="next">
-                                      &gt;
+                                      <a href="">&gt;</a>
                                   </li>
                               </ul>
                               <p>zobrazených (24 z celkového počtu 35)</p>
