@@ -126,23 +126,40 @@ export default function Home() {
             items: 3,
             slidesToSlide: 1
         },
-        mobile1: {
-            breakpoint: { max: 576, min: 370 },
+        mobile: {
+            breakpoint: { max: 576, min: 0 },
             items: 2,
             slidesToSlide: 1,
-            partialVisibilityGutter: -13
-        },
-        mobile2: {
-            breakpoint: { max: 370, min: 0 },
-            items: 2,
-            slidesToSlide: 1,
-            // partialVisibilityGutter: -27
-        },
-        // mobile: {
-        //     breakpoint: { max: 576, min: 0 },
+            // partialVisibilityGutter: -13
+        }
+        // mobile1: {
+        //     breakpoint: { max: 576, min: 370 },
         //     items: 2,
         //     slidesToSlide: 1,
-        //     // partialVisibilityGutter: -13
+        //     partialVisibilityGutter: -13
+        // },
+        // mobile2: {
+        //     breakpoint: { max: 370, min: 0 },
+        //     items: 2,
+        //     slidesToSlide: 1,
+        //     // partialVisibilityGutter: -27
+        // },
+        // mobile1: {
+        //     breakpoint: { max: 576, min: 400 },
+        //     items: 3,
+        //     slidesToSlide: 1,
+        // },
+        // mobile2: {
+        //     breakpoint: { max: 400, min: 370 },
+        //     items: 2,
+        //     slidesToSlide: 1,
+        //     partialVisibilityGutter: -5
+        // },
+        // mobile3: {
+        //     breakpoint: { max: 370, min: 320 },
+        //     items: 2,
+        //     slidesToSlide: 1,
+        //     partialVisibilityGutter: -20
         // }
     };
 
@@ -176,9 +193,9 @@ export default function Home() {
         },
         mobile: {
             breakpoint: { max: 576, min: 0 },
-            items: 1,
+            items: 2,
             slidesToSlide: 1,
-            partialVisibilityGutter: 140
+            // partialVisibilityGutter: 140
         }
     };
 
