@@ -1,0 +1,164 @@
+@media ( max-width: $xxxl ) {
+
+  .productSlider {
+
+    .carouselArrows {
+      padding-right: 105px;
+    }
+  }
+
+  section.blogPosts {
+
+    .blogPostBox {
+      width: 330px !important;
+    }
+  }
+
+}
+
+@media ( max-width: $xxl ) {
+
+  .productSlider {
+
+    .productCarousel {
+
+      ul.react-multi-carousel-track  {
+
+        li {
+          width: auto !important;
+        }
+      }
+    }
+  }
+
+  section.blogPosts {
+
+    .blogPostBox {
+      width: 300px !important;
+
+      .text {
+
+        .postTitle {
+
+          h4 {
+            font-size: 25px !important;
+            line-height: 29px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media ( max-width: $lg ) {
+
+  .miniBannerCarousel {
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 15%;
+      height: 100%;
+      background: transparent linear-gradient(90deg, #FFFFFF00 0%, #FFFFFF 100%) 0% 0% no-repeat padding-box;
+    }
+
+    .carouselArrowsMiniBanners {
+      position: absolute;
+      right: 25px;
+      z-index: 10;
+
+      .arrowNext {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+@media ( max-width: $md ) {
+
+  .productSlider {
+
+    ul {
+
+      li {
+        width: auto !important;
+      }
+    }
+
+    .productCarousel {
+      padding-bottom: 110px;
+
+      .react-multi-carousel-dot-list {
+        top: 87%;
+        padding-left: 15px;
+      }
+    }
+
+    .carouselArrows {
+      padding-right: 15px;
+    }
+  }
+
+  .testimonialsCarousel {
+
+    .testimonialsCarousel {
+      padding-bottom: 100px;
+
+      .carouselArrows {
+        top: 70%;
+        display: flex;
+
+        button {
+
+          img {
+            filter: grayscale(1) invert(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media ( max-width: $sm ) {
+
+  section.blogPosts {
+
+    .blogPostBox {
+      width: 280px !important;
+      margin-right: 10px !important;
+
+      .text {
+
+        .postTitle {
+
+          h4 {
+            font-size: 25px !important;
+            line-height: 29px !important;
+          }
+        }
+      }
+    }
+  }
+
+  .promoSlider {
+
+    .promoCarousel {
+
+      .carouselArrows {
+        bottom: 20px;
+      }
+    }
+  }
+
+  .miniBannerCarousel {
+
+    li {
+
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}
