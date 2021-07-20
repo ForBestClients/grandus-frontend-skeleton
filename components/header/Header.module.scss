@@ -1,8 +1,44 @@
 @import "styles/variables";
 
-.wrapper {
-    padding: $general-gutter;
-    background-color: silver;
-    color: orangered;
-    min-height: 100px;
+header.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    li {
+      padding-left: 70px;
+    }
+    a {
+      font-weight: 600;
+      color: black;
+      text-decoration: none;
+      display: block;
+      padding: 2px 0;
+      position: relative;
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        background: black;
+        width: 0;
+        transition: all .2s;
+      }
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

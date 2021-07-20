@@ -3,29 +3,32 @@ import Link from "next/link";
 
 const Header = ({}) => {
   return (
-    <header className={styles.wrapper}>
-      <span>
-        toto je header jeho css upravujes v{" "}
-        <b>/components/header/Header.module.scss</b>.
-      </span>
-      <ul>
-        <li>
-          <Link href={"/"}>
-            <a>Home</a>
-          </Link>
-        </li>
-        <li>
-          <Link href={"/kategoria"}>
-            <a>Kategoria</a>
-          </Link>
-        </li>
-        <li>
-          <Link href={"/produkt"}>
-            <a>Produkt</a>
-          </Link>
-        </li>
-      </ul>
-    </header>
+	  <header className={styles.header}>
+		  <div className="container-lg">
+			  <div className="row justify-content-between align-items-center">
+				  <div className="col-auto">
+					  <a href="#" className={styles.logo + "d-block"}>
+						  <img src="logo.png" alt="logo" className="d-block" />
+					  </a>
+				  </div>
+				  <div className="col-auto">
+					  <ul>
+						  <li><a href="#">Menu</a></li>
+						  <li><a href="#">Menu</a></li>
+						  <li><a href="#">Menu</a></li>
+						  <li><a href="#">Menu</a></li>
+						  <li><a href="#">Menu</a></li>
+					  </ul>
+					  <button className="responsive-button js-responsive-button hidden-md-up">
+						  <span></span>
+						  <span></span>
+						  <span></span>
+						  <span></span>
+					  </button>
+				  </div>
+			  </div>
+		  </div>
+	  </header>
   );
 };
 
