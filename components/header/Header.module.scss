@@ -42,3 +42,84 @@ header.header {
     }
   }
 }
+
+@media (max-width: 991px) {
+  header.header {
+    padding: 10px 0;
+    .responsiveButton {
+      width: 30px;
+      height: 22px;
+      position: relative;
+      transform: rotate(0deg);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-right: 10px;
+      display: block;
+      span {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: $c_headings;
+        border-radius: 1px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .2s ease-in-out;
+        &:nth-child(1) {
+          top: 0px;
+        }
+        &:nth-child(2), &:nth-child(3) {
+          top: 9px;
+        }
+        &:nth-child(4) {
+          top: 18px;
+        }
+      }
+      &.open {
+        span {
+          &:nth-child(1) {
+            top: 9px;
+            width: 0%;
+            left: 50%;
+          }
+          &:nth-child(2) {
+            transform: rotate(45deg);
+          }
+          &:nth-child(3) {
+            transform: rotate(-45deg);
+          }
+          &:nth-child(4) {
+            top: 9px;
+            width: 0%;
+            left: 50%;
+          }
+        }
+      }
+    }
+    ul {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      background: $c_secondary;
+      height: auto;
+      padding: 25px;
+      &.active {
+        display: block;
+      }
+      a {
+        padding: 8px 0;
+        &:before {
+          display: none;
+        }
+      }
+      li {
+        padding-left: 0;
+      }
+    }
+  }
+}

@@ -430,3 +430,145 @@ section.map {
     display: block;
   }
 }
+
+@media (max-width: 1199px) {
+  section.promo {
+    .text {
+      p {
+        margin: 15px 0;
+      }
+    }
+  }
+  section.tabs {
+    .wrapper {
+      padding: 30px 0;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  section.promo {
+    padding: 100px 0 0;
+    .thumbnail {
+      margin-top: 40px;
+      max-width: 100%;
+    }
+  }
+  section.cta {
+    padding-top: 0;
+    h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .wrap {
+      padding: 40px 15px 0;
+      text-align: center;
+    }
+    .image {
+      position: static;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  section.icons {
+    padding: 30px 0 40px;
+    .item {
+      display: flex;
+      align-items: center;
+      margin: 25px 0;
+    }
+    .icon {
+      margin-right: 20px;
+    }
+    h2 {
+      font-size: 20px;
+      margin: 10px 0;
+      margin-right: 30px;
+      flex-shrink: 0;
+      width: 150px;
+    }
+  }
+  section.tabs {
+    padding: 40px 0;
+    .tabs-content {
+      .item {
+        padding: 20px 0;
+        text-align: center;
+        display: block !important;
+        img {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  section.newsletter {
+    .form {
+      max-width: 100%;
+    }
+    .product {
+      width: 100%;
+      padding-right: 50%;
+      margin-top: 100px;
+      img {
+        left: initial;
+        right: 0;
+        max-width: 40%;
+      }
+    }
+  }
+  section.info {
+    .item {
+      height: auto;
+      &.alt {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  section.icons {
+    .item {
+      display: block;
+    }
+  }
+  section.icons {
+    &.alt {
+      .wrap {
+        padding: 20px 6%;
+      }
+      .circle {
+        left: 50%;
+        top: initial;
+        bottom: 0;
+        transform: translate(-50%,50%)
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  section.logos {
+    .ornament {
+      width: 30px;
+    }
+    svg {
+      max-width: 110px;
+    }
+  }
+  section.newsletter {
+    padding-bottom: 0;
+    .product {
+      margin-top: 50px;
+      padding-right: 38%;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+  section.info {
+    .item {
+      padding: 40px 36% 30px 20px;
+    }
+  }
+}

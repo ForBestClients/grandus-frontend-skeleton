@@ -19,7 +19,7 @@ const Header = ({}) => {
 						  <li><a href="#">Menu</a></li>
 						  <li><a href="#">Menu</a></li>
 					  </ul>
-					  <button className="responsive-button js-responsive-button hidden-md-up">
+					  <button className={styles.responsiveButton + " hidden-md-up"}>
 						  <span></span>
 						  <span></span>
 						  <span></span>

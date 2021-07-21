@@ -377,7 +377,7 @@ export default function Home() {
 					        <p>Expertné konzultácie v oblasti eshopov poskytujeme nielen našim klientom, ale je možné si dohodnúť konzultáciu aj Vášho eshop alebo web riešenia.</p>
 				        </div>
 			        </div>
-			        <Image src={man} alt={'Man'} />
+		            <Image src={man} alt={'Man'} layout="intrinsic" className={styles.image} />
 		        </div>
 	        </div>
         </section>

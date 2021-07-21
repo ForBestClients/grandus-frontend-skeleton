@@ -113,3 +113,22 @@ footer.footer {
     }
   }
 }
+
+@media (max-width: 575px) {
+  footer.footer {
+    padding: 20px 0;
+    p {
+      margin-bottom: 0;
+    }
+    .item {
+      padding: 20px 0;
+      &.alt {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+    .meta {
+      margin-top: 15px;
+    }
+  }
+}
