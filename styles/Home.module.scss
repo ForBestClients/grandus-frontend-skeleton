@@ -129,9 +129,6 @@ section.logos {
     text-transform: uppercase;
     color: #6779B6;
     letter-spacing: 0.1em;
-    &:first-child {
-      margin-bottom: 40px;
-    }
     &:last-child {
       margin-top: 34px;
     }
@@ -417,6 +414,7 @@ section.references {
 
 section.map {
   position: relative;
+  font-size: 0;
   svg {
     display: block;
     max-width: 100%;
@@ -493,7 +491,7 @@ section.map {
   }
   section.tabs {
     padding: 40px 0;
-    .tabs-content {
+    .tabsContent {
       .item {
         padding: 20px 0;
         text-align: center;
@@ -525,6 +523,12 @@ section.map {
       &.alt {
         margin-bottom: 20px;
       }
+    }
+  }
+  section.references {
+    padding-bottom: 40px;
+    p {
+      font-size: 16px;
     }
   }
 }
