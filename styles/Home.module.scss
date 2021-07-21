@@ -243,11 +243,12 @@ section.newsletter {
     width: 280px;
     position: relative;
     margin-right: 250px;
-    img {
+    .imgWrap {
       position: absolute;
       left: calc(100% + 30px);
       top: 50%;
       transform: translateY(-50%);
+      width: 254px;
     }
   }
   .form {
@@ -314,13 +315,14 @@ section.info {
         display: block;
       }
     }
-    img {
+    .imgWrap {
       display: block;
       position: absolute;
       right: 0;
       bottom: 0;
       max-width: 40%;
       max-height: 90%;
+      font-size: 0;
     }
     h2 {
       font-size: 30px;
@@ -331,7 +333,7 @@ section.info {
       h2 {
         color: #5F3618;
       }
-      img {
+      .imgWrap {
         top: 50%;
         bottom: initial;
         transform: translateY(-50%);
@@ -385,12 +387,13 @@ section.references {
     align-items: center;
     justify-content: center;
     margin-top: 32px;
-    img {
-      display: block;
+    .avatar {
       width: 40px;
       height: 40px;
       border-radius: 50%;
       margin-right: 16px;
+      overflow: hidden;
+      display: flex;
     }
     .name {
       color: #07003B;
@@ -509,7 +512,7 @@ section.map {
       width: 100%;
       padding-right: 50%;
       margin-top: 100px;
-      img {
+      .imgWrap {
         left: initial;
         right: 0;
         max-width: 40%;

@@ -1,14 +1,17 @@
 import styles from "./Header.module.scss";
 import Link from "next/link";
 
+import Image from "next/image";
+import logo from "../../public/logo.png";
+
 const Header = ({}) => {
   return (
 	  <header className={styles.header}>
 		  <div className="container-lg">
 			  <div className="row justify-content-between align-items-center">
 				  <div className="col-auto">
-					  <a href="#" className={styles.logo + "d-block"}>
-						  <img src="logo.png" alt="logo" className="d-block" />
+					  <a href="#" className={styles.logo + " d-block"}>
+						  <Image src={logo} alt={'Logo'} />
 					  </a>
 				  </div>
 				  <div className="col-auto">

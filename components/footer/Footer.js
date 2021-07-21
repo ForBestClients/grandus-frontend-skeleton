@@ -1,5 +1,8 @@
 import styles from "./Footer.module.scss";
 
+import Image from "next/image";
+import avatar from "../../public/avatar.png";
+
 const Footer = ({}) => {
   return (
   	<>
@@ -137,7 +140,7 @@ const Footer = ({}) => {
 						  </ul>
 						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pharetra imperdiet luctus.
 							  Nunc venenatis nulla id metus mollis </p>
-						  <div className="meta"><img src="assets/img/avatar.png" alt="avatar" />Róbert Lešundák</div>
+						  <div className={styles.meta}><div className={styles.avatar}><Image src={avatar} alt={'Avatar'} /></div>Róbert Lešundák</div>
 					  </div>
 				  </div>
 			  </div>
